@@ -1,0 +1,40 @@
+# #  comment
+# () grouping
+# [] optional
+# *  zero or more
+# +  one or more
+# |  alternative
+
+
+program     = includes vardecls (procedure)* main EOF
+includes    = ("#include" STRING )*
+stmtlist    = (stmt)*
+main        = "void" "main" "(" ")" body
+procedure   = type IDENT "(" args ")" body
+type        = "int" | "char" | "void"
+args        = [ typeident ("," typeident)* ]
+body        = "{" vardecls stmtlist "}"
+typeident   = type IDENT
+exp         = lexp ">" lexp
+            | lexp "<" lexp
+            | lexp ">=" lexp
+            | lexp "<=" lexp
+            | lexp "!=" lexp
+            | lexp "==" lexp
+            | lexp
+vardecls       = (typeident ";")*
+stmt        = "{" stmtlist "}"
+            | "while" "(" exp ")" stmt
+            | "if" "(" exp ")" stmt ["else" stmt]
+            | IDENT "=" lexp ";"
+            | "return" [lexp] ";"
+            | "print" "(" STRING_LITERAL ")" ";"
+            | "print" "(" lexp ")" ";"
+	    | "read" "(" IDENT ")";ema	 
+            | IDENT "(" [ IDENT ("," IDENT)* ] ")" ";"
+lexp        = term (("+"|"-") term)*
+term        = factor (("/"|"*"|"%") factor)*
+factor      = "(" lexp ")"
+            | ["-"] (IDENT|NUMBER)
+            | CHARACTER
+            | IDENT "(" [ IDENT ("," IDENT)* ] ")"
