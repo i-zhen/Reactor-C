@@ -18,7 +18,7 @@
 		  on the commandline.		     
 		  -->
 <!-- Replace the value of the attribute "name" with the name of YOUR project. -->
-<project basedir="." default="build" name="SCC">
+<project basedir="." default="build" name="CT-15-16">
   <!-- You do not need to touch anything below this comment -->
   <property name="src" location="src"/>
   <property name="bin" location="bin"/>
