@@ -31,7 +31,9 @@ Thereafter you will see a form similar to the below figure:
 ![Forking the CT-15-16 repository](/figures/forking.png "Forking this repository.")
 
 Here you can name your repository and give it an optional description. Finally, click "Fork repository" to finish. After forking you should grant the teaching staff read access to your repository. Click on Settings (the gear icon), and then go to "Access management", the window should look similar to the figure below:
+
 ![Granting the teaching staff read access](/figures/repopermissions.png "Granting the teaching staff read access.")
+
 You should grant the following users read access:
 
 * Christophe Dubach (username: cdubach)
