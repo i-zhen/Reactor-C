@@ -7,7 +7,7 @@
 
 
 program     = includes vardecls (procedure)* main EOF
-includes    = ("#include" STRING )*
+includes    = ("#include" STRING_LITERAL)*
 stmtlist    = (stmt)*
 main        = "void" "main" "(" ")" body
 procedure   = type IDENT "(" args ")" body
@@ -23,14 +23,14 @@ exp         = lexp ">" lexp
             | lexp "==" lexp
             | lexp
 vardecls       = (typeident ";")*
-stmt        = "{" stmtlist "}"
+stmt        = "{" vardecls stmtlist "}"
             | "while" "(" exp ")" stmt
             | "if" "(" exp ")" stmt ["else" stmt]
             | IDENT "=" lexp ";"
             | "return" [lexp] ";"
             | "print" "(" STRING_LITERAL ")" ";"
             | "print" "(" lexp ")" ";"
-	    | "read" "(" IDENT ")";ema	 
+	    | "read" "(" IDENT ")";
             | IDENT "(" [ IDENT ("," IDENT)* ] ")" ";"
 lexp        = term (("+"|"-") term)*
 term        = factor (("/"|"*"|"%") factor)*
