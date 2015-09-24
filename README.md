@@ -89,7 +89,7 @@ For instance, the expression 2\*3+2 should be parsed as (2\*3)+2.
 The file `Lexer.java` contains a partial implementation of a lexer. Your job is to complete the implementation.
 In particular, you have to complete the implementation of the method `next` in the `Lexer`-class. It is strongly recommended that you fill in the missing details, rather than rolling our own `Lexer` from scratch. Furthermore, do not remove the existing public methods, e.g. `getErrorCount` and `nextToken`. The tokens that your lexer needs to recognise are given in the file `Token.java`.
 
-A hint: It is recommended to use the (https://docs.oracle.com/javase/7/docs/api/java/lang/Character.html)[Character-class methods] to test whether a character is a digit, whitespace, etc.
+A hint: It is recommended to use the [Character-class methods](https://docs.oracle.com/javase/7/docs/api/java/lang/Character.html) to test whether a character is a digit, whitespace, etc.
 
 ## 3. Parser
 After having transformed the grammar into a LL(k)-grammar and implemented the lexer you will have to implement a parser. The parser determines whether a given source program is syntactically correct or incorrect. A partial implementation of a recursive-decent parser has already been provided. The provided `Parser`-class has the following interface:
