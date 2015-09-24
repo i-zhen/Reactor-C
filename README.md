@@ -7,7 +7,7 @@ Bitbucket is an online repository that can be used with the git or mercurial con
 Your first task should be to setup a bitbucket account using your university email address.
 You should then send me [christophe.dubach@ed.ac.uk](christophe.dubach@ed.ac.uk) your email address so that I can give you access to the SCC repository.
 Once this is done you should fork SCC repository so that you can get your own private copy (click in the top left corner on the three dots and select fork).
-Once you have forked SCC make sure to give you repository private.
+Once you have forked CT-15-16 make sure to give you repository private.
 Do not share your code and repository with anyone and keep your code secret.
 If we identify that two students have identical portion of code, both will be considered to have cheated.
 
@@ -19,26 +19,33 @@ You will need to choose a development environment for your project. DICE machine
 
 Alternatively, you can use Emacs, vim, or your favourite text editor. Choose whichever you are confident with.
 
-## Obtaining your own copy of the SCC repository 
+## Obtaining your own copy of the CT-15-16 repository 
 We are going to be using the Git revision control system during the course. Git is installed on DICE machines. If you use your own machine then make sure to install Git.
 
-You will need to have your own copy of the SCC repository. In order to fork this repository hover the cursor over the "three dots"-icon to the left, and then click "Fork" as shown in the figure below:
+You will need to have your own copy of the CT-15-16 repository. In order to fork this repository hover the cursor over the "three dots"-icon to the left, and then click "Fork" as shown in the figure below:
 
-![Forking the SCC repository](/figures/howtofork.png "Forking this repository.")
+![Forking the CT-15-16 repository](/figures/howtofork.png "Forking this repository.")
 
 Thereafter you will see a form similar to the below figure:
 
-![Forking the SCC repository](/figures/forkpermissions.png "Remember to tick \"Inherit repository user/group permissions\".")
+![Forking the CT-15-16 repository](/figures/forking.png "Forking this repository.")
 
-Here you can name your repository and give it an optional description. It is **important** that you tick "*Inherit repository user/group permissions*" such that the teaching staff has access to your repository. Finally, click "Fork repository" to finish. Next, you will have to clone the forked repository to your local machine. In order to clone the repository you should launch a terminal and type:
+Here you can name your repository and give it an optional description. Finally, click "Fork repository" to finish. After forking you should grant the teaching staff read access to your repository. Click on Settings (the gear icon), and then go to "Access management", the window should look similar to the figure below:
+![Granting the teaching staff read access](/figures/repopermissions.png "Granting the teaching staff read access.")
+You should grant the following users read access:
+
+* Christophe Dubach (username: cdubach)
+* Daniel Hillerström (username: dhil)
+
+Next, you will have to clone the forked repository to your local machine. In order to clone the repository you should launch a terminal and type:
 ```
 $ git clone https://YOUR-USERNAME@bitbucket.org/YOUR-USERNAME/YOUR-REPOSITORY-NAME
 ```
-where `YOUR-USERNAME` must be *your* Bitbucket account name, and `YOUR-REPOSITORY-NAME` must be the name you chose for your fork of the SCC repository.
+where `YOUR-USERNAME` must be *your* Bitbucket account name, and `YOUR-REPOSITORY-NAME` must be the name you chose for your fork of the CT-15-16 repository.
 
-## Building the SCC project
+## Building the CT-15-16 project
 In order to build the project you must have Ant installed. On DICE machines Ant is already installed.
-Your local copy of the SCC repository contains an Ant build file (`build.xml`). If you are using an IDE, then you can import the build file. Otherwise, you can build the project from the commandline by typing:
+Your local copy of the CT-15-16 repository contains an Ant build file (`build.xml`). If you are using an IDE, then you can import the build file. Otherwise, you can build the project from the commandline by typing:
 ```
 $ ant build
 ```
@@ -57,7 +64,7 @@ This command effectively deletes the `bin` directory.
 # Marking #
 The marking will be done by an automated test suite.
 
-# Part I : Parsing #
+# Part I : Parsing
 The goal of part I is to write a lexical and syntactic analyser - a parser - for a subset of C.
 As you have learnt in the course, parsing consists of three parts:
 
@@ -70,19 +77,33 @@ You will have to implement the rest.
 We strongly encourage you to write a recursive descent parser and as such make your grammar LL(k).
 We have provided utility function in the parser class to allow look ahead.
 
-## 1.Grammar ##
+## 1. Grammar
 You first job will consists in taking the grammar expressed in EBNF form and transform it into an equivalent context-free LL(k) grammar.
 You should make sure that the resulting grammar is non-ambiguous, eliminate left recursion and ensure that the usual precedence rules for arithmetic expression are respected (\*,/,% have precedence over +,-).
 For instance, the expression 2\*3+2 should be parsed as (2\*3)+2.
 
-## 2. Semantic analysis
-Your parser checks whether a given source program has proper *syntax*, however, we also want to check whether the said program has proper *semantics*. In other words, we want to check whether a given program is meaningful. This includes populating a symbol table, type checking, etc. However, before you can do semantic analysis you will need an intermediate representation (IR) for source programs.
+## 2. Lexing
+The file `Lexer.java` contains a partial implementation of a lexer. Your job is to complete the implementation.
+In particular, you have to complete the implementation of the method `next` in the `Lexer`-class. It is strongly recommended that you fill in the missing details, rather than rolling our own `Lexer` from scratch. Furthermore, do not remove the existing public methods, e.g. `getErrorCount` and `nextToken`.
 
-A commonly used IR is Abstract Syntax Tree (AST) which closely resembles the structure of a source program. An AST captures the important details of a source program and omit details such as parentheses. So, for every source-language construct, the compiler needs a designated AST node, e.g. you might have a `BinaryOp`-node, which represents a binary operation (+,-,\*,% or /), with two children that represent the left and right subexpression. Furthermore, to represent a while-loop you might have a `WhileStmt`-node with a child to represent the loop condition and another to represent the loop body (i.e. a list of statements). The AST nodes can be implemented as specialised classes in a class hierarchy in Java.
+A hint: It is recommended to use the [https://docs.oracle.com/javase/7/docs/api/java/lang/Character.html](Character-class methods) to test whether a character is a digit, whitespace, etc.
 
-Once you have implemented the class hierarchy you are ready to perform semantic analysis. ASTs afford an uniform method for analysing source programs as an analysis boils down to performing a particular tree traversal. It is highly recommended that you use the *visitor pattern* to implement your analyses. When using the visitor pattern you will implement type checking, symbol table construction, etc. as distinct visitors.
+## 3. Parser
+After having transformed the grammar into a LL(k)-grammar and implemented the lexer you will have to implement a parser. The parser determines whether a given source program is syntactically correct or incorrect. A partial implementation of a recursive-decent parser has already been provided. The provided `Parser`-class has the following interface:
 
-## Files ##
+* `int getErrorCount()` returns the number of parsing errors.
+* `void parse()` initiates the parsing of a given source program.
+
+In addition, the `Parser`-class contains various private methods, of which some are ultility methods, e.g.
+
+* `void error(TokenClass... expected)` takes a variable number of expected tokens, and emits an error accordingly.
+* `Token lookAhead(int i)` returns the `i`'th token in the token-stream.
+* `void nextToken()` advances the token-stream by one, i.e. it consumes one token from the stream.
+* `Token expect(TokenClass... expected)` takes a variable number of expected tokens, and consumes them from the token-stream if present, otherwise it generates an error using the `error`-method.
+* `Token accept(TokenClass... expected)` tests whether the next token(s) are identical to the `expected`. However, it *does not* consume any tokens from the token-stream.
+* `void parseProgram()` parses a "Program-production" from the LL(k) grammar. Similarly, `void parseIncludes()` parses an "Includes-production". Three additional empty methods have been provided: `parseDecls`, `parseProcs` and `parseMain` are to be completed by you. Furthermore, you will need to add more parse methods yourself. For each nonterminal you should have a corresponding parse method.
+
+## Files
 * grammar/ebnf.txt : This file describes the grammar of our language in EBNF format.
 * Scanner : This class implements the scanner which returns character strings.
 * Token : This class represent the different tokens from the language.
