@@ -28,9 +28,11 @@ stmt        = "{" vardecls stmtlist "}"
             | "if" "(" exp ")" stmt ["else" stmt]
             | IDENT "=" lexp ";"
             | "return" [lexp] ";"
-            | "print" "(" STRING_LITERAL ")" ";"
-            | "print" "(" lexp ")" ";"
-	    | "read" "(" IDENT ")";
+            | "print_s" "(" STRING_LITERAL ")" ";"
+            | "print_c" "(" lexp ")" ";"
+	    | "print_i" "(" lexp ")" ";"
+	    | "read_c" "(" ")";
+   	    | "read_i" "(" ")";
             | IDENT "(" [ IDENT ("," IDENT)* ] ")" ";"
 lexp        = term (("+"|"-") term)*
 term        = factor (("/"|"*"|"%") factor)*
