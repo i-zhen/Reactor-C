@@ -86,7 +86,7 @@ For instance, the expression 2\*3+2 should be parsed as (2\*3)+2.
 
 ## 2. Lexing
 The file `Lexer.java` contains a partial implementation of a lexer. Your job is to complete the implementation.
-In particular, you have to complete the implementation of the method `next` in the `Lexer`-class. It is strongly recommended that you fill in the missing details, rather than rolling our own `Lexer` from scratch. Furthermore, do not remove the existing public methods, e.g. `getErrorCount` and `nextToken`.
+In particular, you have to complete the implementation of the method `next` in the `Lexer`-class. It is strongly recommended that you fill in the missing details, rather than rolling our own `Lexer` from scratch. Furthermore, do not remove the existing public methods, e.g. `getErrorCount` and `nextToken`. The tokens that your lexer needs to recognise are given in the file `Token.java`.
 
 A hint: It is recommended to use the [https://docs.oracle.com/javase/7/docs/api/java/lang/Character.html](Character-class methods) to test whether a character is a digit, whitespace, etc.
 
