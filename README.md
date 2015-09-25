@@ -8,9 +8,9 @@
 # Marking #
 
 The marking will be done using an automated test suite.
-Please note that you are not allowed to modify the Main.java file which is the main entry point to the compiler.
+Please note that you are not allowed to modify the `Main.java` file which is the main entry point to the compiler.
 A checksum on the file will be performed to ensure the file has not be tempered with.
-
+Furthermore, you may not use any external libraries.
 
 # Setup #
 
@@ -89,7 +89,6 @@ The scanner has already been implemented for you and we provide some partial imp
 You will have to implement the rest.
 We strongly encourage you to write a recursive descent parser and as such make your grammar LL(k).
 We have provided utility function in the parser class to allow look ahead.
-Furthermore, **do not** alter the `Main.java` file.
 
 ## 1. Grammar
 You first job will consists in taking the grammar expressed in EBNF form and transform it into an equivalent context-free LL(k) grammar.
@@ -98,7 +97,7 @@ For instance, the expression 2\*3+2 should be parsed as (2\*3)+2.
 
 ## 2. Lexing
 The file `Lexer.java` contains a partial implementation of a lexer. Your job is to complete the implementation.
-In particular, you have to complete the implementation of the method `next` in the `Lexer`-class. It is strongly recommended that you fill in the missing details, rather than rolling our own `Lexer` from scratch. Furthermore, do not remove the existing public methods, e.g. `getErrorCount` and `nextToken`. The tokens that your lexer needs to recognise are given in the file `Token.java`.
+In particular, you have to complete the implementation of the method `next` in the `Lexer`-class. It is strongly recommended that you fill in the missing details, rather than rolling our own `Lexer` from scratch. Furthermore, do not remove the existing public methods, e.g. `getErrorCount` and `nextToken`. The tokens that your lexer needs to recognise are given in the file `Token.java`. Note that you are **not** allowed to use [the Java regular expression matcher](https://docs.oracle.com/javase/7/docs/api/java/util/regex/Matcher.html) in your implementation.
 
 A hint: It is recommended to use the [Character-class methods](https://docs.oracle.com/javase/7/docs/api/java/lang/Character.html) to test whether a character is a digit, whitespace, etc.
 
