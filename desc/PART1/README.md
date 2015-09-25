@@ -13,8 +13,8 @@ We have provided utility function in the parser class to allow look ahead.
 
 
 ## 1. Lexing
-The file `Lexer.java` contains a partial implementation of a lexer. Your job is to complete the implementation.
-In particular, you have to complete the implementation of the method `next` in the `Lexer`-class. It is strongly recommended that you fill in the missing details, rather than rolling our own `Lexer` from scratch. Furthermore, do not remove the existing public methods, e.g. `getErrorCount` and `nextToken`. The tokens that your lexer needs to recognise are given in the file `Token.java`. Note that you are **not** allowed to use [the Java regular expression matcher](https://docs.oracle.com/javase/7/docs/api/java/util/regex/Matcher.html) in your implementation.
+The file `Tokeniser.java` contains a partial implementation of a lexer. Your job is to complete the implementation.
+In particular, you have to complete the implementation of the method `next` in the `Tokeniser`-class. It is strongly recommended that you fill in the missing details, rather than rolling our own `Lexer` from scratch. Furthermore, do not remove the existing public methods, e.g. `getErrorCount` and `nextToken`. The tokens that your lexer needs to recognise are given in the file `Token.java`. Note that you are **not** allowed to use [the Java regular expression matcher](https://docs.oracle.com/javase/7/docs/api/java/util/regex/Matcher.html) in your implementation.
 
 Please note that comments should be completely ignored. The "#include" directive should be tokenised into the INCLUDE token. However, you should not do anything with the "include" preprocessor directive (it is completely ignored in the rest of the compiler).
 
