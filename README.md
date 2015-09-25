@@ -5,6 +5,13 @@
 3. Part 3 (semantic analyser),  Thursday 12 November 2015 at 4pm, weight = 20%
 4. Part 4 (code generator) , Thursday 3  December 2015 at 4pm, weight = 50% 
 
+# Marking #
+
+The marking will be done using an automated test suite.
+Please note that you are not allowed to modify the Main.java file which is the main entry point to the compiler.
+A checksum on the file will be performed to ensure the file has not be tempered with.
+
+
 # Setup #
 
 ## 1.Bitbucket ##
@@ -70,8 +77,6 @@ $ ant clean
 ```
 This command effectively deletes the `bin` directory.
 
-# Marking #
-The marking will be done by an automated test suite.
 
 # Part I : Parsing
 The goal of part I is to write a lexical and syntactic analyser - a parser - for a subset of C.
