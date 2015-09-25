@@ -14,19 +14,18 @@ A checksum on the file will be performed to ensure the file has not be tempered 
 
 # Setup #
 
-## 1.Bitbucket ##
+## Bitbucket ##
 We will rely on bitbucket and it is mandatory to use it for this coursework.
-Bitbucket is an online repository that can be used with the git or mercurial control revision system.
+Bitbucket is an online repository that can be used with the git control revision system.
 
 Your first task should be to setup a bitbucket account using your university email address.
-You should then send me [christophe.dubach@ed.ac.uk](christophe.dubach@ed.ac.uk) your email address so that I can give you access to the SCC repository.
-Once this is done you should fork SCC repository so that you can get your own private copy (click in the top left corner on the three dots and select fork).
-Once you have forked CT-15-16 make sure to give you repository private.
-Do not share your code and repository with anyone and keep your code secret.
+You should then send to [daniel.hillerstrom@ed.ac.uk](daniel.hillerstrom@ed.ac.uk) your bitbucket account id so that we can run the automated test suite on your repository.
+Details on how to fork the CT-15-16 repository are given below.
+Important: do not share your code and repository with anyone and keep your source code secret.
 If we identify that two students have identical portion of code, both will be considered to have cheated.
 
 ## Development environment (editor)
-You will need to choose a development environment for your project. DICE machines have the following integrated development environments (IDE) for Java installed:
+You can choose to use a development environment for your project. DICE machines have the following integrated development environments (IDE) for Java installed:
 
 * Community edition of [IntelliJ](https://www.jetbrains.com/idea/).
 * [Eclipse](https://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/marsr) for Java.
