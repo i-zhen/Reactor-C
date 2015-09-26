@@ -82,6 +82,6 @@ Since we are using an automated marking mechnism (based on how many progams can 
 
 We suggest you follow the excelent tutorial from atlassian on how to use git. In particular you will need to understand the following basic meachnisms:
 
-[add and commit](https://www.atlassian.com/git/tutorials/saving-changes)
-[push](https://www.atlassian.com/git/tutorials/syncing/git-push)
+*[add and commit](https://www.atlassian.com/git/tutorials/saving-changes)
+*[push](https://www.atlassian.com/git/tutorials/syncing/git-push)
 
