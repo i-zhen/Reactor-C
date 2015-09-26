@@ -7,9 +7,10 @@
 
 # Marking #
 
-The marking will be done using an automated test suite.
+The marking will be done using an automated test suite on a dice machine using Java 7 (1.7 runtime).
 Please note that you are not allowed to modify the `Main.java` file which is the main entry point to the compiler.
 A checksum on the file will be performed to ensure the file has not be tempered with.
+Also make sure that the build script provided remains unchanged so that your project can be built on dice.
 Furthermore, you may not use any external libraries.
 
 # Setup #
