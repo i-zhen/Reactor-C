@@ -75,3 +75,13 @@ You can clean the `bin` directory by typing:
 $ ant clean
 ```
 This command effectively deletes the `bin` directory.
+
+## Working with git and pushing your changes
+
+Since we are using an automated marking mechnism (based on how many progams can run successfully through your compiler), it is important to understand how git works. If you want to benefit from the nightly automatic marking feedback, please ensure that you push all your changes daily onto your bitbucket centralised repository.
+
+We suggest you follow the excelent tutorial from atlassian on how to use git. In particular you will need to understand the following basic meachnisms:
+
+[add and commit](https://www.atlassian.com/git/tutorials/saving-changes)
+[push](https://www.atlassian.com/git/tutorials/syncing/git-push)
+
