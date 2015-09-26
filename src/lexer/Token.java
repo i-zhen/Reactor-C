@@ -9,7 +9,7 @@ public class Token {
 
     public enum TokenClass {
 
-        IDENTIFIER, // [0-9a-zA-Z][0-9a-zA-Z_]*
+        IDENTIFIER, // [a-zA-Z][0-9a-zA-Z_]*
 
         ASSIGN, // =
 
@@ -40,7 +40,7 @@ public class Token {
         INCLUDE, // #include
 
         // literals
-        STRING_LITERAL, // .*
+        STRING_LITERAL, // ".*"
         NUMBER, // [0-9]+
         CHARACTER, // a character (e.g. 'a')
 
