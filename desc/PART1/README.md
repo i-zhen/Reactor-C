@@ -38,7 +38,7 @@ In addition, the `Parser`-class contains various private methods, of which some 
 * `Token lookAhead(int i)` returns the `i`'th token in the token-stream.
 * `void nextToken()` advances the token-stream by one, i.e. it consumes one token from the stream.
 * `Token expect(TokenClass... expected)` takes a variable number of expected tokens, and consumes them from the token-stream if present, otherwise it generates an error using the `error`-method.
-* `Token accept(TokenClass... expected)` tests whether the next token(s) are identical to the `expected`. However, it *does not* consume any tokens from the token-stream.
+* `boolean accept(TokenClass... expected)` tests whether the next token(s) are identical to the `expected`. However, it *does not* consume any tokens from the token-stream.
 * `void parseProgram()` parses a "Program-production" from the LL(k) grammar. Similarly, `void parseIncludes()` parses an "Includes-production". Three additional empty methods have been provided: `parseDecls`, `parseProcs` and `parseMain` are to be completed by you. Furthermore, you will need to add more parse methods yourself. For each nonterminal you should have a corresponding parse method.
 
 Your parser *should* only determine whether a given source program is syntactically correct. The `Main`-class relies on the error count provided by the `Parser`-class. Therefore, make sure you use the `error`-method in the `Parser`-class to report errors correctly!
