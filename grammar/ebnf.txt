@@ -40,3 +40,6 @@ factor      = "(" lexp ")"
             | ["-"] (IDENT|NUMBER)
             | CHARACTER
             | IDENT "(" [ IDENT ("," IDENT)* ] ")"
+	    | "read_c" "(" ")"
+	    | "read_i" "(" ")"
+	    
