@@ -9,58 +9,59 @@ public class Token {
 
     public enum TokenClass {
 
-        IDENTIFIER, // [0-9a-zA-Z][0-9a-zA-Z_]*
+        IDENTIFIER, // ('a'|...|'z'|'A'|...|'Z'|'_')('0'|...|'9'|'a'|...|'z'|'A'|...|'Z'|'_')*
 
-        ASSIGN, // =
+        ASSIGN, // '='
 
         // delimiters
-        LBRA, // {
-        RBRA, // }
-        LPAR, // (
-        RPAR, // )
-        SEMICOLON, // ;
-        COMMA, // ,
+        LBRA, // '{'
+        RBRA, // '}'
+        LPAR, // '('
+        RPAR, // ')'
+        SEMICOLON, // ';'
+        COMMA, // ','
 
-        MAIN,  // main function identifier
-        PRINT, // print function identifier
-	READ,  // read function identifier
+	// special functions
+        MAIN,  // "main"
+        PRINT, // "print_s" | "print_i" | "print_c"
+	READ,  // "read_i" | "read_c"
 
         // types
-        INT,
-        VOID,
-        CHAR,
+        INT,  // "int"
+        VOID, // "void"
+        CHAR, // "char"
 
         // control flow
-        IF,
-        ELSE,
-        WHILE,
-        RETURN,
+        IF,     // "if"
+        ELSE,   // "else"
+        WHILE,  // "while"
+        RETURN, // "return"
 
         // include
-        INCLUDE, // #include
+        INCLUDE, // "#include"
 
         // literals
-        STRING_LITERAL, // .*
-        NUMBER, // [0-9]+
-        CHARACTER, // a character (e.g. 'a')
+        STRING_LITERAL, // \".*\"  any sequence of characters enclosed in double quote " (please be aware of the escape character backslash \)
+        NUMBER,         // ('0'|...|'9')+
+        CHARACTER,      // \'('a'|...|'z'|'A'|...|'Z'|'\t'|'\n'|'.'|','|'_'|...)\'  a character starts and end with a single quote '
 
         // comparisons
-        EQ, // ==
-        NE, // !=
-        LT, // <
-        GT, // >
-        LE, // <=
-        GE, // >=
+        EQ, // "=="
+        NE, // "!="
+        LT, // '<'
+        GT, // '>'
+        LE, // "<="
+        GE, // ">="
 
         // arithmetic operators
-        PLUS, // +
-        MINUS, // -
-        TIMES, // *
-        DIV, // /
-        MOD, // %
+        PLUS,  // '+'
+        MINUS, // '-'
+        TIMES, // '*'
+        DIV,   // '/'
+        MOD,   // '%'
 
         // special tokens
-        EOF,    // to signal end of file
+        EOF,    // signal end of file
         INVALID // in case we cannot recognise a character as part of a valid token
     }
 

@@ -31,12 +31,15 @@ stmt        = "{" vardecls stmtlist "}"
             | "print_s" "(" STRING_LITERAL ")" ";"
             | "print_c" "(" lexp ")" ";"
 	    | "print_i" "(" lexp ")" ";"
+            | funcall ";"	    
 	    | "read_c" "(" ")";
    	    | "read_i" "(" ")";
-            | IDENT "(" [ IDENT ("," IDENT)* ] ")" ";"
 lexp        = term (("+"|"-") term)*
 term        = factor (("/"|"*"|"%") factor)*
 factor      = "(" lexp ")"
             | ["-"] (IDENT|NUMBER)
             | CHARACTER
-            | IDENT "(" [ IDENT ("," IDENT)* ] ")"
+            | funcall
+	    | "read_c" "(" ")"
+	    | "read_i" "(" ")"
+funcall     = IDENT "(" [ IDENT ("," IDENT)* ] ")"

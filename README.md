@@ -7,9 +7,10 @@
 
 # Marking #
 
-The marking will be done using an automated test suite.
+The marking will be done using an automated test suite on a dice machine using Java 7 (1.7 runtime).
 Please note that you are not allowed to modify the `Main.java` file which is the main entry point to the compiler.
 A checksum on the file will be performed to ensure the file has not be tempered with.
+Also make sure that the build script provided remains unchanged so that your project can be built on dice.
 Furthermore, you may not use any external libraries.
 
 # Setup #
@@ -43,7 +44,7 @@ Thereafter you will see a form similar to the below figure:
 
 ![Forking the CT-15-16 repository](/figures/forking.png "Forking this repository.")
 
-Here you can name your repository and give it an optional description. Finally, click "Fork repository" to finish. After forking you should grant the teaching staff read access to your repository. Click on Settings (the gear icon), and then go to "Access management", the window should look similar to the figure below:
+Here you can name your repository and give it an optional description. **Remember** to tick "This is a private repository". Finally, click "Fork repository" to finish. After forking you should grant the teaching staff read access to your repository. Click on Settings (the gear icon), and then go to "Access management", the window should look similar to the figure below:
 
 ![Granting the teaching staff read access](/figures/repopermissions.png "Granting the teaching staff read access.")
 
@@ -75,3 +76,12 @@ You can clean the `bin` directory by typing:
 $ ant clean
 ```
 This command effectively deletes the `bin` directory.
+
+## Working with git and pushing your changes
+
+Since we are using an automated marking mechnism (based on how many progams can run successfully through your compiler), it is important to understand how git works. If you want to benefit from the nightly automatic marking feedback, please ensure that you push all your changes daily onto your bitbucket centralised repository.
+
+We suggest you follow the excelent tutorial from atlassian on how to use git. In particular you will need to understand the following basic meachnisms:
+
+* [add and commit](https://www.atlassian.com/git/tutorials/saving-changes)
+* [push](https://www.atlassian.com/git/tutorials/syncing/git-push)
