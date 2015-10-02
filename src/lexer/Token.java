@@ -43,7 +43,7 @@ public class Token {
         // literals
         STRING_LITERAL, // \".*\"  any sequence of characters enclosed in double quote " (please be aware of the escape character backslash \)
         NUMBER,         // ('0'|...|'9')+
-        CHARACTER,      // ('a'|...|'z'|'A'|...|'Z'|'\t'|'\n'|'.'|','|'_'|...)
+        CHARACTER,      // \'('a'|...|'z'|'A'|...|'Z'|'\t'|'\n'|'.'|','|'_'|...)\'  a character starts and end with a single quote '
 
         // comparisons
         EQ, // "=="
