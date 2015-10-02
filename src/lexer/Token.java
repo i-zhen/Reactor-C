@@ -9,7 +9,7 @@ public class Token {
 
     public enum TokenClass {
 
-        IDENTIFIER, // ('a'|...|'z'|'A'|...|'Z')('0'|...|'9'|'a'|...|'z'|'A'|...|'Z')*
+        IDENTIFIER, // ('a'|...|'z'|'A'|...|'Z'|'_')('0'|...|'9'|'a'|...|'z'|'A'|...|'Z'|'_')*
 
         ASSIGN, // '='
 
@@ -43,7 +43,7 @@ public class Token {
         // literals
         STRING_LITERAL, // \".*\"  any sequence of characters enclosed in double quote " (please be aware of the escape character backslash \)
         NUMBER,         // ('0'|...|'9')+
-        CHARACTER,      // ('a'|...|'z'|'A'|...|'Z'|'\t'|'\n'|'.'|','|...)
+        CHARACTER,      // ('a'|...|'z'|'A'|...|'Z'|'\t'|'\n'|'.'|','|'_'|...)
 
         // comparisons
         EQ, // "=="
