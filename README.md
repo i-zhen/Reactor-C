@@ -7,7 +7,7 @@
 
 # Scoreboard #
 
-We automatically run a series of hidden test programs using your compiler about once a day. You can keep track of your progress and see how many tests pass/fail using the scoreboard(http://htmlpreview.github.io/?https://bitbucket.org/cdubach/ct-15-16/raw/master/scoreboard/scoreboard.html).
+We automatically run a series of hidden test programs using your compiler about once a day. You can keep track of your progress and see how many tests pass/fail using the [scoreboard](http://htmlpreview.github.io/?https://bitbucket.org/cdubach/ct-15-16/raw/master/scoreboard/scoreboard.html).
 
 # Marking #
 
