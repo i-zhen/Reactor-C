@@ -5,6 +5,10 @@
 3. Part 3 (semantic analyser),  Thursday 12 November 2015 at 4pm, weight = 20%
 4. Part 4 (code generator) , Thursday 3  December 2015 at 4pm, weight = 50% 
 
+# Scoreboard #
+
+We automatically run a series of hidden test programs using your compiler about once a day. You can keep track of your progress and see how many tests pass/fail using the scoreboard by following this link: (http://htmlpreview.github.io/?https://bitbucket.org/cdubach/ct-15-16/raw/master/scoreboard/scoreboard.html).
+
 # Marking #
 
 The marking will be done using an automated test suite on a dice machine using Java 7 (1.7 runtime).
