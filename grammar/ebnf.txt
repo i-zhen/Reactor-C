@@ -32,8 +32,8 @@ stmt       ::= "{" vardecls stmtlist "}"
              | "print_c" "(" lexp ")" ";"
 	     | "print_i" "(" lexp ")" ";"
              | funcall ";"	    
-	     | "read_c" "(" ")";
-   	     | "read_i" "(" ")";
+	     | "read_c" "(" ")" ";"
+   	     | "read_i" "(" ")" ";"
 lexp       ::= term (("+"|"-") term)*
 term       ::= factor (("/"|"*"|"%") factor)*
 factor     ::= "(" lexp ")"
