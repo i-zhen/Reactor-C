@@ -25,6 +25,8 @@ or multiline
 The "#include" directive should be tokenised into the INCLUDE token. However, you should not do anything with the "include" preprocessor directive (it is completely ignored in the rest of the compiler).
 Furthermore, for numbers we consider only integers, and therefore you need not implement support for hexadecimal or octal numbers.
 
+The list of characters to escape are the same as in Java. Please check this [link](http://docs.oracle.com/javase/tutorial/java/data/characters.html) for the full list.
+
 A hint: It is recommended to use the [Character-class methods](https://docs.oracle.com/javase/7/docs/api/java/lang/Character.html) to test whether a character is a digit, whitespace, etc.
 
 ## 2. Grammar
