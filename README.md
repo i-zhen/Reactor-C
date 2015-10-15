@@ -1,7 +1,7 @@
 # Deadlines #
 
 1. [Part 1 (parser)](desc/PART1/),  Thursday 15 October 2015  at 4pm, weight = 10%
-2. Part 2 (ast builder),  Thursday 29 October 2015  at 4pm, weight = 20%
+2. [Part 2 (ast builder)](desc/PART2),  Thursday 29 October 2015  at 4pm, weight = 20%
 3. Part 3 (semantic analyser),  Thursday 12 November 2015 at 4pm, weight = 20%
 4. Part 4 (code generator) , Thursday 3  December 2015 at 4pm, weight = 50% 
 

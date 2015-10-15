@@ -30,7 +30,7 @@ Var        ::= String
 FunCall    ::= String Expr*
 
 // Binary operation (arithmetic and comparison operations are grouped together)
-BinOP      ::= Expr Op Expr
+BinOp      ::= Expr Op Expr
 Op         ::= ADD | SUB | MUL | DIV | MOD | GT | LT | GE | LE | NE | EQ
 
 
