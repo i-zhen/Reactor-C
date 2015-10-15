@@ -31,7 +31,7 @@ For the parser, you'd possibly want to remove everything between the equals symb
     public Program parse() {
 >>>>>>> 92a7665c3dde600e1bd2d5681b2fc8fb43e1d37b
 ```
-You should pull from the master branch and merge with your version.
+Thereafter you can continue to extend your solution.
 
 ## 1. AST Nodes
 
