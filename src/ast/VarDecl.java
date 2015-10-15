@@ -1,6 +1,6 @@
 package ast;
 
-public class VarDecl implements ASTNode {
+public class VarDecl implements Tree {
     public final Type type;
     public final Var var;
 

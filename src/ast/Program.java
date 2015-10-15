@@ -2,7 +2,7 @@ package ast;
 
 import java.util.List;
 
-public class Program implements ASTNode {
+public class Program implements Tree {
 
     public final List<VarDecl> varDecls;
     public final List<Procedure> procs;
