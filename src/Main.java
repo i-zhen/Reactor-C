@@ -1,3 +1,5 @@
+import ast.ASTPrinter;
+import ast.Program;
 import lexer.Scanner;
 import lexer.Token;
 import lexer.Tokeniser;
@@ -40,6 +42,7 @@ public class Main {
         }
 
         File inputFile = new File(args[1]);
+        File outputFile = new File(args[2]);
 
         Scanner scanner;
         try {
@@ -62,13 +65,16 @@ public class Main {
         }	
 
         Parser parser = new Parser(tokeniser);
-        parser.parse();
-        if (parser.getErrorCount() == 0)
+        Program programAst = parser.parse();
+        if (parser.getErrorCount() == 0) {
             System.out.println("Parsing: pass");
+            System.out.println("Writing AST into output file");
+            programAst.accept(new ASTPrinter(outputFile));
+        }
         else
             System.out.println("Parsing: failed ("+parser.getErrorCount()+" errors)");
 
-	System.exit(parser.getErrorCount() == 0 ? 0 : -1);
+	    System.exit(parser.getErrorCount() == 0 ? 0 : -1);
     }
 
 }

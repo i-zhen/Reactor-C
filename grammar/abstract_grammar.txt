@@ -1,0 +1,55 @@
+// The program top AST node (a list of variable declarations followed by a list of procedure definition and finally the main procedure definition)
+Program    ::= VarDecl* Procedure* Procedure
+
+
+// Types
+Type       ::= INT | CHAR | VOID
+
+
+
+// Variable declaration
+VarDecl    ::= Type Var
+
+// Procedure definition (the String is the name of the procedure)
+Procedure  ::= Type String VarDecl* Block
+
+
+
+// Expressions
+Expr       ::= IntLiteral | StrLiteral | ChrLiteral | Var | FunCall | BinOp
+
+// Literals
+IntLiteral ::= int
+StrLiteral ::= String
+ChrLiteral ::= char
+
+// Variable (the String is the name of the variable) 
+Var        ::= String
+
+// Function call (the String corresponds to the name of the function to call and the Expr* is the list of arguments)
+FunCall    ::= String Expr*
+
+// Binary operation (arithmetic and comparison operations are grouped together)
+BinOP      ::= Expr Op Expr
+Op         ::= ADD | SUB | MUL | DIV | MOD | GT | LT | GE | LE | NE | EQ
+
+
+
+
+// Statements
+Stmt       ::= Block | While | If | Assign | Return | FunCall
+
+// While loop statement : while (Expr) Stmt;
+While      ::= Expr Stmt
+
+// If statement: if (Expr) Stmt1 else Stmt2; (if the second Stmt is null, this means there is no else part)
+If         ::= Expr Stmt [Stmt]
+
+// Assignment statement: Var = Expr;
+Assign     ::= Var Expr
+
+// Return statement (the Expr is optional)
+Return     ::= [Expr]
+
+// Block statement (starts with { and end with } in the source code)
+Block      ::= VarDecl* Stmt*

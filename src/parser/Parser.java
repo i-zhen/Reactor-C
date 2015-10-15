@@ -1,10 +1,14 @@
 package parser;
 
+import ast.Procedure;
+import ast.Program;
+import ast.VarDecl;
 import lexer.Token;
 import lexer.Tokeniser;
 import lexer.Token.TokenClass;
 
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 
@@ -26,11 +30,11 @@ public class Parser {
         this.tokeniser = tokeniser;
     }
 
-    public void parse() {
+    public Program parse() {
         // get the first token
         nextToken();
 
-        parseProgram();
+        return parseProgram();
     }
 
     public int getErrorCount() {
@@ -121,32 +125,37 @@ public class Parser {
     }
 
 
-    private void parseProgram() {
+    private Program parseProgram() {
         parseIncludes();
-        parseDecls();
-        parseProcs();
-        parseMain();
+        List<VarDecl> varDecls = parseDecls();
+        List<Procedure> procs = parseProcs();
+        Procedure main = parseMain();
         expect(TokenClass.EOF);
+        return new Program(varDecls, procs, main);
     }
 
+    // includes are ignored, so does not need to return an AST node
     private void parseIncludes() {
-	if (accept(TokenClass.INCLUDE)) {
+	    if (accept(TokenClass.INCLUDE)) {
             nextToken();
             expect(TokenClass.STRING_LITERAL);
             parseIncludes();
         }
     }
 
-    private void parseDecls() {
-	// to be completed ...
+    private List<VarDecl> parseDecls() {
+	        // to be completed ...
+            return null;
     }
 
-    private void parseProcs() {
+    private List<Procedure> parseProcs() {
         // to be completed ...
+        return null;
     }
 
-    private void parseMain() {
+    private Procedure parseMain() {
         // to be completed ...
+        return null;
     }
 
     // to be completed ...        
