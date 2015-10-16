@@ -48,6 +48,7 @@ public class ASTPrinter implements ASTVisitor<Void> {
         }
         p.main.accept(this);
         writer.print(")");
+	writer.flush();
         return null;
     }
 
