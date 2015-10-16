@@ -5,6 +5,8 @@ import lexer.Token;
 import lexer.Tokeniser;
 import parser.Parser;
 
+import java.io.PrintWriter;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 
@@ -69,7 +71,15 @@ public class Main {
         if (parser.getErrorCount() == 0) {
             System.out.println("Parsing: pass");
             System.out.println("Writing AST into output file");
-            programAst.accept(new ASTPrinter(outputFile));
+	    PrintWriter writer;
+	    try {
+		writer = new PrintWriter(outputFile);		
+		programAst.accept(new ASTPrinter(writer));
+		writer.flush();
+		writer.close();
+	    } catch (Exception e) {
+		e.printStackTrace();
+	    }
         }
         else
             System.out.println("Parsing: failed ("+parser.getErrorCount()+" errors)");

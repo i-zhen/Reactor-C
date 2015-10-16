@@ -13,9 +13,25 @@ If you encounter any problem, have any questions or find a bug with the newly pr
 
 ## 0. Setup
 
-TO BE COMPLETED
-
-You should pull from the master branch and merge with your version.
+You will have to pull the AST class nodes and abstract grammar from the main repository. First, open a terminal and navigate to the root of your local repository. Then type:
+```
+$ git pull https://bitbucket.org/cdubach/ct-15-16.git
+```
+This will cause some merge conflict(s), e.g.:
+```
+From https://bitbucket.org/cdubach/ct-15-16
+ * branch            HEAD       -> FETCH_HEAD
+Auto-merging src/parser/Parser.java
+CONFLICT (content): Merge conflict in src/parser/Parser.java
+```
+Here, the file Parser.java is causing a merge conflict. In order to resolve it, you should open the file to fix the conflict.
+For the parser, you'd possibly want to remove everything between the equals symbols and the greater than symbols, e.g.
+```
+=======
+    public Program parse() {
+>>>>>>> 92a7665c3dde600e1bd2d5681b2fc8fb43e1d37b
+```
+Thereafter you can continue to extend your solution.
 
 ## 1. AST Nodes
 

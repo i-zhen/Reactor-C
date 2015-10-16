@@ -8,12 +8,8 @@ public class ASTPrinter implements ASTVisitor<Void> {
 
     private PrintWriter writer;
 
-    public ASTPrinter(File outputFile) {
-        try {
-            this.writer = new PrintWriter(outputFile);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+    public ASTPrinter(PrintWriter writer) {
+            this.writer = writer;
     }
 
     public Void visitBlock(Block b) {
