@@ -10,6 +10,9 @@ import java.io.PrintWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 
+/**
+ * @author zhenyi
+ */
 public class Main {
 
     private enum Mode {
