@@ -10,15 +10,12 @@ import java.io.PrintWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 
-/**
- * @author cdubach
- */
 public class Main {
 
     private enum Mode {
         LEXER, PARSER
     }
-dd
+
     public static void usage() {
         System.out.println("Usage: java "+Main.class.getSimpleName()+" pass inputfile outputfile");
         System.out.println("where pass is either: -lexer or -parser");
