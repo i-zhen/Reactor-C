@@ -54,7 +54,9 @@ Using EBNF syntax, the output should be of the form: `AST_NODE_CLASS_NAME '(' [S
 ### Examples:
 
 * `y = 3*x;` should result in the following output: `Assign(Var(y),BinOp(IntLiteral(3), MUL, Var(x)))`.
-* `void foo() { return; }` should result in: `Procedure(VOID, foo, Block(Return()))`
+* `void foo() { return; }` should result in: `Procedure(VOID, foo, Block(Return()))`.
+* `-x;` should result in: `BinOp(0,MINUS,Var(x))`.
+* `-1` should result in `BinOp(0,MINUS,IntLiteral(1))`.
 
 Note that you are free to add white spaces in your output format; spaces, newlines and tabulations will be ignore by our comparison tool.
 
