@@ -22,10 +22,10 @@ public class ASTPrinter implements ASTVisitor<Void> {
     public Void visitProcedure(Procedure p) {
         writer.print("Procedure(");
         writer.print(p.type);
-        writer.print(","+p.name);
-        for (VarDecl vd : p.params) {
-            writer.print(",");
+        writer.print(","+p.name+",");
+        for (VarDecl vd : p.params) {            
             vd.accept(this);
+            writer.print(",");
         }
         p.block.accept(this);
         writer.print(")");
