@@ -55,8 +55,8 @@ Using EBNF syntax, the output should be of the form: `AST_NODE_CLASS_NAME '(' [S
 
 * `y = 3*x;` should result in the following output: `Assign(Var(y),BinOp(IntLiteral(3), MUL, Var(x)))`.
 * `void foo() { return; }` should result in: `Procedure(VOID, foo, Block(Return()))`.
-* `-x;` should result in: `BinOp(IntLiteral(0),MINUS,Var(x))`.
-* `-1` should result in `BinOp(IntLiteral(0),MINUS,IntLiteral(1))`.
+* `-x;` should result in: `BinOp(IntLiteral(0),SUB,Var(x))`.
+* `-1` should result in `BinOp(IntLiteral(0),SUB,IntLiteral(1))`.
 * `2+3+4` should result in `BinOp(IntLiteral(2), ADD, BinOp(IntLiteral(3), ADD, IntLiteral(4)))`  (arithmetic operators are right associative in our language (as opposed to C))
 * `2*3+4` should result in `BinOp(BinOp(IntLiteral(2), MUL, IntLiteral(3)), ADD IntLiteral(4))`  (multiplication has precendence over addition)
 
