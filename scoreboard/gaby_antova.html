@@ -1,23 +1,36 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CT Scoreboard for gaby_antova</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><style type="text/css">body { margin: 0 auto; width: 50%; padding-bottom: 30px; } td.hd { font-weight: bold; text-align: center; } td { padding: 5px; }</style></head><body><div class="container"><h2>Information</h2>
-<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>gaby_antova</td></tr><tr><td>Start</td><td>2015-10-24 16:02:19</td></tr><tr><td>End</td><td>2015-10-24 16:02:19</td></tr><tr><td>Comment ID</td><td>0f1e610901d894053adcc929a554e74a6e29dac2</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>124</td><td>Your compiler might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmprnthhlxa/gaby_antova/build.xml
+<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>gaby_antova</td></tr><tr><td>Start</td><td>2015-10-25 04:02:18</td></tr><tr><td>End</td><td>2015-10-25 04:02:18</td></tr><tr><td>Comment ID</td><td>f35f0f2cd83fc327dde8069b8d68555f02d269f0</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>124</td><td>Your compiler might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmpsjbcdq9o/gaby_antova/build.xml
 
 build-subprojects:
 
 init:
-    [mkdir] Created dir: /tmp/tmprnthhlxa/gaby_antova/bin
+    [mkdir] Created dir: /tmp/tmpsjbcdq9o/gaby_antova/bin
 
 build-project:
-     [echo] CT-15-16: /tmp/tmprnthhlxa/gaby_antova/build.xml
-    [javac] Compiling 17 source files to /tmp/tmprnthhlxa/gaby_antova/bin
-    [javac] /tmp/tmprnthhlxa/gaby_antova/src/Main.java:85: error: incompatible types
-    [javac] 	    Program programAst = parser.parse();
-    [javac] 	                                     ^
-    [javac]   required: Program
-    [javac]   found:    void
-    [javac] 1 error
+     [echo] CT-15-16: /tmp/tmpsjbcdq9o/gaby_antova/build.xml
+    [javac] Compiling 17 source files to /tmp/tmpsjbcdq9o/gaby_antova/bin
+    [javac] /tmp/tmpsjbcdq9o/gaby_antova/src/ast/ASTPrinter.java:70: error: not a statement
+    [javac]         writer.print(f.name)+",";
+    [javac]                             ^
+    [javac] /tmp/tmpsjbcdq9o/gaby_antova/src/ast/ASTPrinter.java:81: error: not a statement
+    [javac]         writer.print(bo.expr1)+",";
+    [javac]                               ^
+    [javac] /tmp/tmpsjbcdq9o/gaby_antova/src/ast/ASTPrinter.java:82: error: not a statement
+    [javac] 	writer.print(bo.op)+",";
+    [javac] 	                   ^
+    [javac] /tmp/tmpsjbcdq9o/gaby_antova/src/ast/ASTPrinter.java:94: error: not a statement
+    [javac]         writer.print(f.name)+",";
+    [javac]                             ^
+    [javac] /tmp/tmpsjbcdq9o/gaby_antova/src/ast/ASTPrinter.java:104: error: not a statement
+    [javac]         writer.print(bo.expr)+",";
+    [javac]                              ^
+    [javac] /tmp/tmpsjbcdq9o/gaby_antova/src/ast/ASTPrinter.java:105: error: not a statement
+    [javac] 	writer.print(bo.op)+",";
+    [javac] 	                   ^
+    [javac] 6 errors
 
 BUILD FAILED
-/tmp/tmprnthhlxa/gaby_antova/build.xml:48: Compile failed; see the compiler error output for details.
+/tmp/tmpsjbcdq9o/gaby_antova/build.xml:48: Compile failed; see the compiler error output for details.
 
 Total time: 0 seconds
 </pre></fieldset></div><hr /><div class="container" style="width:75%;"><a href="scoreboard.html"><button type="button" class="btn btn-default">Go back</button></a></div></div></body></html>
