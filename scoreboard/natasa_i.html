@@ -1,82 +1,82 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CT Scoreboard for natasa_i</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><style type="text/css">body { margin: 0 auto; width: 50%; padding-bottom: 30px; } td.hd { font-weight: bold; text-align: center; } td { padding: 5px; }</style></head><body><div class="container"><h2>Information</h2>
-<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>natasa_i</td></tr><tr><td>Start</td><td>2015-10-26 04:10:34</td></tr><tr><td>End</td><td>2015-10-26 04:10:34</td></tr><tr><td>Comment ID</td><td>0f892ba73b8f4f8c0738ce8d6b493f2d894b642b</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>124</td><td>Your compiler might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmpp2lqnzi4/natasa_i/build.xml
+<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>natasa_i</td></tr><tr><td>Start</td><td>2015-10-26 16:23:17</td></tr><tr><td>End</td><td>2015-10-26 16:23:41</td></tr><tr><td>Comment ID</td><td>0f892ba73b8f4f8c0738ce8d6b493f2d894b642b</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>124</td><td>Your compiler might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmpaqtt1l2t/natasa_i/build.xml
 
 build-subprojects:
 
 init:
-    [mkdir] Created dir: /tmp/tmpp2lqnzi4/natasa_i/bin
-     [copy] Copying 3 files to /tmp/tmpp2lqnzi4/natasa_i/bin
+    [mkdir] Created dir: /tmp/tmpaqtt1l2t/natasa_i/bin
+     [copy] Copying 3 files to /tmp/tmpaqtt1l2t/natasa_i/bin
 
 build-project:
-     [echo] CT-15-16: /tmp/tmpp2lqnzi4/natasa_i/build.xml
-    [javac] Compiling 29 source files to /tmp/tmpp2lqnzi4/natasa_i/bin
-    [javac] /tmp/tmpp2lqnzi4/natasa_i/src/ast/Main.java:13: error: duplicate class: Main
+     [echo] CT-15-16: /tmp/tmpaqtt1l2t/natasa_i/build.xml
+    [javac] Compiling 29 source files to /tmp/tmpaqtt1l2t/natasa_i/bin
+    [javac] /tmp/tmpaqtt1l2t/natasa_i/src/ast/Main.java:13: error: duplicate class: Main
     [javac] public class Main {
     [javac]        ^
-    [javac] /tmp/tmpp2lqnzi4/natasa_i/src/ast/Assign.java:13: error: cannot find symbol
+    [javac] /tmp/tmpaqtt1l2t/natasa_i/src/ast/Assign.java:13: error: cannot find symbol
     [javac] 	    return v.visitAssign(this);
     [javac] 	            ^
     [javac]   symbol:   method visitAssign(Assign)
     [javac]   location: variable v of type ASTVisitor<T>
     [javac]   where T is a type-variable:
     [javac]     T extends Object declared in method <T>accept(ASTVisitor<T>)
-    [javac] /tmp/tmpp2lqnzi4/natasa_i/src/ast/BinOp.java:15: error: cannot find symbol
+    [javac] /tmp/tmpaqtt1l2t/natasa_i/src/ast/BinOp.java:15: error: cannot find symbol
     [javac] 		return v.visitBinOp(this);
     [javac] 		        ^
     [javac]   symbol:   method visitBinOp(BinOp)
     [javac]   location: variable v of type ASTVisitor<T>
     [javac]   where T is a type-variable:
     [javac]     T extends Object declared in method <T>accept(ASTVisitor<T>)
-    [javac] /tmp/tmpp2lqnzi4/natasa_i/src/ast/ChrLiteral.java:12: error: cannot find symbol
+    [javac] /tmp/tmpaqtt1l2t/natasa_i/src/ast/ChrLiteral.java:12: error: cannot find symbol
     [javac] 		return v.visitChrLiteral(this);
     [javac] 		        ^
     [javac]   symbol:   method visitChrLiteral(ChrLiteral)
     [javac]   location: variable v of type ASTVisitor<T>
     [javac]   where T is a type-variable:
     [javac]     T extends Object declared in method <T>accept(ASTVisitor<T>)
-    [javac] /tmp/tmpp2lqnzi4/natasa_i/src/ast/FunCallExpr.java:15: error: cannot find symbol
+    [javac] /tmp/tmpaqtt1l2t/natasa_i/src/ast/FunCallExpr.java:15: error: cannot find symbol
     [javac] 		return v.visitFunCallExpr(this);
     [javac] 		        ^
     [javac]   symbol:   method visitFunCallExpr(FunCallExpr)
     [javac]   location: variable v of type ASTVisitor<T>
     [javac]   where T is a type-variable:
     [javac]     T extends Object declared in method <T>accept(ASTVisitor<T>)
-    [javac] /tmp/tmpp2lqnzi4/natasa_i/src/ast/FunCallStmt.java:15: error: cannot find symbol
+    [javac] /tmp/tmpaqtt1l2t/natasa_i/src/ast/FunCallStmt.java:15: error: cannot find symbol
     [javac] 	    return v.visitFunCallStmt(this);
     [javac] 	            ^
     [javac]   symbol:   method visitFunCallStmt(FunCallStmt)
     [javac]   location: variable v of type ASTVisitor<T>
     [javac]   where T is a type-variable:
     [javac]     T extends Object declared in method <T>accept(ASTVisitor<T>)
-    [javac] /tmp/tmpp2lqnzi4/natasa_i/src/ast/If.java:20: error: cannot find symbol
+    [javac] /tmp/tmpaqtt1l2t/natasa_i/src/ast/If.java:20: error: cannot find symbol
     [javac] 	    return v.visitIf(this);
     [javac] 	            ^
     [javac]   symbol:   method visitIf(If)
     [javac]   location: variable v of type ASTVisitor<T>
     [javac]   where T is a type-variable:
     [javac]     T extends Object declared in method <T>accept(ASTVisitor<T>)
-    [javac] /tmp/tmpp2lqnzi4/natasa_i/src/ast/IntLiteral.java:12: error: cannot find symbol
+    [javac] /tmp/tmpaqtt1l2t/natasa_i/src/ast/IntLiteral.java:12: error: cannot find symbol
     [javac] 		return v.visitIntLiteral(this);
     [javac] 		        ^
     [javac]   symbol:   method visitIntLiteral(IntLiteral)
     [javac]   location: variable v of type ASTVisitor<T>
     [javac]   where T is a type-variable:
     [javac]     T extends Object declared in method <T>accept(ASTVisitor<T>)
-    [javac] /tmp/tmpp2lqnzi4/natasa_i/src/ast/Return.java:15: error: cannot find symbol
+    [javac] /tmp/tmpaqtt1l2t/natasa_i/src/ast/Return.java:15: error: cannot find symbol
     [javac] 	    return v.visitReturn(this);
     [javac] 	            ^
     [javac]   symbol:   method visitReturn(Return)
     [javac]   location: variable v of type ASTVisitor<T>
     [javac]   where T is a type-variable:
     [javac]     T extends Object declared in method <T>accept(ASTVisitor<T>)
-    [javac] /tmp/tmpp2lqnzi4/natasa_i/src/ast/StrLiteral.java:11: error: cannot find symbol
+    [javac] /tmp/tmpaqtt1l2t/natasa_i/src/ast/StrLiteral.java:11: error: cannot find symbol
     [javac] 		return v.visitStrLiteral(this);
     [javac] 		        ^
     [javac]   symbol:   method visitStrLiteral(StrLiteral)
     [javac]   location: variable v of type ASTVisitor<T>
     [javac]   where T is a type-variable:
     [javac]     T extends Object declared in method <T>accept(ASTVisitor<T>)
-    [javac] /tmp/tmpp2lqnzi4/natasa_i/src/ast/While.java:13: error: cannot find symbol
+    [javac] /tmp/tmpaqtt1l2t/natasa_i/src/ast/While.java:13: error: cannot find symbol
     [javac] 	    return v.visitWhile(this);
     [javac] 	            ^
     [javac]   symbol:   method visitWhile(While)
@@ -86,7 +86,7 @@ build-project:
     [javac] 11 errors
 
 BUILD FAILED
-/tmp/tmpp2lqnzi4/natasa_i/build.xml:48: Compile failed; see the compiler error output for details.
+/tmp/tmpaqtt1l2t/natasa_i/build.xml:48: Compile failed; see the compiler error output for details.
 
-Total time: 1 second
+Total time: 0 seconds
 </pre></fieldset></div><hr /><div class="container" style="width:75%;"><a href="scoreboard.html"><button type="button" class="btn btn-default">Go back</button></a></div></div></body></html>
