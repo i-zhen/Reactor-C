@@ -1,142 +1,27 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CT Scoreboard for val0528</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><style type="text/css">body { margin: 0 auto; width: 50%; padding-bottom: 30px; } td.hd { font-weight: bold; text-align: center; } td { padding: 5px; }</style></head><body><div class="container"><h2>Information</h2>
-<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>val0528</td></tr><tr><td>Start</td><td>2015-10-25 16:19:03</td></tr><tr><td>End</td><td>2015-10-25 16:19:03</td></tr><tr><td>Comment ID</td><td>503482fdda4a91b3f60ce4e991bc652c2979b594</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>124</td><td>Your compiler might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmpe4bwrcw1/val0528/build.xml
+<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>val0528</td></tr><tr><td>Start</td><td>2015-10-26 04:17:28</td></tr><tr><td>End</td><td>2015-10-26 04:17:28</td></tr><tr><td>Comment ID</td><td>a961d2a5cb189513eb2f0521314db96be912fcba</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>124</td><td>Your compiler might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmpp2lqnzi4/val0528/build.xml
 
 build-subprojects:
 
 init:
-    [mkdir] Created dir: /tmp/tmpe4bwrcw1/val0528/bin
+    [mkdir] Created dir: /tmp/tmpp2lqnzi4/val0528/bin
 
 build-project:
-     [echo] CT-15-16: /tmp/tmpe4bwrcw1/val0528/build.xml
-    [javac] Compiling 28 source files to /tmp/tmpe4bwrcw1/val0528/bin
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:140: error: List is abstract; cannot be instantiated
-    [javac]       List<VarDecl> varDecls = new List<VarDecl>();
-    [javac]                                ^
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:146: error: List is abstract; cannot be instantiated
-    [javac]       List<Procedure> procs = new List<Procedure>();
-    [javac]                               ^
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:152: error: cannot find symbol
-    [javac]     return new Program(varDecls, procs, main);
-    [javac]                        ^
-    [javac]   symbol:   variable varDecls
-    [javac]   location: class Parser
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:152: error: cannot find symbol
-    [javac]     return new Program(varDecls, procs, main);
-    [javac]                                  ^
-    [javac]   symbol:   variable procs
-    [javac]   location: class Parser
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:157: error: List is abstract; cannot be instantiated
-    [javac]     List<Procedure> pList = new List<Procedure>();
-    [javac]                             ^
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:166: error: cannot find symbol
-    [javac]     return pList();
-    [javac]            ^
-    [javac]   symbol:   method pList()
-    [javac]   location: class Parser
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:180: error: List is abstract; cannot be instantiated
-    [javac]     List<Stmt> stmts = new List<Stmt>();
-    [javac]                        ^
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:194: error: cannot find symbol
-    [javac]       Type type = VOID;
-    [javac]                   ^
-    [javac]   symbol:   variable VOID
-    [javac]   location: class Parser
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:202: error: cannot find symbol
-    [javac]     return new Procedure(type, name, new List<VarDecl>(), body);
-    [javac]                          ^
-    [javac]   symbol:   variable type
-    [javac]   location: class Parser
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:202: error: List is abstract; cannot be instantiated
-    [javac]     return new Procedure(type, name, new List<VarDecl>(), body);
-    [javac]                                      ^
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:210: error: incompatible types
-    [javac]     List<VarDecl> params = parseParams();
-    [javac]                                       ^
-    [javac]   required: List<VarDecl>
-    [javac]   found:    void
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:218: error: incompatible types
-    [javac]     return expect(TokenClass.INT, TokenClass.CHAR, TokenClass.VOID);
-    [javac]                  ^
-    [javac]   required: Type
-    [javac]   found:    Token
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:250: error: incompatible types
-    [javac]     Var var = expect(TokenClass.IDENTIFIER);
-    [javac]                     ^
-    [javac]   required: Var
-    [javac]   found:    Token
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:271: error: List is abstract; cannot be instantiated
-    [javac]     List<VarDecl> varDecls = new List<VarDecl>();
-    [javac]                              ^
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:297: error: incompatible types
-    [javac]       Expr expr = parseExp();
-    [javac]                           ^
-    [javac]   required: Expr
-    [javac]   found:    void
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:304: error: incompatible types
-    [javac]       Expr expr = parseExp();
-    [javac]                           ^
-    [javac]   required: Expr
-    [javac]   found:    void
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:323: error: incompatible types
-    [javac]         Expr expr = parseOptLExp();
-    [javac]                                 ^
-    [javac]   required: Expr
-    [javac]   found:    Return
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:394: error: incompatible types
-    [javac]     Expr lhs = parseFactor();
-    [javac]                           ^
-    [javac]   required: Expr
-    [javac]   found:    void
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:403: error: cannot find symbol
-    [javac]       if(token == TIMES) {
-    [javac]                   ^
-    [javac]   symbol:   variable TIMES
-    [javac]   location: class Parser
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:404: error: cannot find symbol
-    [javac]         op = MUL;
-    [javac]              ^
-    [javac]   symbol:   variable MUL
-    [javac]   location: class Parser
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:405: error: cannot find symbol
-    [javac]       } else if(token == DIV) {
-    [javac]                          ^
-    [javac]   symbol:   variable DIV
-    [javac]   location: class Parser
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:406: error: cannot find symbol
-    [javac]         op = DIV;
-    [javac]              ^
-    [javac]   symbol:   variable DIV
-    [javac]   location: class Parser
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:408: error: cannot find symbol
-    [javac]         op = MOD;
-    [javac]              ^
-    [javac]   symbol:   variable MOD
-    [javac]   location: class Parser
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:410: error: incompatible types
-    [javac]       Expr rhs = parseFactor();
-    [javac]                             ^
-    [javac]   required: Expr
-    [javac]   found:    void
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:412: error: cannot find symbol
-    [javac]       return BinOp(lhs, op, rhs);
-    [javac]              ^
-    [javac]   symbol:   method BinOp(Expr,Op,Expr)
-    [javac]   location: class Parser
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:440: error: cannot find symbol
-    [javac]         parseFunCall();
-    [javac]         ^
-    [javac]   symbol:   method parseFunCall()
-    [javac]   location: class Parser
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:481: error: List is abstract; cannot be instantiated
-    [javac]     List<Expr> exprs = new List<Expr>();
-    [javac]                        ^
-    [javac] /tmp/tmpe4bwrcw1/val0528/src/parser/Parser.java:494: error: List is abstract; cannot be instantiated
-    [javac]     List<Expr> exprs = new List<Expr>();
-    [javac]                        ^
-    [javac] 28 errors
+     [echo] CT-15-16: /tmp/tmpp2lqnzi4/val0528/build.xml
+    [javac] Compiling 28 source files to /tmp/tmpp2lqnzi4/val0528/bin
+    [javac] /tmp/tmpp2lqnzi4/val0528/src/parser/Parser.java:179: error: ';' expected
+    [javac]     List<Stmt> stmts = new ArrayList<Stmt>()
+    [javac]                                             ^
+    [javac] /tmp/tmpp2lqnzi4/val0528/src/parser/Parser.java:540: error: ';' expected
+    [javac]       exprs.add(new Var(token.data))
+    [javac]                                     ^
+    [javac] /tmp/tmpp2lqnzi4/val0528/src/parser/Parser.java:554: error: ')' expected
+    [javac]       exprs.add(new Var(expect(TokenClass.IDENTIFIER).data);
+    [javac]                                                            ^
+    [javac] 3 errors
 
 BUILD FAILED
-/tmp/tmpe4bwrcw1/val0528/build.xml:48: Compile failed; see the compiler error output for details.
+/tmp/tmpp2lqnzi4/val0528/build.xml:48: Compile failed; see the compiler error output for details.
 
-Total time: 1 second
+Total time: 0 seconds
 </pre></fieldset></div><hr /><div class="container" style="width:75%;"><a href="scoreboard.html"><button type="button" class="btn btn-default">Go back</button></a></div></div></body></html>
