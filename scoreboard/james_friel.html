@@ -1,107 +1,78 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CT Scoreboard for james_friel</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><style type="text/css">body { margin: 0 auto; width: 50%; padding-bottom: 30px; } td.hd { font-weight: bold; text-align: center; } td { padding: 5px; }</style></head><body><div class="container"><h2>Information</h2>
-<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>james_friel</td></tr><tr><td>Start</td><td>2015-10-26 16:30:13</td></tr><tr><td>End</td><td>2015-10-26 16:30:34</td></tr><tr><td>Comment ID</td><td>a8806a98026cbeab89805c7ed99bde2311ff83a1</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>124</td><td>Your compiler might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmpaqtt1l2t/james_friel/build.xml
+<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>james_friel</td></tr><tr><td>Start</td><td>2015-10-27 04:15:52</td></tr><tr><td>End</td><td>2015-10-27 04:16:02</td></tr><tr><td>Comment ID</td><td>35bc4e4d3570735012b23d6823042c38ae846def</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>124</td><td>Your compiler might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmpcb45z1s1/james_friel/build.xml
 
 build-subprojects:
 
 init:
-    [mkdir] Created dir: /tmp/tmpaqtt1l2t/james_friel/bin
+    [mkdir] Created dir: /tmp/tmpcb45z1s1/james_friel/bin
 
 build-project:
-     [echo] CT-15-16: /tmp/tmpaqtt1l2t/james_friel/build.xml
-    [javac] Compiling 30 source files to /tmp/tmpaqtt1l2t/james_friel/bin
-    [javac] /tmp/tmpaqtt1l2t/james_friel/src/Main.java:85: error: incompatible types
+     [echo] CT-15-16: /tmp/tmpcb45z1s1/james_friel/build.xml
+    [javac] Compiling 30 source files to /tmp/tmpcb45z1s1/james_friel/bin
+    [javac] /tmp/tmpcb45z1s1/james_friel/src/Main.java:85: error: incompatible types
     [javac] 	    Program programAst = parser.parse();
     [javac] 	                                     ^
     [javac]   required: Program
     [javac]   found:    Void
-    [javac] /tmp/tmpaqtt1l2t/james_friel/src/parser/Parser.java:55: error: incompatible types
+    [javac] /tmp/tmpcb45z1s1/james_friel/src/parser/Parser.java:55: error: incompatible types
     [javac]         return parseProgram();
     [javac]                            ^
     [javac]   required: Void
     [javac]   found:    Program
-    [javac] /tmp/tmpaqtt1l2t/james_friel/src/parser/Parser.java:150: error: incompatible types
-    [javac]         Procedure main = parseMain();
-    [javac]                                   ^
-    [javac]   required: Procedure
-    [javac]   found:    Void
-    [javac] /tmp/tmpaqtt1l2t/james_friel/src/parser/Parser.java:173: error: incompatible types
-    [javac] 		return new VarDecl(null,null);//BIT BROKEN should return a VarDecl
+    [javac] /tmp/tmpcb45z1s1/james_friel/src/parser/Parser.java:175: error: constructor VarDecl in class VarDecl cannot be applied to given types;
+    [javac] 		return new VarDecl(typ, new Var(id));//fix typ
     [javac] 		       ^
-    [javac]   required: List<VarDecl>
-    [javac]   found:    VarDecl
-    [javac] /tmp/tmpaqtt1l2t/james_friel/src/parser/Parser.java:194: error: cannot find symbol
-    [javac] 		return new Procedure(null,null,null,b);
-    [javac] 		                                    ^
-    [javac]   symbol:   variable b
+    [javac]   required: Type,Var
+    [javac]   found: String,Var
+    [javac]   reason: actual argument String cannot be converted to Type by method invocation conversion
+    [javac] /tmp/tmpcb45z1s1/james_friel/src/parser/Parser.java:190: error: cannot find symbol
+    [javac] 			return new Procedure(typ,Var(id),para,b);//There's an issue here
+    [javac] 			                         ^
+    [javac]   symbol:   method Var(String)
     [javac]   location: class Parser
-    [javac] /tmp/tmpaqtt1l2t/james_friel/src/parser/Parser.java:194: error: incompatible types
-    [javac] 		return new Procedure(null,null,null,b);
-    [javac] 		       ^
-    [javac]   required: List<Procedure>
-    [javac]   found:    Procedure
-    [javac] /tmp/tmpaqtt1l2t/james_friel/src/parser/Parser.java:247: error: incompatible types
-    [javac] 			List<Stmt> stm = stmt();
-    [javac] 			                     ^
-    [javac]   required: List<Stmt>
-    [javac]   found:    Stmt
-    [javac] /tmp/tmpaqtt1l2t/james_friel/src/parser/Parser.java:249: error: cannot find symbol
-    [javac] 		return new List<Stmt>(stm);
-    [javac] 		                      ^
-    [javac]   symbol:   variable stm
+    [javac] /tmp/tmpcb45z1s1/james_friel/src/parser/Parser.java:210: error: cannot find symbol
+    [javac] 		return new VarDecl(typ, Var(id));//Fix typ
+    [javac] 		                        ^
+    [javac]   symbol:   method Var(String)
     [javac]   location: class Parser
-    [javac] /tmp/tmpaqtt1l2t/james_friel/src/parser/Parser.java:249: error: List is abstract; cannot be instantiated
-    [javac] 		return new List<Stmt>(stm);
+    [javac] /tmp/tmpcb45z1s1/james_friel/src/parser/Parser.java:224: error: cannot find symbol
+    [javac] 		return Procedure(VOID,"MAIN",null,b); ///Fix actual return for void and main
+    [javac] 		                 ^
+    [javac]   symbol:   variable VOID
+    [javac]   location: class Parser
+    [javac] /tmp/tmpcb45z1s1/james_friel/src/parser/Parser.java:238: error: cannot find symbol
+    [javac] 			return VarDecl(typ,Var(id));//Errrr??...
+    [javac] 			                   ^
+    [javac]   symbol:   method Var(String)
+    [javac]   location: class Parser
+    [javac] /tmp/tmpcb45z1s1/james_friel/src/parser/Parser.java:247: error: Stmt is abstract; cannot be instantiated
+    [javac] 		return new Stmt(stm);///ISSUES
     [javac] 		       ^
-    [javac] /tmp/tmpaqtt1l2t/james_friel/src/parser/Parser.java:258: error: Expr is abstract; cannot be instantiated
+    [javac] /tmp/tmpcb45z1s1/james_friel/src/parser/Parser.java:256: error: Expr is abstract; cannot be instantiated
     [javac] 		return new Expr();
     [javac] 		       ^
-    [javac] /tmp/tmpaqtt1l2t/james_friel/src/parser/Parser.java:269: error: cannot find symbol
-    [javac] 			return new Stmt(decl, stlist);
+    [javac] /tmp/tmpcb45z1s1/james_friel/src/parser/Parser.java:267: error: cannot find symbol
+    [javac] 			return new Stmt(vd, stlist); //THIS IS FUCKED APPARENTLY
     [javac] 			                ^
-    [javac]   symbol:   variable decl
+    [javac]   symbol:   variable vd
     [javac]   location: class Parser
-    [javac] /tmp/tmpaqtt1l2t/james_friel/src/parser/Parser.java:269: error: cannot find symbol
-    [javac] 			return new Stmt(decl, stlist);
-    [javac] 			                      ^
-    [javac]   symbol:   variable stlist
-    [javac]   location: class Parser
-    [javac] /tmp/tmpaqtt1l2t/james_friel/src/parser/Parser.java:269: error: Stmt is abstract; cannot be instantiated
-    [javac] 			return new Stmt(decl, stlist);
+    [javac] /tmp/tmpcb45z1s1/james_friel/src/parser/Parser.java:267: error: Stmt is abstract; cannot be instantiated
+    [javac] 			return new Stmt(vd, stlist); //THIS IS FUCKED APPARENTLY
     [javac] 			       ^
-    [javac] /tmp/tmpaqtt1l2t/james_friel/src/parser/Parser.java:276: error: cannot find symbol
-    [javac] 			return new While(exp1, stmt1);
-    [javac] 			                 ^
-    [javac]   symbol:   variable exp1
+    [javac] /tmp/tmpcb45z1s1/james_friel/src/parser/Parser.java:283: error: incompatible types
+    [javac] 				List<Stmt> slist = stmt();
+    [javac] 				                       ^
+    [javac]   required: List<Stmt>
+    [javac]   found:    Stmt
+    [javac] /tmp/tmpcb45z1s1/james_friel/src/parser/Parser.java:309: error: cannot find symbol
+    [javac] 				return new FunCallStmt(prnt,StrLiterla(sl));//This right?
+    [javac] 				                            ^
+    [javac]   symbol:   method StrLiterla(String)
     [javac]   location: class Parser
-    [javac] /tmp/tmpaqtt1l2t/james_friel/src/parser/Parser.java:276: error: cannot find symbol
-    [javac] 			return new While(exp1, stmt1);
-    [javac] 			                       ^
-    [javac]   symbol:   variable stmt1
-    [javac]   location: class Parser
-    [javac] /tmp/tmpaqtt1l2t/james_friel/src/parser/Parser.java:276: error: incompatible types
-    [javac] 			return new While(exp1, stmt1);
-    [javac] 			       ^
-    [javac]   required: Stmt
-    [javac]   found:    While
-    [javac] /tmp/tmpaqtt1l2t/james_friel/src/parser/Parser.java:287: error: cannot find symbol
-    [javac] 			return new If(exp1, stmt1);
-    [javac] 			              ^
-    [javac]   symbol:   variable exp1
-    [javac]   location: class Parser
-    [javac] /tmp/tmpaqtt1l2t/james_friel/src/parser/Parser.java:287: error: cannot find symbol
-    [javac] 			return new If(exp1, stmt1);
-    [javac] 			                    ^
-    [javac]   symbol:   variable stmt1
-    [javac]   location: class Parser
-    [javac] /tmp/tmpaqtt1l2t/james_friel/src/parser/Parser.java:287: error: incompatible types
-    [javac] 			return new If(exp1, stmt1);
-    [javac] 			       ^
-    [javac]   required: Stmt
-    [javac]   found:    If
-    [javac] 19 errors
+    [javac] 13 errors
 
 BUILD FAILED
-/tmp/tmpaqtt1l2t/james_friel/build.xml:48: Compile failed; see the compiler error output for details.
+/tmp/tmpcb45z1s1/james_friel/build.xml:48: Compile failed; see the compiler error output for details.
 
 Total time: 0 seconds
 </pre></fieldset></div><hr /><div class="container" style="width:75%;"><a href="scoreboard.html"><button type="button" class="btn btn-default">Go back</button></a></div></div></body></html>
