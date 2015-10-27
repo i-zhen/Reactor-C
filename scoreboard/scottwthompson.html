@@ -1,63 +1,21 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CT Scoreboard for scottwthompson</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><style type="text/css">body { margin: 0 auto; width: 50%; padding-bottom: 30px; } td.hd { font-weight: bold; text-align: center; } td { padding: 5px; }</style></head><body><div class="container"><h2>Information</h2>
-<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>scottwthompson</td></tr><tr><td>Start</td><td>2015-10-27 04:17:12</td></tr><tr><td>End</td><td>2015-10-27 04:17:22</td></tr><tr><td>Comment ID</td><td>2f0b0a958d935eb2f60e2688f40e74e225cd3085</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>124</td><td>Your compiler might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmpcb45z1s1/scottwthompson/build.xml
+<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>scottwthompson</td></tr><tr><td>Start</td><td>2015-10-27 16:20:22</td></tr><tr><td>End</td><td>2015-10-27 16:20:27</td></tr><tr><td>Comment ID</td><td>28c53b61b85c5a3b4ad4d6195911c4615b4e99e2</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>124</td><td>Your compiler might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmps6aky9td/scottwthompson/build.xml
 
 build-subprojects:
 
 init:
-    [mkdir] Created dir: /tmp/tmpcb45z1s1/scottwthompson/bin
+    [mkdir] Created dir: /tmp/tmps6aky9td/scottwthompson/bin
 
 build-project:
-     [echo] CT-15-16: /tmp/tmpcb45z1s1/scottwthompson/build.xml
-    [javac] Compiling 28 source files to /tmp/tmpcb45z1s1/scottwthompson/bin
-    [javac] /tmp/tmpcb45z1s1/scottwthompson/src/ast/ASTPrinter.java:156: error: cannot find symbol
-    [javac]         f.stmt1.accept(this);
-    [javac]          ^
-    [javac]   symbol:   variable stmt1
-    [javac]   location: variable f of type If
-    [javac] /tmp/tmpcb45z1s1/scottwthompson/src/ast/ASTPrinter.java:157: error: cannot find symbol
-    [javac]         if (!f.stmt2.equals(null)) {
-    [javac]               ^
-    [javac]   symbol:   variable stmt2
-    [javac]   location: variable f of type If
-    [javac] /tmp/tmpcb45z1s1/scottwthompson/src/ast/ASTPrinter.java:159: error: cannot find symbol
-    [javac]             f.stmt2.accept(this);
-    [javac]              ^
-    [javac]   symbol:   variable stmt2
-    [javac]   location: variable f of type If
-    [javac] /tmp/tmpcb45z1s1/scottwthompson/src/parser/Parser.java:128: error: incompatible types
-    [javac]         List<VarDecl> varDecls = parseDecls();
-    [javac]                                            ^
-    [javac]   required: List<VarDecl>
-    [javac]   found:    void
-    [javac] /tmp/tmpcb45z1s1/scottwthompson/src/parser/Parser.java:129: error: incompatible types
-    [javac]         List<Procedure> procs = parseProcs();
-    [javac]                                           ^
-    [javac]   required: List<Procedure>
-    [javac]   found:    void
-    [javac] /tmp/tmpcb45z1s1/scottwthompson/src/parser/Parser.java:130: error: incompatible types
-    [javac]         Procedure main = parseMain();
-    [javac]                                   ^
-    [javac]   required: Procedure
-    [javac]   found:    void
-    [javac] /tmp/tmpcb45z1s1/scottwthompson/src/parser/Parser.java:240: error: cannot find symbol
-    [javac]                 parseLexp();
-    [javac]                 ^
-    [javac]   symbol:   method parseLexp()
-    [javac]   location: class Parser
-    [javac] /tmp/tmpcb45z1s1/scottwthompson/src/parser/Parser.java:251: error: cannot find symbol
-    [javac]                 parseLexp();
-    [javac]                 ^
-    [javac]   symbol:   method parseLexp()
-    [javac]   location: class Parser
-    [javac] /tmp/tmpcb45z1s1/scottwthompson/src/parser/Parser.java:258: error: cannot find symbol
-    [javac]                 parseLexp();
-    [javac]                 ^
-    [javac]   symbol:   method parseLexp()
-    [javac]   location: class Parser
-    [javac] 9 errors
+     [echo] CT-15-16: /tmp/tmps6aky9td/scottwthompson/build.xml
+    [javac] Compiling 28 source files to /tmp/tmps6aky9td/scottwthompson/bin
+    [javac] /tmp/tmps6aky9td/scottwthompson/src/parser/Parser.java:13: error: package java.util.stream does not exist
+    [javac] import java.util.stream.StreamSupport;
+    [javac]                        ^
+    [javac] 1 error
 
 BUILD FAILED
-/tmp/tmpcb45z1s1/scottwthompson/build.xml:48: Compile failed; see the compiler error output for details.
+/tmp/tmps6aky9td/scottwthompson/build.xml:48: Compile failed; see the compiler error output for details.
 
 Total time: 0 seconds
 </pre></fieldset></div><hr /><div class="container" style="width:75%;"><a href="scoreboard.html"><button type="button" class="btn btn-default">Go back</button></a></div></div></body></html>

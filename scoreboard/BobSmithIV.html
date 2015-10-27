@@ -1,26 +1,146 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CT Scoreboard for BobSmithIV</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><style type="text/css">body { margin: 0 auto; width: 50%; padding-bottom: 30px; } td.hd { font-weight: bold; text-align: center; } td { padding: 5px; }</style></head><body><div class="container"><h2>Information</h2>
-<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>BobSmithIV</td></tr><tr><td>Start</td><td>2015-10-27 04:14:45</td></tr><tr><td>End</td><td>2015-10-27 04:14:50</td></tr><tr><td>Comment ID</td><td>1c289b532c3bbad70d57c075ef28d5890599061a</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>124</td><td>Your compiler might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmpcb45z1s1/BobSmithIV/build.xml
+<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>BobSmithIV</td></tr><tr><td>Start</td><td>2015-10-27 16:17:53</td></tr><tr><td>End</td><td>2015-10-27 16:17:57</td></tr><tr><td>Comment ID</td><td>14bc8351dadd816bea30c1d5b7a61fcd7b22c175</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>124</td><td>Your compiler might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmps6aky9td/BobSmithIV/build.xml
 
 build-subprojects:
 
 init:
-    [mkdir] Created dir: /tmp/tmpcb45z1s1/BobSmithIV/bin
+    [mkdir] Created dir: /tmp/tmps6aky9td/BobSmithIV/bin
 
 build-project:
-     [echo] CT-15-16: /tmp/tmpcb45z1s1/BobSmithIV/build.xml
-    [javac] Compiling 17 source files to /tmp/tmpcb45z1s1/BobSmithIV/bin
-    [javac] /tmp/tmpcb45z1s1/BobSmithIV/src/parser/Parser.java:37: error: incompatible types
+     [echo] CT-15-16: /tmp/tmps6aky9td/BobSmithIV/build.xml
+    [javac] Compiling 28 source files to /tmp/tmps6aky9td/BobSmithIV/bin
+    [javac] /tmp/tmps6aky9td/BobSmithIV/src/ast/Block.java:5: error: cannot find symbol
+    [javac]     public final List<VarDecl> varDecls;
+    [javac]                  ^
+    [javac]   symbol:   class List
+    [javac]   location: class Block
+    [javac] /tmp/tmps6aky9td/BobSmithIV/src/ast/Block.java:6: error: cannot find symbol
+    [javac]     public final List<Stmt> stmts;
+    [javac]                  ^
+    [javac]   symbol:   class List
+    [javac]   location: class Block
+    [javac] /tmp/tmps6aky9td/BobSmithIV/src/ast/Block.java:8: error: cannot find symbol
+    [javac]     public Block(List<VarDecl> varDecls, List<Stmt> stmts) {
+    [javac]                  ^
+    [javac]   symbol:   class List
+    [javac]   location: class Block
+    [javac] /tmp/tmps6aky9td/BobSmithIV/src/ast/Block.java:8: error: cannot find symbol
+    [javac]     public Block(List<VarDecl> varDecls, List<Stmt> stmts) {
+    [javac]                                          ^
+    [javac]   symbol:   class List
+    [javac]   location: class Block
+    [javac] /tmp/tmps6aky9td/BobSmithIV/src/ast/FunCallExpr.java:6: error: cannot find symbol
+    [javac]     public final List<Expr> exprs;
+    [javac]                  ^
+    [javac]   symbol:   class List
+    [javac]   location: class FunCallExpr
+    [javac] /tmp/tmps6aky9td/BobSmithIV/src/ast/FunCallExpr.java:8: error: cannot find symbol
+    [javac]     public FunCallExpr(String name, List<Expr> exprs){
+    [javac]                                     ^
+    [javac]   symbol:   class List
+    [javac]   location: class FunCallExpr
+    [javac] /tmp/tmps6aky9td/BobSmithIV/src/ast/FunCallStmt.java:6: error: cannot find symbol
+    [javac]     public final List<Expr> exprs;
+    [javac]                  ^
+    [javac]   symbol:   class List
+    [javac]   location: class FunCallStmt
+    [javac] /tmp/tmps6aky9td/BobSmithIV/src/ast/FunCallStmt.java:8: error: cannot find symbol
+    [javac]     public FunCallStmt(String name, List<Expr> exprs) {
+    [javac]                                     ^
+    [javac]   symbol:   class List
+    [javac]   location: class FunCallStmt
+    [javac] /tmp/tmps6aky9td/BobSmithIV/src/ast/Assign.java:14: error: cannot find symbol
+    [javac] 	    return v.visitAssign(this);
+    [javac] 	            ^
+    [javac]   symbol:   method visitAssign(Assign)
+    [javac]   location: variable v of type ASTVisitor<T>
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>accept(ASTVisitor<T>)
+    [javac] /tmp/tmps6aky9td/BobSmithIV/src/ast/BinOp.java:16: error: cannot find symbol
+    [javac] 	    return v.visitBinOp(this);
+    [javac] 	            ^
+    [javac]   symbol:   method visitBinOp(BinOp)
+    [javac]   location: variable v of type ASTVisitor<T>
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>accept(ASTVisitor<T>)
+    [javac] /tmp/tmps6aky9td/BobSmithIV/src/ast/ChrLiteral.java:11: error: cannot find symbol
+    [javac] 	    return v.visitChrLiteral(this);
+    [javac] 	            ^
+    [javac]   symbol:   method visitChrLiteral(ChrLiteral)
+    [javac]   location: variable v of type ASTVisitor<T>
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>accept(ASTVisitor<T>)
+    [javac] /tmp/tmps6aky9td/BobSmithIV/src/ast/FunCallExpr.java:14: error: cannot find symbol
+    [javac] 	    return v.visitFunCallExpr(this);
+    [javac] 	            ^
+    [javac]   symbol:   method visitFunCallExpr(FunCallExpr)
+    [javac]   location: variable v of type ASTVisitor<T>
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>accept(ASTVisitor<T>)
+    [javac] /tmp/tmps6aky9td/BobSmithIV/src/ast/FunCallStmt.java:14: error: cannot find symbol
+    [javac] 	    return v.visitFunCallStmt(this);
+    [javac] 	            ^
+    [javac]   symbol:   method visitFunCallStmt(FunCallStmt)
+    [javac]   location: variable v of type ASTVisitor<T>
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>accept(ASTVisitor<T>)
+    [javac] /tmp/tmps6aky9td/BobSmithIV/src/ast/If.java:12: error: cannot find symbol
+    [javac] 	    this.elseStmt = Null;
+    [javac] 	                    ^
+    [javac]   symbol:   variable Null
+    [javac]   location: class If
+    [javac] /tmp/tmps6aky9td/BobSmithIV/src/ast/If.java:22: error: cannot find symbol
+    [javac] 	    return v.visitIf(this);
+    [javac] 	            ^
+    [javac]   symbol:   method visitIf(If)
+    [javac]   location: variable v of type ASTVisitor<T>
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>accept(ASTVisitor<T>)
+    [javac] /tmp/tmps6aky9td/BobSmithIV/src/ast/IntLiteral.java:11: error: cannot find symbol
+    [javac] 	    return v.visitIntLiteral(this);
+    [javac] 	            ^
+    [javac]   symbol:   method visitIntLiteral(IntLiteral)
+    [javac]   location: variable v of type ASTVisitor<T>
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>accept(ASTVisitor<T>)
+    [javac] /tmp/tmps6aky9td/BobSmithIV/src/ast/Return.java:8: error: cannot find symbol
+    [javac] 	    this.expr = Null;
+    [javac] 	                ^
+    [javac]   symbol:   variable Null
+    [javac]   location: class Return
+    [javac] /tmp/tmps6aky9td/BobSmithIV/src/ast/Return.java:16: error: cannot find symbol
+    [javac] 	    return v.visitReturn(this);
+    [javac] 	            ^
+    [javac]   symbol:   method visitReturn(Return)
+    [javac]   location: variable v of type ASTVisitor<T>
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>accept(ASTVisitor<T>)
+    [javac] /tmp/tmps6aky9td/BobSmithIV/src/ast/StrLiteral.java:11: error: cannot find symbol
+    [javac] 	    return v.visitStrLiteral(this);
+    [javac] 	            ^
+    [javac]   symbol:   method visitStrLiteral(StrLiteral)
+    [javac]   location: variable v of type ASTVisitor<T>
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>accept(ASTVisitor<T>)
+    [javac] /tmp/tmps6aky9td/BobSmithIV/src/ast/While.java:14: error: cannot find symbol
+    [javac] 	    return v.visitWhile(this);
+    [javac] 	            ^
+    [javac]   symbol:   method visitWhile(While)
+    [javac]   location: variable v of type ASTVisitor<T>
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>accept(ASTVisitor<T>)
+    [javac] /tmp/tmps6aky9td/BobSmithIV/src/parser/Parser.java:37: error: incompatible types
     [javac]         return parseProgram();
     [javac]                            ^
     [javac]   required: Program
     [javac]   found:    void
-    [javac] /tmp/tmpcb45z1s1/BobSmithIV/src/parser/Parser.java:134: error: cannot return a value from method whose result type is void
+    [javac] /tmp/tmps6aky9td/BobSmithIV/src/parser/Parser.java:134: error: cannot return a value from method whose result type is void
     [javac]         return new Program(varDecls, procs, main);
     [javac]                ^
-    [javac] 2 errors
+    [javac] 22 errors
 
 BUILD FAILED
-/tmp/tmpcb45z1s1/BobSmithIV/build.xml:48: Compile failed; see the compiler error output for details.
+/tmp/tmps6aky9td/BobSmithIV/build.xml:48: Compile failed; see the compiler error output for details.
 
 Total time: 0 seconds
 </pre></fieldset></div><hr /><div class="container" style="width:75%;"><a href="scoreboard.html"><button type="button" class="btn btn-default">Go back</button></a></div></div></body></html>
