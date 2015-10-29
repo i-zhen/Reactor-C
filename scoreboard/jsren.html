@@ -1,136 +1,30 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CT Scoreboard for jsren</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><style type="text/css">body { margin: 0 auto; width: 50%; padding-bottom: 30px; } td.hd { font-weight: bold; text-align: center; } td { padding: 5px; }</style></head><body><div class="container"><h2>Information</h2>
-<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>jsren</td></tr><tr><td>Start</td><td>2015-10-28 16:25:54</td></tr><tr><td>End</td><td>2015-10-28 16:26:09</td></tr><tr><td>Comment ID</td><td>d19e1943d33a21c400cc2265be0be9e00343d4e0</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>124</td><td>Your compiler might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmpn8oik7nn/jsren/build.xml
+<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>jsren</td></tr><tr><td>Start</td><td>2015-10-29 04:25:18</td></tr><tr><td>End</td><td>2015-10-29 04:25:24</td></tr><tr><td>Comment ID</td><td>b4b205dac27674cd9db98b6c2bf5f1acdafd9e1f</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>124</td><td>Your compiler might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmp1cpfp_hd/jsren/build.xml
 
 build-subprojects:
 
 init:
-    [mkdir] Created dir: /tmp/tmpn8oik7nn/jsren/bin
+    [mkdir] Created dir: /tmp/tmp1cpfp_hd/jsren/bin
 
 build-project:
-     [echo] CT-15-16: /tmp/tmpn8oik7nn/jsren/build.xml
-    [javac] Compiling 23 source files to /tmp/tmpn8oik7nn/jsren/bin
-    [javac] /tmp/tmpn8oik7nn/jsren/src/ast/ASTPrinter.java:6: error: cannot find symbol
-    [javac] import java.util.StringJoiner;
-    [javac]                 ^
-    [javac]   symbol:   class StringJoiner
-    [javac]   location: package java.util
-    [javac] /tmp/tmpn8oik7nn/jsren/src/Main.java:81: error: cannot find symbol
-    [javac] 	    parser.parse();
-    [javac] 	          ^
-    [javac]   symbol:   method parse()
-    [javac]   location: variable parser of type Parser
-    [javac] /tmp/tmpn8oik7nn/jsren/src/Main.java:85: error: cannot find symbol
-    [javac] 	    Program programAst = parser.parse();
-    [javac] 	                               ^
-    [javac]   symbol:   method parse()
-    [javac]   location: variable parser of type Parser
-    [javac] /tmp/tmpn8oik7nn/jsren/src/parser/ParserBase.java:48: error: cannot find symbol
-    [javac]         return elementType.construct(tokens);
-    [javac]                           ^
-    [javac]   symbol:   method construct(Token[])
-    [javac]   location: variable elementType of type T
-    [javac]   where T is a type-variable:
-    [javac]     T extends Tree declared in method <T>endElement(T)
-    [javac] /tmp/tmpn8oik7nn/jsren/src/parser/Parser.java:143: error: constructor Block in class Block cannot be applied to given types;
-    [javac]         return new Block(varDecls, stmts);
-    [javac]                ^
-    [javac]   required: no arguments
-    [javac]   found: List<VarDecl>,List<Stmt>
-    [javac]   reason: actual and formal argument lists differ in length
-    [javac] /tmp/tmpn8oik7nn/jsren/src/parser/Parser.java:156: error: cannot find symbol
-    [javac]                 return FunCallStmt(name, args);
-    [javac]                        ^
-    [javac]   symbol:   method FunCallStmt(Token,List<Expr>)
-    [javac]   location: class Parser
-    [javac] /tmp/tmpn8oik7nn/jsren/src/parser/Parser.java:163: error: cannot find symbol
-    [javac]                 return new Assign(new Var(name), expr);
-    [javac]                            ^
-    [javac]   symbol:   class Assign
-    [javac]   location: class Parser
-    [javac] /tmp/tmpn8oik7nn/jsren/src/parser/Parser.java:177: error: cannot find symbol
-    [javac]             return new If(cnd, ifbody, elsebody);
-    [javac]                        ^
-    [javac]   symbol:   class If
-    [javac]   location: class Parser
-    [javac] /tmp/tmpn8oik7nn/jsren/src/parser/Parser.java:188: error: cannot find symbol
-    [javac]             return new FunCallStmt(identifier);
-    [javac]                        ^
-    [javac]   symbol:   class FunCallStmt
-    [javac]   location: class Parser
-    [javac] /tmp/tmpn8oik7nn/jsren/src/parser/Parser.java:199: error: cannot find symbol
-    [javac]                     arg = StrLiteral(readToken(TokenClass.STRING_LITERAL, "Error parsing `print_s` function call"));
-    [javac]                           ^
-    [javac]   symbol:   method StrLiteral(Token)
-    [javac]   location: class Parser
-    [javac] /tmp/tmpn8oik7nn/jsren/src/parser/Parser.java:205: error: cannot find symbol
-    [javac]             return new FunCallStmt(identifier, arg);
-    [javac]                        ^
-    [javac]   symbol:   class FunCallStmt
-    [javac]   location: class Parser
-    [javac] /tmp/tmpn8oik7nn/jsren/src/parser/Parser.java:212: error: cannot find symbol
-    [javac]             return new While(expr, stmt);
-    [javac]                        ^
-    [javac]   symbol:   class While
-    [javac]   location: class Parser
-    [javac] /tmp/tmpn8oik7nn/jsren/src/parser/Parser.java:221: error: cannot find symbol
-    [javac]             return new Return(term);
-    [javac]                        ^
-    [javac]   symbol:   class Return
-    [javac]   location: class Parser
-    [javac] /tmp/tmpn8oik7nn/jsren/src/parser/Parser.java:233: error: cannot find symbol
-    [javac]                 expr = new BinOp(expr, op, parseFactor()); op = null;
-    [javac]                            ^
-    [javac]   symbol:   class BinOp
-    [javac]   location: class Parser
-    [javac] /tmp/tmpn8oik7nn/jsren/src/parser/Parser.java:241: error: cannot find symbol
-    [javac]             return new BinOp(expr, op2, parseTerm());
-    [javac]                        ^
-    [javac]   symbol:   class BinOp
-    [javac]   location: class Parser
-    [javac] /tmp/tmpn8oik7nn/jsren/src/parser/Parser.java:252: error: cannot find symbol
-    [javac]             if (acceptToken(TokenClass.LPAR)) return new FunCallExpr(token, parseParams());
-    [javac]                                                          ^
-    [javac]   symbol:   class FunCallExpr
-    [javac]   location: class Parser
-    [javac] /tmp/tmpn8oik7nn/jsren/src/parser/Parser.java:258: error: cannot find symbol
-    [javac]             return new IntLiteral(token);
-    [javac]                        ^
-    [javac]   symbol:   class IntLiteral
-    [javac]   location: class Parser
-    [javac] /tmp/tmpn8oik7nn/jsren/src/parser/Parser.java:261: error: cannot find symbol
-    [javac]             return new ChrLiteral(token);
-    [javac]                        ^
-    [javac]   symbol:   class ChrLiteral
-    [javac]   location: class Parser
-    [javac] /tmp/tmpn8oik7nn/jsren/src/parser/Parser.java:266: error: cannot find symbol
-    [javac]             return new BinOp(IntLiteral(new FakeToken(TokenClass.INT, "0")), token,
-    [javac]                        ^
-    [javac]   symbol:   class BinOp
-    [javac]   location: class Parser
-    [javac] /tmp/tmpn8oik7nn/jsren/src/parser/Parser.java:266: error: cannot find symbol
-    [javac]             return new BinOp(IntLiteral(new FakeToken(TokenClass.INT, "0")), token,
-    [javac]                              ^
-    [javac]   symbol:   method IntLiteral(FakeToken)
-    [javac]   location: class Parser
-    [javac] /tmp/tmpn8oik7nn/jsren/src/parser/Parser.java:281: error: cannot find symbol
-    [javac]             return new FunCallExpr(token);
-    [javac]                        ^
-    [javac]   symbol:   class FunCallExpr
-    [javac]   location: class Parser
-    [javac] /tmp/tmpn8oik7nn/jsren/src/parser/Parser.java:292: error: cannot find symbol
-    [javac]             return new BinOp(expr, Op.fromToken(op), parseTerm());
-    [javac]                        ^
-    [javac]   symbol:   class BinOp
-    [javac]   location: class Parser
-    [javac] /tmp/tmpn8oik7nn/jsren/src/parser/Parser.java:292: error: cannot find symbol
-    [javac]             return new BinOp(expr, Op.fromToken(op), parseTerm());
-    [javac]                                    ^
-    [javac]   symbol:   variable Op
-    [javac]   location: class Parser
-    [javac] 23 errors
+     [echo] CT-15-16: /tmp/tmp1cpfp_hd/jsren/build.xml
+    [javac] Compiling 34 source files to /tmp/tmp1cpfp_hd/jsren/bin
+    [javac] /tmp/tmp1cpfp_hd/jsren/src/parser/Parser.java:196: error: constructor FunCallStmt in class FunCallStmt cannot be applied to given types;
+    [javac]             return new FunCallStmt(name, new ArrayList<>(0));
+    [javac]                    ^
+    [javac]   required: Token,List<Expr>
+    [javac]   found: Token,ArrayList<Object>
+    [javac]   reason: actual argument ArrayList<Object> cannot be converted to List<Expr> by method invocation conversion
+    [javac] /tmp/tmp1cpfp_hd/jsren/src/parser/Parser.java:295: error: constructor FunCallExpr in class FunCallExpr cannot be applied to given types;
+    [javac]             return new FunCallExpr(token, new ArrayList<>(0));
+    [javac]                    ^
+    [javac]   required: Token,List<Expr>
+    [javac]   found: Token,ArrayList<Object>
+    [javac]   reason: actual argument ArrayList<Object> cannot be converted to List<Expr> by method invocation conversion
+    [javac] 2 errors
 
 BUILD FAILED
-/tmp/tmpn8oik7nn/jsren/build.xml:48: Compile failed; see the compiler error output for details.
+/tmp/tmp1cpfp_hd/jsren/build.xml:48: Compile failed; see the compiler error output for details.
 
-Total time: 0 seconds
+Total time: 1 second
 </pre></fieldset></div><hr /><div class="container" style="width:75%;"><a href="scoreboard.html"><button type="button" class="btn btn-default">Go back</button></a></div></div></body></html>
