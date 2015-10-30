@@ -24,7 +24,7 @@ public class Token {
 	// special functions
         MAIN,  // "main"
         PRINT, // "print_s" | "print_i" | "print_c"
-	READ,  // "read_i" | "read_c"
+	    READ,  // "read_i" | "read_c"
 
         // types
         INT,  // "int"
