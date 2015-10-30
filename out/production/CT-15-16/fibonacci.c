@@ -8,7 +8,7 @@ void main() {
   int c;
   char t;
 
-  char ch_4124_@ = 90;
+  char __ = '\f';
 
   // read n from the standard input
   n = read_i();

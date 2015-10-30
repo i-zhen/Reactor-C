@@ -194,16 +194,25 @@ public class Tokeniser {
         //Character
         if(c == '\'') {
             c = scanner.next();
-            if (c == '\\')
+            if (c == '\\') {
                 c = scanner.next();
-            if(c == 't') c = '\t';
-            if(c == 'b') c = '\b';
-            if(c == 'n') c = '\n';
-            if(c == 'r') c = '\r';
-            if(c == 'f') c = '\f';
-            if(c == '\'') c = '\'';
-            if(c == '\"') c = '\"';
-            if(c == '\\') c = '\\';
+                if (c == 't') c = '\t';
+                else if (c == 'n') c = '\n';
+                else if (c == 'r') c = '\r';
+                else if (c == 'b') c = '\b';
+                else if (c == 'f') c = '\f';
+                else if (c == '\'') c = '\'';
+                else if (c == '\"') c = '\"';
+                else if (c == '\\') c = '\\';
+                else {
+                    error(c, line, column);
+                    return new Token(TokenClass.INVALID, line, column);
+                }
+            }
+            if(Character.isDigit(c)){
+                error(c, line, column);
+                return new Token(TokenClass.INVALID, line, column);
+            }
             String chr = "" + c;
             c = scanner.next();
             if(c != '\'') {
@@ -215,7 +224,7 @@ public class Tokeniser {
 
 
         // identifier
-        if(Character.isLetter(c)){
+        if(Character.isLetter(c) || c == '_'){
             StringBuilder sb = new StringBuilder();
             sb.append(c);
             c = scanner.peek();
