@@ -61,19 +61,40 @@ public class Tokeniser {
         //include
         if (c == '#') {
             c = scanner.next();
-            if (c != 'i') return new Token(TokenClass.INVALID, line, column);
+            if (c != 'i'){
+                error(c, line, column);
+                return new Token(TokenClass.INVALID, line, column);
+            }
             c = scanner.next();
-            if (c != 'n') return new Token(TokenClass.INVALID, line, column);
+            if (c != 'n') {
+                error(c, line, column);
+                return new Token(TokenClass.INVALID, line, column);
+            }
             c = scanner.next();
-            if (c != 'c') return new Token(TokenClass.INVALID, line, column);
+            if (c != 'c') {
+                error(c, line, column);
+                return new Token(TokenClass.INVALID, line, column);
+            }
             c = scanner.next();
-            if (c != 'l') return new Token(TokenClass.INVALID, line, column);
+            if (c != 'l') {
+                error(c, line, column);
+                return new Token(TokenClass.INVALID, line, column);
+            }
             c = scanner.next();
-            if (c != 'u') return new Token(TokenClass.INVALID, line, column);
+            if (c != 'u') {
+                error(c, line, column);
+                return new Token(TokenClass.INVALID, line, column);
+            }
             c = scanner.next();
-            if (c != 'd') return new Token(TokenClass.INVALID, line, column);
+            if (c != 'd') {
+                error(c, line, column);
+                return new Token(TokenClass.INVALID, line, column);
+            }
             c = scanner.next();
-            if (c != 'e') return new Token(TokenClass.INVALID, line, column);
+            if (c != 'e') {
+                error(c, line, column);
+                return new Token(TokenClass.INVALID, line, column);
+            }
             return new Token(TokenClass.INCLUDE, line, column);
         }
 
@@ -123,6 +144,7 @@ public class Tokeniser {
             c = scanner.next();
             if (c == '=')
                 return new Token(TokenClass.NE, line, column);
+            error(c, line, column);
             return new Token(TokenClass.INVALID, line, column);
         }
 
@@ -175,17 +197,19 @@ public class Tokeniser {
             if (c == '\\')
                 c = scanner.next();
             if(c == 't') c = '\t';
-            if(c == 'b') c = '\t';
-            if(c == 'n') c = '\t';
-            if(c == 'r') c = '\t';
-            if(c == 'f') c = '\t';
+            if(c == 'b') c = '\b';
+            if(c == 'n') c = '\n';
+            if(c == 'r') c = '\r';
+            if(c == 'f') c = '\f';
             if(c == '\'') c = '\'';
             if(c == '\"') c = '\"';
             if(c == '\\') c = '\\';
             String chr = "" + c;
             c = scanner.next();
-            if(c != '\'')
+            if(c != '\'') {
+                error(c, line, column);
                 return new Token(TokenClass.INVALID, line, column);
+            }
             return new Token(TokenClass.CHARACTER, chr, line, column);
         }
 
