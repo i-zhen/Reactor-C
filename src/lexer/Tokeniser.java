@@ -174,6 +174,14 @@ public class Tokeniser {
             c = scanner.next();
             if (c == '\\')
                 c = scanner.next();
+            if(c == 't') c = '\t';
+            if(c == 'b') c = '\t';
+            if(c == 'n') c = '\t';
+            if(c == 'r') c = '\t';
+            if(c == 'f') c = '\t';
+            if(c == '\'') c = '\'';
+            if(c == '\"') c = '\"';
+            if(c == '\\') c = '\\';
             String chr = "" + c;
             c = scanner.next();
             if(c != '\'')
