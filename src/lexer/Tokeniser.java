@@ -261,7 +261,12 @@ public class Tokeniser {
                 scanner.next();
                 c = scanner.peek();
             }
-            return new Token(TokenClass.NUMBER, sb.toString(), line, column);
+            if (Character.isWhitespace(c) || c == '+' || c == '-' || c == '*' || c == '/' || c == ')' || c == ';')
+                return new Token(TokenClass.NUMBER, sb.toString(), line, column);
+            else{
+                error(c,line,column);
+                return new Token(TokenClass.INVALID, line, column);
+            }
         }
 
         // if we reach this point, it means we did not recognise a valid token
