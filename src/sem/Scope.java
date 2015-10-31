@@ -22,7 +22,7 @@ public abstract class Scope {
 		return null;
 	}
 	
-	public void Symbol(Symbol sym) {
+	public void put(Symbol sym) {
 		symbolTable.put(sym.name, sym);
 	}
 }
