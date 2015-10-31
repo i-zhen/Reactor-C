@@ -40,8 +40,8 @@
       <file leaf-file-name="Tokeniser.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lexer/Tokeniser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5990566">
-              <caret line="262" column="13" selection-start-line="262" selection-start-column="13" selection-end-line="262" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.504717">
+              <caret line="210" column="13" selection-start-line="210" selection-start-column="13" selection-end-line="210" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -541,12 +541,12 @@
       <workItem from="1446064172815" duration="1427000" />
       <workItem from="1446067825203" duration="12638000" />
       <workItem from="1446231964798" duration="1575000" />
-      <workItem from="1446241265651" duration="2211000" />
+      <workItem from="1446241265651" duration="2605000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20251000" />
+    <option name="totallyTimeSpent" value="20645000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="12" y="23" width="1260" height="733" extended-state="0" />
@@ -1029,8 +1029,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lexer/Tokeniser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5990566">
-          <caret line="262" column="13" selection-start-line="262" selection-start-column="13" selection-end-line="262" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.504717">
+          <caret line="210" column="13" selection-start-line="210" selection-start-column="13" selection-end-line="210" selection-end-column="13" />
           <folding />
         </state>
       </provider>

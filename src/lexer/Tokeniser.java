@@ -209,10 +209,6 @@ public class Tokeniser {
                     return new Token(TokenClass.INVALID, line, column);
                 }
             }
-            if(Character.isDigit(c)){
-                error(c, line, column);
-                return new Token(TokenClass.INVALID, line, column);
-            }
             String chr = "" + c;
             c = scanner.next();
             if(c != '\'') {
