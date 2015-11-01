@@ -29,7 +29,7 @@ void main() {
   first = 0;
   second = 1;
 
-  first = 9 + 0 +0 + 9 9 ;
+  first = 9 + 0 +0 + 9 ;
     
   print_s("First ");
   print_i(n);
@@ -49,6 +49,10 @@ void main() {
     print_s(" ");
     c = c+1;
   }
-  if(c>9) d=0; else {}
+  if(c>9) {} 
+  else  if (c>9) {}
+  	else  if (c>9) {}
+  		else  if (c>9) {}
+  			else {}
 
 }

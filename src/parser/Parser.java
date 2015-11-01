@@ -250,7 +250,6 @@ public class Parser {
         switch ( token.tokenClass ){
             case LBRA : {                                          // parse block
                 parseBlock();
-                parseStmtlist();
                 break;
             } case WHILE: {                                         // parse while loop
                 nextToken();
