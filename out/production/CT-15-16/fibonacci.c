@@ -3,7 +3,6 @@
 #include "io.h"
 #include "io.h"
 
-k;
 
 int bigger(int a, int b) {
   if(a >= b) return a;
@@ -22,12 +21,15 @@ void main() {
   int next;
   int c;
   char t;
+  
 
   // read n from the standard input
   n = read_i();
   
   first = 0;
   second = 1;
+
+  first = 9 + 0 +0 + 9 9 ;
     
   print_s("First ");
   print_i(n);

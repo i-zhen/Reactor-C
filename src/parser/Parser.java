@@ -270,17 +270,17 @@ public class Parser {
                     parseStmt();
                 }
                 break;
-            } case IDENTIFIER: {                                   // parse function call or assign
+            } case IDENTIFIER: {                                    // parse function call or assign
                 if( lookAhead(1).tokenClass == TokenClass.LPAR ){
                     parseFunCall();
                     expect( TokenClass.SEMICOLON );
                 } else if ( lookAhead(1).tokenClass == TokenClass.ASSIGN ) {
-                    nextToken();                                   // IDENT
-                    nextToken();                                   // EQ
+                    nextToken();                                    // IDENT
+                    nextToken();                                    // EQ
                     parseLexp();
                     expect( TokenClass.SEMICOLON );
                 } else {
-                    nextToken();
+                    nextToken();                                    // Pass the error
                     error( TokenClass.LPAR, TokenClass.ASSIGN );
                 }
                 break;
