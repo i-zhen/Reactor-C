@@ -16,7 +16,7 @@ Procedure  ::= Type String VarDecl* Block
 
 
 // Expressions
-Expr       ::= IntLiteral | StrLiteral | ChrLiteral | Var | FunCall | BinOp
+Expr       ::= IntLiteral | StrLiteral | ChrLiteral | Var | FunCallExpr | BinOp
 
 // Literals
 IntLiteral ::= int
@@ -27,7 +27,7 @@ ChrLiteral ::= char
 Var        ::= String
 
 // Function call (the String corresponds to the name of the function to call and the Expr* is the list of arguments)
-FunCall    ::= String Expr*
+FunCallExpr ::= String Expr*
 
 // Binary operation (arithmetic and comparison operations are grouped together)
 BinOp      ::= Expr Op Expr
@@ -37,7 +37,11 @@ Op         ::= ADD | SUB | MUL | DIV | MOD | GT | LT | GE | LE | NE | EQ
 
 
 // Statements
-Stmt       ::= Block | While | If | Assign | Return | FunCall
+Stmt       ::= Block | While | If | Assign | Return | FunCallStmt
+
+// Function call (the String corresponds to the name of the function to call and the Expr* is the list of arguments)
+FunCallStmt ::= String Expr*
+
 
 // While loop statement : while (Expr) Stmt;
 While      ::= Expr Stmt

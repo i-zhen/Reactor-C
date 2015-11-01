@@ -1,12 +1,13 @@
 package parser;
 
-import ast.Procedure;
-import ast.Program;
-import ast.VarDecl;
+import ast.*;
+import com.sun.corba.se.impl.oa.toa.TOA;
 import lexer.Token;
 import lexer.Tokeniser;
 import lexer.Token.TokenClass;
+import org.omg.PortableServer.LIFESPAN_POLICY_ID;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -74,7 +75,7 @@ public class Parser {
             buffer.add(tokeniser.nextToken());
         assert buffer.size() >= i;
 
-        int cnt=1;
+        int cnt = 1;
         for (Token t : buffer) {
             if (cnt == i)
                 return t;
@@ -114,7 +115,7 @@ public class Parser {
     }
 
     /*
-    * Returns true if the current token is equals to any of the expected ones.
+    * Returns true if the current token equals to any of the expected ones.
     */
 
     private boolean accept(TokenClass... expected) {
@@ -144,19 +145,224 @@ public class Parser {
     }
 
     private List<VarDecl> parseDecls() {
-	        // to be completed ...
-            return null;
+        if (accept(TokenClass.INT, TokenClass.CHAR) && (lookAhead(2).tokenClass == TokenClass.SEMICOLON)){
+            List<VarDecl> varDecls = new ArrayList<>();
+            Type type;
+
+            if (token.tokenClass == TokenClass.INT ){
+                type = Type.INT;
+            } else{
+                type = Type.CHAR;
+            }
+            nextToken();
+
+            ast.Var var = new ast.Var(token.toString());
+            expect(TokenClass.IDENTIFIER);
+
+            varDecls.add(new VarDecl(type, var));
+            expect(TokenClass.SEMICOLON);
+            varDecls.addAll(parseDecls());
+
+            return varDecls;
+        }
+
+        return null;
+    }
+
+    private List<VarDecl> parseParams(){
+        if (accept(TokenClass.INT, TokenClass.CHAR)){
+            List<VarDecl> varDecls = new ArrayList<>();
+            //incomplete
+            nextToken();
+            parseParams();
+            return varDecls;
+        }
+        return null;
     }
 
     private List<Procedure> parseProcs() {
-        // to be completed ...
+        if (accept(TokenClass.INT, TokenClass.CHAR, TokenClass.VOID)){
+            List<Procedure> procs = new ArrayList<>();
+            Type type;
+            if (token.tokenClass == TokenClass.INT ){
+                type = Type.INT;
+            } else if (token.tokenClass == TokenClass.CHAR){
+                type = Type.CHAR;
+            } else {
+                type = Type.VOID;
+            }
+            nextToken();
+            String name = token.toString();
+            expect(TokenClass.IDENTIFIER);
+
+            expect(TokenClass.LPAR);
+            List<VarDecl> varDecls = parseParams();
+
+            expect(TokenClass.RPAR);
+            Block block = parseBlock();
+
+            procs.add(new Procedure(type, name, varDecls, block));
+            procs.addAll(parseProcs());
+            return procs;
+        }
+
         return null;
     }
 
     private Procedure parseMain() {
-        // to be completed ...
+        expect(TokenClass.VOID);
+        expect(TokenClass.MAIN);
+        expect(TokenClass.LPAR);
+        expect(TokenClass.RPAR);
+
+        return new Procedure(Type.VOID, "main", null, parseBlock());
+    }
+
+    private Block parseBlock() {
+        expect(TokenClass.LBRA);
+        parseDecls();
+        parse();
+        expect(TokenClass.RBRA);
         return null;
     }
 
+    private List<Stmt> parseStmt() {
+        if(accept(TokenClass.LBRA)) {
+            // parse block
+            parseBlock();
+        } else if (accept(TokenClass.WHILE)) {
+            // parse while loop
+            nextToken();
+            expect(TokenClass.LPAR);
+            parseExpr();
+            expect(TokenClass.RPAR);
+            parseStmt();
+        } else if (accept(TokenClass.IF)) {
+            //parse if
+            nextToken();
+            expect(TokenClass.LPAR);
+            parseExpr();
+            expect(TokenClass.RPAR);
+            parseStmt();
+            if (accept(TokenClass.ELSE)) {
+                nextToken();
+                parseStmt();
+            }
+        } else if (accept(TokenClass.IDENTIFIER)){
+            //parse funcall or assign
+            if(lookAhead(1).tokenClass == TokenClass.LPAR){
+                parseFunCall();
+            } else if (lookAhead(1).tokenClass == TokenClass.ASSIGN) {
+                nextToken(); // IDENT
+                nextToken(); // EQ
+                parseLexp();
+            } else error();
+        } else if (accept(TokenClass.RETURN)) {
+            //parse return
+            nextToken();
+            parseLexp();
+            expect(TokenClass.COMMA);
+        } else if (accept(TokenClass.PRINT)) {
+            //parse print
+            nextToken();
+            expect(TokenClass.LPAR);
+            if (accept(TokenClass.STRING_LITERAL)){
+                nextToken();
+            } else {
+                parseLexp();
+            }
+            expect(TokenClass.RPAR);
+            expect(TokenClass.COMMA);
+        } else if (accept(TokenClass.READ)){
+            //parse read
+            nextToken();
+            expect(TokenClass.LPAR);
+            expect(TokenClass.RBRA);
+            expect(TokenClass.COMMA);
+        } else {
+            error();
+        }
+        return null;
+    }
+
+    private Expr parseExpr() {
+        parseLexp();
+        if (accept(TokenClass.LE, TokenClass.LT, TokenClass.GE,
+                TokenClass.NE, TokenClass.EQ, TokenClass.GT)) {
+            nextToken();
+            parseLexp();
+        }
+        return null;
+    }
+
+    private Expr parseLexp() {
+        parseTerm();
+        if (accept(TokenClass.PLUS, TokenClass.MINUS)){
+            nextToken();
+            parseTerm();
+        }
+        return null;
+    }
+
+    private Expr parseTerm() {
+        parseFactor();
+        if (accept(TokenClass.DIV, TokenClass.TIMES, TokenClass.MOD)){
+            nextToken();
+            parseFactor();
+        }
+        return null;
+    }
+
+    private Expr parseFactor() {
+        if (accept(TokenClass.LPAR)){
+            //parse Lpar
+            nextToken();
+            parseLexp();
+            expect(TokenClass.RPAR);
+        } else if (accept(TokenClass.CHARACTER)){
+            //parse character
+            nextToken();
+        } else if (accept(TokenClass.READ)){
+            //parse read
+            nextToken();
+            expect(TokenClass.LPAR);
+            expect(TokenClass.RPAR);
+        } else if (accept(TokenClass.IDENTIFIER)){
+            //parse variable without minus or function
+            if (lookAhead(1).tokenClass == TokenClass.LPAR){
+                parseFunCall();
+            } else {
+                nextToken();
+            }
+        } else if (accept(TokenClass.MINUS)){
+            //parse variable or number with minus
+            expect(TokenClass.IDENTIFIER, TokenClass.NUMBER);
+        } else if (accept(TokenClass.NUMBER)){
+            //parse number without minus
+            nextToken();
+        } else {
+            error();
+        }
+        return null;
+    }
+
+    private Expr parseFunCall() {
+        expect(TokenClass.IDENTIFIER);
+        expect(TokenClass.LPAR);
+        parseIdent();
+        expect(TokenClass.RPAR);
+
+        return null;
+    }
+
+    private Expr parseIdent() {
+        if (accept(TokenClass.IDENTIFIER)){
+            if (lookAhead(1).tokenClass == TokenClass.COMMA) {
+                nextToken();
+                parseIdent();
+            }
+        }
+        return null;
+    }
     // to be completed ...        
 }

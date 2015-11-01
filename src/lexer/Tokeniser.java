@@ -192,6 +192,7 @@ public class Tokeniser {
         }
 
         //Character
+        // '\8' is not allowed, but '8' is allowed
         if(c == '\'') {
             c = scanner.next();
             if (c == '\\') {

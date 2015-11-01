@@ -1,5 +1,10 @@
 #include "io.h"
 
+int bigger(int a, int b) {
+  if(a >= b) return a;
+  return b
+}
+
 void main() {
   int n;
   int first;
