@@ -19,7 +19,7 @@ void main() {
   first = 0;
   second = 1;
 
-  first = read_i() + 90 - 90 % 3 / 89;
+  first = read_i() + 90 - 90 % 3 / 89 * (-9999);
     
   print_s("First ");
   print_i(n);

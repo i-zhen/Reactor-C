@@ -227,12 +227,20 @@ public class Parser {
     private Block parseBlock() {
         expect(TokenClass.LBRA);
         parseDecls();
-        parseStmt();
+        parseStmtlist();
         expect(TokenClass.RBRA);
         return null;
     }
 
-    private List<Stmt> parseStmt() {
+    private List<Stmt> parseStmtlist() {
+        while (accept(TokenClass.LBRA, TokenClass.WHILE, TokenClass.IF, TokenClass.IDENTIFIER,
+                TokenClass.RETURN, TokenClass.PRINT, TokenClass.READ)) {
+            parseStmt();
+        }
+        return null;
+    }
+
+    private Stmt parseStmt() {
         if(accept(TokenClass.LBRA)) {
             // parse block
             parseBlock();
@@ -289,11 +297,8 @@ public class Parser {
             expect(TokenClass.LPAR);
             expect(TokenClass.RBRA);
             expect(TokenClass.SEMICOLON);
-        }
-        //check if need loop
-        if (accept(TokenClass.LBRA, TokenClass.WHILE, TokenClass.IF, TokenClass.IDENTIFIER,
-                TokenClass.RETURN, TokenClass.PRINT, TokenClass.READ)) {
-            parseStmt();
+        } else {
+            error();
         }
         return null;
     }
@@ -365,7 +370,6 @@ public class Parser {
         expect(TokenClass.LPAR);
         parseIdent();
         expect(TokenClass.RPAR);
-
         return null;
     }
 
