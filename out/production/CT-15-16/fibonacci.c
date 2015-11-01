@@ -3,6 +3,7 @@
 #include "io.h"
 #include "io.h"
 
+k;
 
 int bigger(int a, int b) {
   if(a >= b) return a;
@@ -10,10 +11,7 @@ int bigger(int a, int b) {
   return 98;
 }
 
-int smaller(int a, int b) {
-  if(a < b) return a;
-  return b;
-}
+int smaller(int a, int b) {if(a < b) return a;return b;}
 
 
 
@@ -24,7 +22,6 @@ void main() {
   int next;
   int c;
   char t;
-
 
   // read n from the standard input
   n = read_i();
@@ -37,7 +34,7 @@ void main() {
   print_s(" terms of Fibonacci series are : ");
  
   c = 0;
-  while (c < n) {
+  while (c <1) {
     if ( c <= 1 )
       next = c;
     else
@@ -50,4 +47,6 @@ void main() {
     print_s(" ");
     c = c+1;
   }
+  if(c>9) d=0; else {}
+
 }
