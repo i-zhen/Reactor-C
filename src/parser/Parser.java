@@ -310,10 +310,11 @@ public class Parser {
 
     private Expr parseExpr() {
         parseLexp();
-        if (accept(TokenClass.LE, TokenClass.LT, TokenClass.GE,
-                TokenClass.NE, TokenClass.EQ, TokenClass.GT)) {
+        if (accept(TokenClass.LE, TokenClass.LT, TokenClass.GE, TokenClass.NE, TokenClass.EQ, TokenClass.GT)) {
             nextToken();
             parseLexp();
+        } else {
+            error(TokenClass.LE, TokenClass.LT, TokenClass.GE, TokenClass.NE, TokenClass.EQ, TokenClass.GT);
         }
         return null;
     }
