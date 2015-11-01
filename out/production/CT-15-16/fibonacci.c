@@ -1,10 +1,8 @@
 #include "io.h"
+#include "io.h"
+#include "io.h"
+#include "io.h"
 
-int a;
-
-int b;
-
-int c;
 
 int bigger(int a, int b) {
   if(a >= b) return a;

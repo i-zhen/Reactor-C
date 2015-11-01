@@ -1,16 +1,15 @@
 package parser;
 
 import ast.*;
-import com.sun.corba.se.impl.oa.toa.TOA;
 import lexer.Token;
 import lexer.Tokeniser;
 import lexer.Token.TokenClass;
-import org.omg.PortableServer.LIFESPAN_POLICY_ID;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
+
 
 
 /**
@@ -156,8 +155,8 @@ public class Parser {
             }
             nextToken();
 
-            ast.Var var = new ast.Var(token.toString());
-            expect(TokenClass.IDENTIFIER);
+            ast.Var var = new ast.Var(expect(TokenClass.IDENTIFIER).toString());
+            //expect(TokenClass.IDENTIFIER);
 
             //varDecls.add(new VarDecl(type, var));
             expect(TokenClass.SEMICOLON);
@@ -233,80 +232,75 @@ public class Parser {
     }
 
     private List<Stmt> parseStmtlist() {
-        while (accept(TokenClass.LBRA, TokenClass.WHILE, TokenClass.IF, TokenClass.IDENTIFIER,
+        if (accept(TokenClass.LBRA, TokenClass.WHILE, TokenClass.IF, TokenClass.IDENTIFIER,
                 TokenClass.RETURN, TokenClass.PRINT, TokenClass.READ)) {
             parseStmt();
+            parseStmtlist();
         }
         return null;
     }
 
     private Stmt parseStmt() {
-        if(accept(TokenClass.LBRA)) {
-            // parse block
-            parseBlock();
-
-        } else if (accept(TokenClass.WHILE)) {
-            // parse while loop
-            nextToken();
-            expect(TokenClass.LPAR);
-            parseExpr();
-            expect(TokenClass.RPAR);
-            parseStmt();
-
-        } else if (accept(TokenClass.IF)) {
-            //parse if
-            nextToken();
-            expect(TokenClass.LPAR);
-            parseExpr();
-            expect(TokenClass.RPAR);
-            parseStmt();
-            if (accept(TokenClass.ELSE)) {
+        switch (token.tokenClass){
+            case LBRA : {                                          // parse block
+                parseBlock();
+                break;
+            }case WHILE: {                                         // parse while loop
                 nextToken();
+                expect(TokenClass.LPAR);
+                parseExpr();
+                expect(TokenClass.RPAR);
                 parseStmt();
-            }
-
-        } else if (accept(TokenClass.IDENTIFIER)){
-            //parse funcall or assign
-            if(lookAhead(1).tokenClass == TokenClass.LPAR){
-                parseFunCall();
-                expect(TokenClass.SEMICOLON);
-            } else if (lookAhead(1).tokenClass == TokenClass.ASSIGN) {
-                nextToken(); // IDENT
-                nextToken(); // EQ
-                parseLexp();
-                expect(TokenClass.SEMICOLON);
-            } else {
-                error();
-            }
-
-        } else if (accept(TokenClass.RETURN)) {
-            //parse return
-            nextToken();
-            parseLexp();
-            expect(TokenClass.SEMICOLON);
-
-        } else if (accept(TokenClass.PRINT)) {
-            //parse print
-            nextToken();
-            expect(TokenClass.LPAR);
-            if (accept(TokenClass.STRING_LITERAL)){
+                break;
+            }case IF: {                                            // parse if
                 nextToken();
-            } else {
+                expect(TokenClass.LPAR);
+                parseExpr();
+                expect(TokenClass.RPAR);
+                parseStmt();
+                if (accept(TokenClass.ELSE)) {
+                    nextToken();
+                    parseStmt();
+                }
+                break;
+            }case IDENTIFIER: {                                    // parse function call or assign
+                if(lookAhead(1).tokenClass == TokenClass.LPAR){
+                    parseFunCall();
+                    expect(TokenClass.SEMICOLON);
+                } else if (lookAhead(1).tokenClass == TokenClass.ASSIGN) {
+                    nextToken();                                   // IDENT
+                    nextToken();                                   // EQ
+                    parseLexp();
+                    expect(TokenClass.SEMICOLON);
+                } else {
+                    error();
+                }
+                break;
+            }case RETURN: {                                        // parse return
+                nextToken();
                 parseLexp();
-            }
-            expect(TokenClass.RPAR);
-            expect(TokenClass.SEMICOLON);
-
-        } else if (accept(TokenClass.READ)){
-            //parse read
-            nextToken();
-            expect(TokenClass.LPAR);
-            expect(TokenClass.RBRA);
-            expect(TokenClass.SEMICOLON);
-
-        } else {
-            error();
+                expect(TokenClass.SEMICOLON);
+                break;
+            }case PRINT: {                                         // parse print
+                nextToken();
+                expect(TokenClass.LPAR);
+                if (accept(TokenClass.STRING_LITERAL)){
+                    nextToken();
+                } else {
+                    parseLexp();
+                }
+                expect(TokenClass.RPAR);
+                expect(TokenClass.SEMICOLON);
+                break;
+            }case READ: {                                          // parse read
+                nextToken();
+                expect(TokenClass.LPAR);
+                expect(TokenClass.RBRA);
+                expect(TokenClass.SEMICOLON);
+                break;
+            }default: error();
         }
+
         return null;
     }
 
@@ -339,42 +333,37 @@ public class Parser {
     }
 
     private Expr parseFactor() {
-        if (accept(TokenClass.LPAR)){
-            //parse Lpar
-            nextToken();
-            parseLexp();
-            expect(TokenClass.RPAR);
-
-        } else if (accept(TokenClass.CHARACTER)){
-            //parse character
-            nextToken();
-
-        } else if (accept(TokenClass.READ)){
-            //parse read
-            nextToken();
-            expect(TokenClass.LPAR);
-            expect(TokenClass.RPAR);
-
-        } else if (accept(TokenClass.IDENTIFIER)){
-            //parse variable without minus or function
-            if (lookAhead(1).tokenClass == TokenClass.LPAR){
-                parseFunCall();
-            } else {
+        switch (token.tokenClass) {
+            case LPAR:{                                                //parse Lpar
                 nextToken();
-            }
-
-        } else if (accept(TokenClass.MINUS)){
-            //parse variable or number with minus
-            nextToken();
-            expect(TokenClass.IDENTIFIER, TokenClass.NUMBER);
-
-        } else if (accept(TokenClass.NUMBER)){
-            //parse number without minus
-            nextToken();
-
-        } else {
-            error();
+                parseLexp();
+                expect(TokenClass.RPAR);
+                break;
+            }case CHARACTER:{                                          //parse character
+                nextToken();
+                break;
+            }case READ:{                                               //parse read
+                nextToken();
+                expect(TokenClass.LPAR);
+                expect(TokenClass.RPAR);
+                break;
+            }case IDENTIFIER:{                                         //parse variable without minus or function
+                if (lookAhead(1).tokenClass == TokenClass.LPAR){
+                    parseFunCall();
+                } else {
+                    nextToken();
+                }
+                break;
+            }case MINUS:{                                              //parse variable or number with minus
+                nextToken();
+                expect(TokenClass.IDENTIFIER, TokenClass.NUMBER);
+                break;
+            }case NUMBER:{                                             //parse number without minus
+                nextToken();
+                break;
+            }default: error();
         }
+
         return null;
     }
 
