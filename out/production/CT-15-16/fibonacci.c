@@ -2,7 +2,7 @@
 
 int bigger(int a, int b) {
   if(a >= b) return a;
-  return b
+  return b;
 }
 
 void main() {
@@ -12,8 +12,6 @@ void main() {
   int next;
   int c;
   char t;
-
-  char __ = '\t';
 
   // read n from the standard input
   n = read_i();

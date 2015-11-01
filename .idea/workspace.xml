@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6fe539b0-54dc-4c80-b34d-032b048cadfb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/Parser.java" afterPath="$PROJECT_DIR$/src/parser/Parser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lexer/Scanner.java" afterPath="$PROJECT_DIR$/src/lexer/Scanner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lexer/Tokeniser.java" afterPath="$PROJECT_DIR$/src/lexer/Tokeniser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grammar/abstract_grammar.txt" afterPath="$PROJECT_DIR$/grammar/abstract_grammar.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grammar/ebnf.txt" afterPath="$PROJECT_DIR$/grammar/ebnf.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CT-15-16.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,8 +28,8 @@
       <file leaf-file-name="Parser.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/parser/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5283019">
-              <caret line="176" column="24" selection-start-line="176" selection-start-column="24" selection-end-line="176" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.38679245">
+              <caret line="164" column="25" selection-start-line="164" selection-start-column="25" selection-end-line="164" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -168,8 +163,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="452" />
-    <option name="y" value="23" />
+    <option name="x" value="503" />
+    <option name="y" value="26" />
     <option name="width" value="1271" />
     <option name="height" value="733" />
   </component>
@@ -646,15 +641,15 @@
       <workItem from="1446067825203" duration="12638000" />
       <workItem from="1446231964798" duration="1575000" />
       <workItem from="1446241265651" duration="2638000" />
-      <workItem from="1446297397459" duration="16402000" />
+      <workItem from="1446297397459" duration="18096000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37080000" />
+    <option name="totallyTimeSpent" value="38774000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="452" y="23" width="1271" height="733" extended-state="0" />
+    <frame x="503" y="26" width="1271" height="733" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1128,8 +1123,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/parser/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5283019">
-          <caret line="176" column="24" selection-start-line="176" selection-start-column="24" selection-end-line="176" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.38679245">
+          <caret line="164" column="25" selection-start-line="164" selection-start-column="25" selection-end-line="164" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

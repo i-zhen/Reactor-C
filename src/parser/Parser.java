@@ -159,11 +159,11 @@ public class Parser {
             ast.Var var = new ast.Var(token.toString());
             expect(TokenClass.IDENTIFIER);
 
-            varDecls.add(new VarDecl(type, var));
+            //varDecls.add(new VarDecl(type, var));
             expect(TokenClass.SEMICOLON);
-            varDecls.addAll(parseDecls());
-
-            return varDecls;
+            //varDecls.addAll(parseDecls());
+            parseDecls();
+            return null;
         }
 
         return null;
@@ -174,7 +174,11 @@ public class Parser {
             List<VarDecl> varDecls = new ArrayList<>();
             //incomplete
             nextToken();
-            parseParams();
+            expect(TokenClass.IDENTIFIER);
+            if(accept(TokenClass.COMMA)){
+                nextToken();
+                parseParams();
+            }
             return varDecls;
         }
         return null;
@@ -201,9 +205,9 @@ public class Parser {
             expect(TokenClass.RPAR);
             Block block = parseBlock();
 
-            procs.add(new Procedure(type, name, varDecls, block));
-            procs.addAll(parseProcs());
-            return procs;
+            //procs.add(new Procedure(type, name, varDecls, block));
+            //procs.addAll(parseProcs());
+            return null;
         }
 
         return null;
@@ -221,7 +225,7 @@ public class Parser {
     private Block parseBlock() {
         expect(TokenClass.LBRA);
         parseDecls();
-        parse();
+        parseStmt();
         expect(TokenClass.RBRA);
         return null;
     }
@@ -252,16 +256,20 @@ public class Parser {
             //parse funcall or assign
             if(lookAhead(1).tokenClass == TokenClass.LPAR){
                 parseFunCall();
+                expect(TokenClass.SEMICOLON);
             } else if (lookAhead(1).tokenClass == TokenClass.ASSIGN) {
                 nextToken(); // IDENT
                 nextToken(); // EQ
                 parseLexp();
-            } else error();
+                expect(TokenClass.SEMICOLON);
+            } else {
+                error();
+            }
         } else if (accept(TokenClass.RETURN)) {
             //parse return
             nextToken();
             parseLexp();
-            expect(TokenClass.COMMA);
+            expect(TokenClass.SEMICOLON);
         } else if (accept(TokenClass.PRINT)) {
             //parse print
             nextToken();
@@ -272,15 +280,18 @@ public class Parser {
                 parseLexp();
             }
             expect(TokenClass.RPAR);
-            expect(TokenClass.COMMA);
+            expect(TokenClass.SEMICOLON);
         } else if (accept(TokenClass.READ)){
             //parse read
             nextToken();
             expect(TokenClass.LPAR);
             expect(TokenClass.RBRA);
-            expect(TokenClass.COMMA);
-        } else {
-            error();
+            expect(TokenClass.SEMICOLON);
+        }
+
+        if (accept(TokenClass.LBRA, TokenClass.WHILE, TokenClass.IF, TokenClass.IDENTIFIER,
+                TokenClass.RETURN, TokenClass.PRINT, TokenClass.READ)) {
+            parseStmt();
         }
         return null;
     }
