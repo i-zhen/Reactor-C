@@ -185,7 +185,8 @@ public class Parser {
     }
 
     private List<Procedure> parseProcs() {
-        if (accept(TokenClass.INT, TokenClass.CHAR, TokenClass.VOID)){
+        if (accept(TokenClass.INT, TokenClass.CHAR, TokenClass.VOID) &&
+                (lookAhead(1).tokenClass != TokenClass.MAIN)){
             List<Procedure> procs = new ArrayList<>();
             Type type;
             if (token.tokenClass == TokenClass.INT ){
@@ -207,6 +208,7 @@ public class Parser {
 
             //procs.add(new Procedure(type, name, varDecls, block));
             //procs.addAll(parseProcs());
+            parseProcs();
             return null;
         }
 
@@ -288,7 +290,7 @@ public class Parser {
             expect(TokenClass.RBRA);
             expect(TokenClass.SEMICOLON);
         }
-
+        //check if need loop
         if (accept(TokenClass.LBRA, TokenClass.WHILE, TokenClass.IF, TokenClass.IDENTIFIER,
                 TokenClass.RETURN, TokenClass.PRINT, TokenClass.READ)) {
             parseStmt();
@@ -308,7 +310,7 @@ public class Parser {
 
     private Expr parseLexp() {
         parseTerm();
-        if (accept(TokenClass.PLUS, TokenClass.MINUS)){
+        while (accept(TokenClass.PLUS, TokenClass.MINUS)){
             nextToken();
             parseTerm();
         }
@@ -317,7 +319,7 @@ public class Parser {
 
     private Expr parseTerm() {
         parseFactor();
-        if (accept(TokenClass.DIV, TokenClass.TIMES, TokenClass.MOD)){
+        while (accept(TokenClass.DIV, TokenClass.TIMES, TokenClass.MOD)){
             nextToken();
             parseFactor();
         }
@@ -347,6 +349,7 @@ public class Parser {
             }
         } else if (accept(TokenClass.MINUS)){
             //parse variable or number with minus
+            nextToken();
             expect(TokenClass.IDENTIFIER, TokenClass.NUMBER);
         } else if (accept(TokenClass.NUMBER)){
             //parse number without minus
@@ -368,12 +371,12 @@ public class Parser {
 
     private Expr parseIdent() {
         if (accept(TokenClass.IDENTIFIER)){
-            if (lookAhead(1).tokenClass == TokenClass.COMMA) {
+            nextToken();
+            if (accept(TokenClass.COMMA)) {
                 nextToken();
                 parseIdent();
             }
         }
         return null;
     }
-    // to be completed ...        
 }
