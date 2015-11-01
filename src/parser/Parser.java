@@ -278,7 +278,8 @@ public class Parser {
                 break;
             }case RETURN: {                                        // parse return
                 nextToken();
-                parseLexp();
+                if(!accept(TokenClass.SEMICOLON))
+                    parseLexp();
                 expect(TokenClass.SEMICOLON);
                 parseStmt();
                 break;

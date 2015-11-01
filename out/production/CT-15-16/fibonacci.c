@@ -6,7 +6,8 @@
 
 int bigger(int a, int b) {
   if(a >= b) return a;
-  return b;
+  return ;
+  return 98;
 }
 
 int smaller(int a, int b) {
@@ -30,8 +31,6 @@ void main() {
   
   first = 0;
   second = 1;
-
-read_i() + -90 %;
     
   print_s("First ");
   print_i(n);
