@@ -163,6 +163,10 @@ public class Parser {
             //varDecls.addAll(parseDecls());
             parseDecls();
             return null;
+        } else if (accept(TokenClass.IDENTIFIER) &&                          //type missing
+                       ((lookAhead(1).tokenClass != TokenClass.LPAR) &&
+                        (lookAhead(1).tokenClass != TokenClass.ASSIGN))) {
+            error(TokenClass.INT, TokenClass.CHAR);
         }
 
         return null;
@@ -209,6 +213,8 @@ public class Parser {
             //procs.addAll(parseProcs());
             parseProcs();
             return null;
+        } else if (!accept(TokenClass.VOID, TokenClass.INT, TokenClass.CHAR)) {
+            error(TokenClass.VOID, TokenClass.INT, TokenClass.CHAR);
         }
 
         return null;
@@ -226,17 +232,8 @@ public class Parser {
     private Block parseBlock() {
         expect(TokenClass.LBRA);
         parseDecls();
-        parseStmtlist();
+        parseStmt();
         expect(TokenClass.RBRA);
-        return null;
-    }
-
-    private List<Stmt> parseStmtlist() {
-        if (accept(TokenClass.LBRA, TokenClass.WHILE, TokenClass.IF, TokenClass.IDENTIFIER,
-                TokenClass.RETURN, TokenClass.PRINT, TokenClass.READ)) {
-            parseStmt();
-            parseStmtlist();
-        }
         return null;
     }
 
@@ -244,6 +241,7 @@ public class Parser {
         switch (token.tokenClass){
             case LBRA : {                                          // parse block
                 parseBlock();
+                parseStmt();
                 break;
             }case WHILE: {                                         // parse while loop
                 nextToken();
@@ -267,19 +265,22 @@ public class Parser {
                 if(lookAhead(1).tokenClass == TokenClass.LPAR){
                     parseFunCall();
                     expect(TokenClass.SEMICOLON);
+                    parseStmt();
                 } else if (lookAhead(1).tokenClass == TokenClass.ASSIGN) {
                     nextToken();                                   // IDENT
                     nextToken();                                   // EQ
                     parseLexp();
                     expect(TokenClass.SEMICOLON);
+                    parseStmt();
                 } else {
-                    error();
+                    error(TokenClass.LPAR, TokenClass.ASSIGN);
                 }
                 break;
             }case RETURN: {                                        // parse return
                 nextToken();
                 parseLexp();
                 expect(TokenClass.SEMICOLON);
+                parseStmt();
                 break;
             }case PRINT: {                                         // parse print
                 nextToken();
@@ -291,14 +292,16 @@ public class Parser {
                 }
                 expect(TokenClass.RPAR);
                 expect(TokenClass.SEMICOLON);
+                parseStmt();
                 break;
             }case READ: {                                          // parse read
                 nextToken();
                 expect(TokenClass.LPAR);
-                expect(TokenClass.RBRA);
+                expect(TokenClass.RPAR);
                 expect(TokenClass.SEMICOLON);
+                parseStmt();
                 break;
-            }default: error();
+            }
         }
 
         return null;
@@ -361,7 +364,8 @@ public class Parser {
             }case NUMBER:{                                             //parse number without minus
                 nextToken();
                 break;
-            }default: error();
+            }default: error(TokenClass.LPAR, TokenClass.CHARACTER, TokenClass.READ,
+                            TokenClass.IDENTIFIER, TokenClass.NUMBER, TokenClass.MINUS);
         }
 
         return null;

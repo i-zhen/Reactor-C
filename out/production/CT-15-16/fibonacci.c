@@ -14,6 +14,8 @@ int smaller(int a, int b) {
   return b;
 }
 
+
+
 void main() {
   int n;
   int first;
@@ -22,13 +24,14 @@ void main() {
   int c;
   char t;
 
+
   // read n from the standard input
   n = read_i();
   
   first = 0;
   second = 1;
 
-  first = read_i() + 90 - 90 % 3 / 89 * (-9999) + bigger(first, hkj);
+read_i() + -90 %;
     
   print_s("First ");
   print_i(n);
