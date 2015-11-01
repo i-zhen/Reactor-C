@@ -244,6 +244,7 @@ public class Parser {
         if(accept(TokenClass.LBRA)) {
             // parse block
             parseBlock();
+
         } else if (accept(TokenClass.WHILE)) {
             // parse while loop
             nextToken();
@@ -251,6 +252,7 @@ public class Parser {
             parseExpr();
             expect(TokenClass.RPAR);
             parseStmt();
+
         } else if (accept(TokenClass.IF)) {
             //parse if
             nextToken();
@@ -262,6 +264,7 @@ public class Parser {
                 nextToken();
                 parseStmt();
             }
+
         } else if (accept(TokenClass.IDENTIFIER)){
             //parse funcall or assign
             if(lookAhead(1).tokenClass == TokenClass.LPAR){
@@ -275,11 +278,13 @@ public class Parser {
             } else {
                 error();
             }
+
         } else if (accept(TokenClass.RETURN)) {
             //parse return
             nextToken();
             parseLexp();
             expect(TokenClass.SEMICOLON);
+
         } else if (accept(TokenClass.PRINT)) {
             //parse print
             nextToken();
@@ -291,12 +296,14 @@ public class Parser {
             }
             expect(TokenClass.RPAR);
             expect(TokenClass.SEMICOLON);
+
         } else if (accept(TokenClass.READ)){
             //parse read
             nextToken();
             expect(TokenClass.LPAR);
             expect(TokenClass.RBRA);
             expect(TokenClass.SEMICOLON);
+
         } else {
             error();
         }
@@ -337,14 +344,17 @@ public class Parser {
             nextToken();
             parseLexp();
             expect(TokenClass.RPAR);
+
         } else if (accept(TokenClass.CHARACTER)){
             //parse character
             nextToken();
+
         } else if (accept(TokenClass.READ)){
             //parse read
             nextToken();
             expect(TokenClass.LPAR);
             expect(TokenClass.RPAR);
+
         } else if (accept(TokenClass.IDENTIFIER)){
             //parse variable without minus or function
             if (lookAhead(1).tokenClass == TokenClass.LPAR){
@@ -352,13 +362,16 @@ public class Parser {
             } else {
                 nextToken();
             }
+
         } else if (accept(TokenClass.MINUS)){
             //parse variable or number with minus
             nextToken();
             expect(TokenClass.IDENTIFIER, TokenClass.NUMBER);
+
         } else if (accept(TokenClass.NUMBER)){
             //parse number without minus
             nextToken();
+
         } else {
             error();
         }
@@ -376,9 +389,9 @@ public class Parser {
     private Expr parseIdent() {
         if (accept(TokenClass.IDENTIFIER)){
             nextToken();
-            if (accept(TokenClass.COMMA)) {
+            while (accept(TokenClass.COMMA)) {
                 nextToken();
-                parseIdent();
+                expect(TokenClass.IDENTIFIER);
             }
         }
         return null;

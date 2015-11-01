@@ -1,7 +1,18 @@
 #include "io.h"
 
+int a;
+
+int b;
+
+int c;
+
 int bigger(int a, int b) {
   if(a >= b) return a;
+  return b;
+}
+
+int smaller(int a, int b) {
+  if(a < b) return a;
   return b;
 }
 
@@ -19,7 +30,7 @@ void main() {
   first = 0;
   second = 1;
 
-  first = read_i() + 90 - 90 % 3 / 89 * (-9999);
+  first = read_i() + 90 - 90 % 3 / 89 * (-9999) + bigger(first, hkj);
     
   print_s("First ");
   print_i(n);
