@@ -4,6 +4,8 @@
 #include "io.h"
 
 
+
+
 int bigger(int a, int b) {
   if(a >= b) return a;
   return ;
@@ -29,7 +31,7 @@ void main() {
   first = 0;
   second = 1;
 
-  first = 9 + 0 +0 + 9 ;
+  first = fir + jj +kk +kk ;
     
   print_s("First ");
   print_i(n);
@@ -51,8 +53,8 @@ void main() {
   }
   if(c>9) {} 
   else  if (c>9) {}
-  	else  if (c>9) {}
-  		else  if (c>9) {}
-  			else {}
+  else  if (c>9) {}
+  else  if (c>9) {}
+  else if (ee9==0){}
 
 }
