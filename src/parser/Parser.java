@@ -155,8 +155,8 @@ public class Parser {
             }
             nextToken();
 
-            ast.Var var = new ast.Var(expect(TokenClass.IDENTIFIER).toString());
-            //expect(TokenClass.IDENTIFIER);
+            //ast.Var var = new ast.Var(expect(TokenClass.IDENTIFIER).toString());
+            expect(TokenClass.IDENTIFIER);
 
             //varDecls.add(new VarDecl(type, var));
             expect(TokenClass.SEMICOLON);
