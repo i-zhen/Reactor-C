@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fe539b0-54dc-4c80-b34d-032b048cadfb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/parser/Parser.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/parser/Parser.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/Parser.java" afterPath="$PROJECT_DIR$/src/parser/Parser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/fibonacci.c" afterPath="$PROJECT_DIR$/out/production/CT-15-16/fibonacci.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CT-15-16.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +28,8 @@
       <file leaf-file-name="Parser.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/parser/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42677164">
-              <caret line="324" column="10" selection-start-line="324" selection-start-column="10" selection-end-line="324" selection-end-column="10" />
+            <state vertical-scroll-proportion="7.4881887">
+              <caret line="321" column="71" selection-start-line="321" selection-start-column="71" selection-end-line="321" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,7 +85,7 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="335" />
+    <option name="x" value="70" />
     <option name="y" value="23" />
     <option name="width" value="1256" />
     <option name="height" value="759" />
@@ -568,15 +565,15 @@
       <workItem from="1446231964798" duration="1575000" />
       <workItem from="1446241265651" duration="2638000" />
       <workItem from="1446297397459" duration="23181000" />
-      <workItem from="1446382944086" duration="15275000" />
+      <workItem from="1446382944086" duration="15511000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59134000" />
+    <option name="totallyTimeSpent" value="59370000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="335" y="23" width="1256" height="759" extended-state="0" />
+    <frame x="70" y="23" width="1256" height="759" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1084,8 +1081,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/parser/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42677164">
-          <caret line="324" column="10" selection-start-line="324" selection-start-column="10" selection-end-line="324" selection-end-column="10" />
+        <state vertical-scroll-proportion="7.4881887">
+          <caret line="321" column="71" selection-start-line="321" selection-start-column="71" selection-end-line="321" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

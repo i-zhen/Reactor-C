@@ -322,7 +322,7 @@ public class Parser {
                     , TokenClass.NE, TokenClass.EQ, TokenClass.GT ) ) {
             nextToken();
             parseLexp();
-        } 
+        }
         return null;
     }
 

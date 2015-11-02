@@ -53,7 +53,7 @@ void main() {
     print_s(" ");
     c = c+1;
   }
-  if(c+u) {} 
+  if(c) {} 
   else  if (c>9) {}
   else  if (c>9) {}
   else  if (c>9) {}
