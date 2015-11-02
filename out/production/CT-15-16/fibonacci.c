@@ -31,14 +31,16 @@ void main() {
   first = 0;
   second = 1;
 
-  else = 1 + 9;
+  elseif = el + ifd * fund(fdasf,adfad,dsafsad) - adfafdadfdaf;
+
+  ___(asdfsafd,asf,d,d);
     
   print_s("First ");
   print_i(n);
   print_s(" terms of Fibonacci series are : ");
  
   c = 0;
-  while (c <1) {
+  while (c ==0) {
     if ( c <= 1 )
       next = c;
     else
@@ -51,7 +53,7 @@ void main() {
     print_s(" ");
     c = c+1;
   }
-  if(c>9) {} 
+  if(c+u) {} 
   else  if (c>9) {}
   else  if (c>9) {}
   else  if (c>9) {}

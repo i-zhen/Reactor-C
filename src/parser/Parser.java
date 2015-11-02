@@ -322,10 +322,7 @@ public class Parser {
                     , TokenClass.NE, TokenClass.EQ, TokenClass.GT ) ) {
             nextToken();
             parseLexp();
-        } else {
-            error(    TokenClass.LE, TokenClass.LT, TokenClass.GE
-                    , TokenClass.NE, TokenClass.EQ, TokenClass.GT );
-        }
+        } 
         return null;
     }
 
