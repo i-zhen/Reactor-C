@@ -238,9 +238,9 @@ public class Parser {
     }
 
     private List<Stmt> parseStmtlist(){
-        while (accept( TokenClass.LBRA      , TokenClass.IF    , TokenClass.ELSE
+        while (accept( TokenClass.LBRA      , TokenClass.IF    , TokenClass.WHILE
                      , TokenClass.IDENTIFIER, TokenClass.RETURN, TokenClass.PRINT
-                     , TokenClass.READ      , TokenClass.WHILE ) ){
+                     , TokenClass.READ ) ){
             parseStmt();
         }
         return null;
@@ -307,9 +307,9 @@ public class Parser {
                 expect( TokenClass.SEMICOLON );
                 break;
             } default: {
-                error(    TokenClass.LBRA      , TokenClass.IF    , TokenClass.ELSE
+                error(    TokenClass.LBRA      , TokenClass.IF    , TokenClass.WHILE
                         , TokenClass.IDENTIFIER, TokenClass.RETURN, TokenClass.PRINT
-                        , TokenClass.READ      , TokenClass.WHILE );
+                        , TokenClass.READ );
             }
         }
 

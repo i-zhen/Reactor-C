@@ -31,7 +31,7 @@ void main() {
   first = 0;
   second = 1;
 
-  first = fir + jj +kk +kk ;
+  else = 1 + 9;
     
   print_s("First ");
   print_i(n);
