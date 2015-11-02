@@ -200,7 +200,7 @@ public class Parser {
                 type = Type.VOID;
             }
             nextToken();
-            String name = token.toString();
+            //String name = token.toString();
             expect(TokenClass.IDENTIFIER);
 
             expect(TokenClass.LPAR);

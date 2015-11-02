@@ -1,20 +1,4 @@
 #include "io.h"
-#include "io.h"
-#include "io.h"
-#include "io.h"
-
-
-
-
-int bigger(int a, int b) {
-  if(a >= b) return a;
-  return ;
-  return 98;
-}
-
-int smaller(int a, int b) {if(a < b) return a;return b;}
-
-
 
 void main() {
   int n;
@@ -23,6 +7,8 @@ void main() {
   int next;
   int c;
   char t;
+
+  char else;
   
 
   // read n from the standard input
@@ -30,16 +16,13 @@ void main() {
   
   first = 0;
   second = 1;
-
-  elseif = el + ifd * fund(fdasf,adfad,dsafsad) - adfafdadfdaf;
-
-  ___(asdfsafd,asf,d,d);
     
   print_s("First ");
   print_i(n);
   print_s(" terms of Fibonacci series are : ");
  
   c = 0;
+  if(else){}else{}
   while (c ==0) {
     if ( c <= 1 )
       next = c;
@@ -53,10 +36,4 @@ void main() {
     print_s(" ");
     c = c+1;
   }
-  if(c) {} 
-  else  if (c>9) {}
-  else  if (c>9) {}
-  else  if (c>9) {}
-  else if (ee9==0){}
-
 }
