@@ -144,7 +144,7 @@ public class Parser {
     }
 
     private List<VarDecl> parseDecls() {
-        if (accept(TokenClass.INT, TokenClass.CHAR) && (lookAhead(2).tokenClass == TokenClass.SEMICOLON)){
+        if (accept(TokenClass.INT, TokenClass.CHAR, TokenClass.VOID) && (lookAhead(2).tokenClass == TokenClass.SEMICOLON)){
             List<VarDecl> varDecls = new ArrayList<>();
             Type type;
 

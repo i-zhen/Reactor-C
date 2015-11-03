@@ -1,6 +1,11 @@
 #include "io.h"
 
 void main() {
+  void nothing;
+  int _variable;
+}
+/*
+void main() {
   int n;
   int first;
   int second;
@@ -8,7 +13,8 @@ void main() {
   int c;
   char t;
 
-  char else;
+  dfeef = jjdjjf;
+  dfdf=dkkd+df+Fd+a+A+A+A+A+A+df;
   
 
   // read n from the standard input
@@ -22,7 +28,7 @@ void main() {
   print_s(" terms of Fibonacci series are : ");
  
   c = 0;
-  if(else){}else{}
+  if(_){}else{}
   while (c ==0) {
     if ( c <= 1 )
       next = c;
@@ -36,4 +42,4 @@ void main() {
     print_s(" ");
     c = c+1;
   }
-}
+}*/
