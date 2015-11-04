@@ -1,5 +1,5 @@
 package ast;
 
 public enum Type {
-    INT, CHAR, VOID;
+    INT, CHAR, VOID, STRING;
 }

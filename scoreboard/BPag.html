@@ -1,0 +1,85 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CT Scoreboard for BPag</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><style type="text/css">body { margin: 0 auto; width: 50%; padding-bottom: 30px; } td.hd { font-weight: bold; text-align: center; } td { padding: 5px; }</style></head><body><div class="container"><h2>Information</h2>
+<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>BPag</td></tr><tr><td>Start</td><td>2015-11-04 16:08:36</td></tr><tr><td>End</td><td>2015-11-04 16:08:41</td></tr><tr><td>Comment ID</td><td>1e2327ea3e2fbe74d800538af0984cdd0ae67ee3</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>240</td><td>One or more semantic error(s).</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>124</td><td>Your compiler might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmphjq_u1_l/BPag/build.xml
+
+build-subprojects:
+
+init:
+    [mkdir] Created dir: /tmp/tmphjq_u1_l/BPag/bin
+
+build-project:
+     [echo] CT-15-16: /tmp/tmphjq_u1_l/BPag/build.xml
+    [javac] Compiling 35 source files to /tmp/tmphjq_u1_l/BPag/bin
+    [javac] /tmp/tmphjq_u1_l/BPag/src/sem/NameAnalysisVisitor.java:35: error: cannot find symbol
+    [javac] 		scope.put(new PDSymbol("print_s",new Procedure(Type.VOID,"print_s",strParam,null)));
+    [javac] 		              ^
+    [javac]   symbol:   class PDSymbol
+    [javac]   location: class NameAnalysisVisitor
+    [javac] /tmp/tmphjq_u1_l/BPag/src/sem/NameAnalysisVisitor.java:39: error: cannot find symbol
+    [javac] 		scope.put(new PDSymbol("print_i",new Procedure(Type.VOID,"print_i",iParam,null)));
+    [javac] 		              ^
+    [javac]   symbol:   class PDSymbol
+    [javac]   location: class NameAnalysisVisitor
+    [javac] /tmp/tmphjq_u1_l/BPag/src/sem/NameAnalysisVisitor.java:43: error: cannot find symbol
+    [javac] 		scope.put(new PDSymbol("print_sc",new Procedure(Type.VOID,"print_c",cParam,null)));
+    [javac] 		              ^
+    [javac]   symbol:   class PDSymbol
+    [javac]   location: class NameAnalysisVisitor
+    [javac] /tmp/tmphjq_u1_l/BPag/src/sem/NameAnalysisVisitor.java:45: error: cannot find symbol
+    [javac] 		scope.put(new PDSymbol("read_i",new Procedure(Type.INT,"read_i",new LinkedList<VarDecl>(),null)));
+    [javac] 		              ^
+    [javac]   symbol:   class PDSymbol
+    [javac]   location: class NameAnalysisVisitor
+    [javac] /tmp/tmphjq_u1_l/BPag/src/sem/NameAnalysisVisitor.java:46: error: cannot find symbol
+    [javac] 		scope.put(new PDSymbol("read_c",new Procedure(Type.CHAR,"read_c",new LinkedList<VarDecl>(),null)));
+    [javac] 		              ^
+    [javac]   symbol:   class PDSymbol
+    [javac]   location: class NameAnalysisVisitor
+    [javac] /tmp/tmphjq_u1_l/BPag/src/sem/NameAnalysisVisitor.java:74: error: cannot find symbol
+    [javac] 		scope.put(new PDSymbol(p.name,p));
+    [javac] 		              ^
+    [javac]   symbol:   class PDSymbol
+    [javac]   location: class NameAnalysisVisitor
+    [javac] /tmp/tmphjq_u1_l/BPag/src/sem/NameAnalysisVisitor.java:104: error: cannot find symbol
+    [javac] 		scope.put(new VDSymbol(vd.var.name,vd));
+    [javac] 		              ^
+    [javac]   symbol:   class VDSymbol
+    [javac]   location: class NameAnalysisVisitor
+    [javac] /tmp/tmphjq_u1_l/BPag/src/sem/NameAnalysisVisitor.java:111: error: cannot find symbol
+    [javac] 		VDSymbol symbol = (VDSymbol)scope.lookup(v.name);
+    [javac] 		^
+    [javac]   symbol:   class VDSymbol
+    [javac]   location: class NameAnalysisVisitor
+    [javac] /tmp/tmphjq_u1_l/BPag/src/sem/NameAnalysisVisitor.java:111: error: cannot find symbol
+    [javac] 		VDSymbol symbol = (VDSymbol)scope.lookup(v.name);
+    [javac] 		                   ^
+    [javac]   symbol:   class VDSymbol
+    [javac]   location: class NameAnalysisVisitor
+    [javac] /tmp/tmphjq_u1_l/BPag/src/sem/NameAnalysisVisitor.java:145: error: cannot find symbol
+    [javac] 		PDSymbol symbol = (PDSymbol)scope.lookup(f.name);
+    [javac] 		^
+    [javac]   symbol:   class PDSymbol
+    [javac]   location: class NameAnalysisVisitor
+    [javac] /tmp/tmphjq_u1_l/BPag/src/sem/NameAnalysisVisitor.java:145: error: cannot find symbol
+    [javac] 		PDSymbol symbol = (PDSymbol)scope.lookup(f.name);
+    [javac] 		                   ^
+    [javac]   symbol:   class PDSymbol
+    [javac]   location: class NameAnalysisVisitor
+    [javac] /tmp/tmphjq_u1_l/BPag/src/sem/NameAnalysisVisitor.java:157: error: cannot find symbol
+    [javac] 		PDSymbol symbol = (PDSymbol)scope.lookup(f.name);
+    [javac] 		^
+    [javac]   symbol:   class PDSymbol
+    [javac]   location: class NameAnalysisVisitor
+    [javac] /tmp/tmphjq_u1_l/BPag/src/sem/NameAnalysisVisitor.java:157: error: cannot find symbol
+    [javac] 		PDSymbol symbol = (PDSymbol)scope.lookup(f.name);
+    [javac] 		                   ^
+    [javac]   symbol:   class PDSymbol
+    [javac]   location: class NameAnalysisVisitor
+    [javac] Note: /tmp/tmphjq_u1_l/BPag/src/sem/SemanticAnalyzer.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 13 errors
+
+BUILD FAILED
+/tmp/tmphjq_u1_l/BPag/build.xml:49: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+</pre></fieldset></div><hr /><div class="container" style="width:75%;"><a href="scoreboard.html"><button type="button" class="btn btn-default">Go back</button></a></div></div></body></html>
