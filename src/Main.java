@@ -123,7 +123,7 @@ public class Main {
         			System.out.println("Semantic analysis: Failed (" + errors + ")");
         		System.exit(errors == 0 ? PASS : SEM_FAIL);
         	} else
-        		System.exit(PARSER_FAIL);        	
+        		System.exit(PARSER_FAIL);
         } else {
         	System.exit(MODE_FAIL);
         }

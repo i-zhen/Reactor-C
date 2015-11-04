@@ -1,10 +1,6 @@
 #include "io.h"
 
-void main() {
-  void nothing;
-  int _variable;
-}
-/*
+
 void main() {
   int n;
   int first;
@@ -42,4 +38,4 @@ void main() {
     print_s(" ");
     c = c+1;
   }
-}*/
+}

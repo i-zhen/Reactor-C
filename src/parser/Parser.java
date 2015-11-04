@@ -186,7 +186,7 @@ public class Parser {
         }
         return null;
     }
-
+    
     private List<Procedure> parseProcs() {
         if (accept(TokenClass.INT, TokenClass.CHAR, TokenClass.VOID) &&
                 (lookAhead(1).tokenClass != TokenClass.MAIN)){
