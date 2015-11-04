@@ -2,7 +2,7 @@ package sem;
 
 import java.util.Map;
 
-public abstract class Scope {
+public class Scope {
 	private Scope outer;
 	private Map<String, Symbol> symbolTable;
 	
