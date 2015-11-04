@@ -13,7 +13,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 
 /**
- * @author zhenyi
  * The Main file implies an interface for the subsequent components, e.g.
  *   * The Tokeniser must have a constructor which accepts a Scanner,
  *     moreover Tokeniser must provide a public method getErrorCount
@@ -78,28 +77,6 @@ public class Main {
         Tokeniser tokeniser = new Tokeniser(scanner);
         if (mode == Mode.LEXER) {
             for (Token t = tokeniser.nextToken(); t.tokenClass != Token.TokenClass.EOF; t = tokeniser.nextToken()) 
-		        System.out.println(t);
-            if (tokeniser.getErrorCount() == 0)
-		        System.out.println("Lexing: pass");
-	        else
-		        System.out.println("Lexing: failed ("+tokeniser.getErrorCount()+" errors)");
-	        System.exit(tokeniser.getErrorCount() == 0 ? 0 : -1);
-        }
-
-        Parser parser = new Parser(tokeniser);
-        Program programAst = parser.parse();
-        if (parser.getErrorCount() == 0) {
-            System.out.println("Parsing: pass");
-            System.out.println("Writing AST into output file");
-	        PrintWriter writer;
-	        try {
-                writer = new PrintWriter(outputFile);
-		        programAst.accept(new ASTPrinter(writer));
-		        writer.flush();
-		        writer.close();
-	        } catch (Exception e) {
-		        e.printStackTrace();
-	        }
             	System.out.println(t);
             if (tokeniser.getErrorCount() == 0)
         		System.out.println("Lexing: pass");
