@@ -1,10 +1,10 @@
 # Part III : Semantic Analyser
 
-The goal of part III is to build the semantic analyser. This consists of two phases: name analysis and type analysis. The description of the type analysis phase will be explained after next Tuesday class.
+The goal of part III is to build the semantic analyser. This consists of two phases: name analysis and type analysis.
 
 As usual you will first have to pull from the master branch the changes which include some skeleton implementation for this part.
 
-## Name Analysis
+## 1. Name Analysis
 
 The goal of the name analysis is to ensure that the scoping and visibility rules of the language are respected. This means for instance ensuring identifiers are only declared once or that any use of an identifier is preceded by a declaration in the current or enclosing scope.
 
@@ -30,9 +30,15 @@ Shadowing occurs when an identifier declared within a given scope has the same n
 Your task is to implement a visitor that traverses the AST and identifies when the above rules are violated. In addition, you should add, for the two function call AST nodes and for the variable AST node, a field referencing the declaration (either a Procedure or VarDecl). This field should be updated to point to the actual declaration of the identifier when traversing the AST with the name analysis visitor. This will establish the link between the use of a variable or function and its declaration.
 
 
-## Type Analysis
+## 2. Type Analysis
 
-To appear soon...
+The goal of type analysis is to verified that the input program is well-typed and assign a type for each expression encountered.
+As seen during the course, the typing rule of SmallC are defined using a formal notation.
+You can find all the typing rules [here](./typing-rules.pdf).
+As usual, if you notice an error or if something is not clear, please post your question on Piazza.
+
+Your task consists of extending the `sem.TypeCheckVisitor` class and implement the type checking mechanism following the typyng rules.
+
 
 ## New Files
 
@@ -43,7 +49,11 @@ A new package has been added under `src/sem/`. This package contains template cl
  * The `sem.TypeCheckVisitor` is a template for typechecker.
  * The `sem.Symbol` is an abstract parent class for other concrete symbols (e.g. variables and procedures).
  * The `sem.Scope` is a partial implementation of the `Scope`-class discussed in the lectures.
+ * The `typing-rules.pdf` contains all the typing rules for our language
 
 ## Updated Files
 
-The `Main.java` has been updated to provide a new commandline pass `-sem` which runs your semantic analyzer on the input.
+* The `Main.java` has been updated to provide a new commandline pass `-sem` which runs your semantic analyzer on the input.
+* The `Type.java` has been updated to add the missing STRING type for string literal (print_s function)
+* The `Expr.java` has been updated to add a type field that needs to be filled in by the type analysis visitor.
+
