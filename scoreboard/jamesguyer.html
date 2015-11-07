@@ -1,105 +1,105 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CT Scoreboard for jamesguyer</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><style type="text/css">body { margin: 0 auto; width: 50%; padding-bottom: 30px; } td.hd { font-weight: bold; text-align: center; } td { padding: 5px; }</style></head><body><div class="container"><h2>Information</h2>
-<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>jamesguyer</td></tr><tr><td>Start</td><td>2015-11-07 04:01:31</td></tr><tr><td>End</td><td>2015-11-07 04:01:36</td></tr><tr><td>Comment ID</td><td>c7f053e43b366d38b7ce5b17097a5134a2a552f4</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>240</td><td>One or more semantic error(s).</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>124</td><td>Your compiler might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmpdsxr16ha/jamesguyer/build.xml
+<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>jamesguyer</td></tr><tr><td>Start</td><td>2015-11-07 17:39:18</td></tr><tr><td>End</td><td>2015-11-07 17:39:23</td></tr><tr><td>Comment ID</td><td>c7f053e43b366d38b7ce5b17097a5134a2a552f4</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>240</td><td>One or more semantic error(s).</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>124</td><td>Your compiler might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmpfdez8as0/jamesguyer/build.xml
 
 build-subprojects:
 
 init:
-    [mkdir] Created dir: /tmp/tmpdsxr16ha/jamesguyer/bin
-     [copy] Copying 1 file to /tmp/tmpdsxr16ha/jamesguyer/bin
+    [mkdir] Created dir: /tmp/tmpfdez8as0/jamesguyer/bin
+     [copy] Copying 1 file to /tmp/tmpfdez8as0/jamesguyer/bin
 
 build-project:
-     [echo] CT-15-16: /tmp/tmpdsxr16ha/jamesguyer/build.xml
-    [javac] Compiling 28 source files to /tmp/tmpdsxr16ha/jamesguyer/bin
-    [javac] /tmp/tmpdsxr16ha/jamesguyer/src/Main.java:7: error: package sem does not exist
+     [echo] CT-15-16: /tmp/tmpfdez8as0/jamesguyer/build.xml
+    [javac] Compiling 28 source files to /tmp/tmpfdez8as0/jamesguyer/bin
+    [javac] /tmp/tmpfdez8as0/jamesguyer/src/Main.java:7: error: package sem does not exist
     [javac] import sem.SemanticAnalyzer;
     [javac]           ^
-    [javac] /tmp/tmpdsxr16ha/jamesguyer/src/Main.java:114: error: cannot find symbol
+    [javac] /tmp/tmpfdez8as0/jamesguyer/src/Main.java:114: error: cannot find symbol
     [javac]           	SemanticAnalyzer sem = new SemanticAnalyzer();
     [javac]           	^
     [javac]   symbol:   class SemanticAnalyzer
     [javac]   location: class Main
-    [javac] /tmp/tmpdsxr16ha/jamesguyer/src/Main.java:114: error: cannot find symbol
+    [javac] /tmp/tmpfdez8as0/jamesguyer/src/Main.java:114: error: cannot find symbol
     [javac]           	SemanticAnalyzer sem = new SemanticAnalyzer();
     [javac]           	                           ^
     [javac]   symbol:   class SemanticAnalyzer
     [javac]   location: class Main
-    [javac] /tmp/tmpdsxr16ha/jamesguyer/src/ast/ASTPrinter.java:7: error: ASTPrinter is not abstract and does not override abstract method visitStmt(Stmt) in ASTVisitor
+    [javac] /tmp/tmpfdez8as0/jamesguyer/src/ast/ASTPrinter.java:7: error: ASTPrinter is not abstract and does not override abstract method visitStmt(Stmt) in ASTVisitor
     [javac] public class ASTPrinter implements ASTVisitor<Void> {
     [javac]        ^
-    [javac] /tmp/tmpdsxr16ha/jamesguyer/src/ast/ASTPrinter.java:127: error: cannot find symbol
+    [javac] /tmp/tmpfdez8as0/jamesguyer/src/ast/ASTPrinter.java:127: error: cannot find symbol
     [javac]     	bo.op.accept(this);
     [javac]     	     ^
     [javac]   symbol:   method accept(ASTPrinter)
     [javac]   location: variable op of type Op
-    [javac] /tmp/tmpdsxr16ha/jamesguyer/src/parser/Parser.java:163: error: incompatible types
+    [javac] /tmp/tmpfdez8as0/jamesguyer/src/parser/Parser.java:163: error: incompatible types
     [javac]             String var = parseVar();
     [javac]                                  ^
     [javac]   required: String
     [javac]   found:    Var
-    [javac] /tmp/tmpdsxr16ha/jamesguyer/src/parser/Parser.java:167: error: constructor VarDecl in class VarDecl cannot be applied to given types;
+    [javac] /tmp/tmpfdez8as0/jamesguyer/src/parser/Parser.java:167: error: constructor VarDecl in class VarDecl cannot be applied to given types;
     [javac]             return new VarDecl(type,var);
     [javac]                    ^
     [javac]   required: Type,Var
     [javac]   found: Type,String
     [javac]   reason: actual argument String cannot be converted to Var by method invocation conversion
-    [javac] /tmp/tmpdsxr16ha/jamesguyer/src/parser/Parser.java:183: error: cannot find symbol
+    [javac] /tmp/tmpfdez8as0/jamesguyer/src/parser/Parser.java:183: error: cannot find symbol
     [javac] 				return Procedure(type, name, params, block);
     [javac] 				       ^
     [javac]   symbol:   method Procedure(Type,String,List<VarDecl>,Block)
     [javac]   location: class Parser
-    [javac] /tmp/tmpdsxr16ha/jamesguyer/src/parser/Parser.java:191: error: incompatible types
+    [javac] /tmp/tmpfdez8as0/jamesguyer/src/parser/Parser.java:191: error: incompatible types
     [javac]         List<Stmt> stmt = parseStmtLst();
     [javac]                                       ^
     [javac]   required: List<Stmt>
     [javac]   found:    void
-    [javac] /tmp/tmpdsxr16ha/jamesguyer/src/parser/Parser.java:198: error: incompatible types
+    [javac] /tmp/tmpfdez8as0/jamesguyer/src/parser/Parser.java:198: error: incompatible types
     [javac]         	List<Stmt> stmt = parseStmt();
     [javac]         	                           ^
     [javac]   required: List<Stmt>
     [javac]   found:    Stmt
-    [javac] /tmp/tmpdsxr16ha/jamesguyer/src/parser/Parser.java:199: error: incompatible types
+    [javac] /tmp/tmpfdez8as0/jamesguyer/src/parser/Parser.java:199: error: incompatible types
     [javac]         	List<Stmt> returnstmts = parseStmtLst();
     [javac]         	                                     ^
     [javac]   required: List<Stmt>
     [javac]   found:    void
-    [javac] /tmp/tmpdsxr16ha/jamesguyer/src/parser/Parser.java:201: error: cannot return a value from method whose result type is void
+    [javac] /tmp/tmpfdez8as0/jamesguyer/src/parser/Parser.java:201: error: cannot return a value from method whose result type is void
     [javac]         return returnstmt;
     [javac]                ^
-    [javac] /tmp/tmpdsxr16ha/jamesguyer/src/parser/Parser.java:208: error: incompatible types
+    [javac] /tmp/tmpfdez8as0/jamesguyer/src/parser/Parser.java:208: error: incompatible types
     [javac]             List<Stmt> stmt = parseStmtLst();
     [javac]                                           ^
     [javac]   required: List<Stmt>
     [javac]   found:    void
-    [javac] /tmp/tmpdsxr16ha/jamesguyer/src/parser/Parser.java:227: error: variable stmt is already defined in method parseStmt()
+    [javac] /tmp/tmpfdez8as0/jamesguyer/src/parser/Parser.java:227: error: variable stmt is already defined in method parseStmt()
     [javac]             	List<Stmt> stmt = parseExp();
     [javac]             	           ^
-    [javac] /tmp/tmpdsxr16ha/jamesguyer/src/parser/Parser.java:227: error: incompatible types
+    [javac] /tmp/tmpfdez8as0/jamesguyer/src/parser/Parser.java:227: error: incompatible types
     [javac]             	List<Stmt> stmt = parseExp();
     [javac]             	                          ^
     [javac]   required: List<Stmt>
     [javac]   found:    Expr
-    [javac] /tmp/tmpdsxr16ha/jamesguyer/src/parser/Parser.java:229: error: constructor StrLiteral in class StrLiteral cannot be applied to given types;
+    [javac] /tmp/tmpfdez8as0/jamesguyer/src/parser/Parser.java:229: error: constructor StrLiteral in class StrLiteral cannot be applied to given types;
     [javac]                 return new StrLiteral(name);
     [javac]                        ^
     [javac]   required: Type
     [javac]   found: String
     [javac]   reason: actual argument String cannot be converted to Type by method invocation conversion
-    [javac] /tmp/tmpdsxr16ha/jamesguyer/src/parser/Parser.java:379: error: cannot find symbol
+    [javac] /tmp/tmpfdez8as0/jamesguyer/src/parser/Parser.java:379: error: cannot find symbol
     [javac]                 	Expr lhs = IntLiteral(0);
     [javac]                 	           ^
     [javac]   symbol:   method IntLiteral(int)
     [javac]   location: class Parser
-    [javac] /tmp/tmpdsxr16ha/jamesguyer/src/parser/Parser.java:441: error: incompatible types
+    [javac] /tmp/tmpfdez8as0/jamesguyer/src/parser/Parser.java:441: error: incompatible types
     [javac]         return list;
     [javac]                ^
     [javac]   required: List<Expr>
     [javac]   found:    List<String>
-    [javac] Note: /tmp/tmpdsxr16ha/jamesguyer/src/parser/Parser.java uses unchecked or unsafe operations.
+    [javac] Note: /tmp/tmpfdez8as0/jamesguyer/src/parser/Parser.java uses unchecked or unsafe operations.
     [javac] Note: Recompile with -Xlint:unchecked for details.
     [javac] 18 errors
 
 BUILD FAILED
-/tmp/tmpdsxr16ha/jamesguyer/build.xml:49: Compile failed; see the compiler error output for details.
+/tmp/tmpfdez8as0/jamesguyer/build.xml:49: Compile failed; see the compiler error output for details.
 
 Total time: 0 seconds
 </pre></fieldset></div><hr /><div class="container" style="width:75%;"><a href="scoreboard.html"><button type="button" class="btn btn-default">Go back</button></a></div></div></body></html>
