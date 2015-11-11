@@ -1,201 +1,70 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CT Scoreboard for jamesguyer</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><style type="text/css">body { margin: 0 auto; width: 50%; padding-bottom: 30px; } td.hd { font-weight: bold; text-align: center; } td { padding: 5px; }</style></head><body><div class="container"><h2>Information</h2>
-<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>jamesguyer</td></tr><tr><td>Start</td><td>2015-11-10 16:01:43</td></tr><tr><td>End</td><td>2015-11-10 16:01:48</td></tr><tr><td>Comment ID</td><td>5e54b1cef40af4b197b05e9d6528567fc544a078</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>240</td><td>One or more semantic error(s).</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>124</td><td>Your compiler might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmp89t8i9y9/jamesguyer/build.xml
+<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>jamesguyer</td></tr><tr><td>Start</td><td>2015-11-11 04:01:39</td></tr><tr><td>End</td><td>2015-11-11 04:01:48</td></tr><tr><td>Comment ID</td><td>6bf070d3524cc95ee1147c5b603b6d4ceea72f3a</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>240</td><td>One or more semantic error(s).</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>124</td><td>Your compiler might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmpjfydr08q/jamesguyer/build.xml
 
 build-subprojects:
 
 init:
-    [mkdir] Created dir: /tmp/tmp89t8i9y9/jamesguyer/bin
+    [mkdir] Created dir: /tmp/tmpjfydr08q/jamesguyer/bin
 
 build-project:
-     [echo] CT-15-16: /tmp/tmp89t8i9y9/jamesguyer/build.xml
-    [javac] Compiling 35 source files to /tmp/tmp89t8i9y9/jamesguyer/bin
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:505: error: not a statement
-    [javac] 			Expr expr = parseExp();
-    [javac] 			^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:505: error: ';' expected
-    [javac] 			Expr expr = parseExp();
-    [javac] 			    ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:508: error: illegal start of type
-    [javac] 		return exprs;
-    [javac] 		^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:508: error: ';' expected
-    [javac] 		return exprs;
-    [javac] 		      ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:512: error: class, interface, or enum expected
-    [javac]     private Expr parseExp() {
-    [javac]             ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:516: error: class, interface, or enum expected
-    [javac]         }
-    [javac]         ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:519: error: class, interface, or enum expected
-    [javac]         	return lhs;
-    [javac]         	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:520: error: class, interface, or enum expected
-    [javac]         }
-    [javac]         ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:526: error: class, interface, or enum expected
-    [javac]     	Op op;
-    [javac]     	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:527: error: class, interface, or enum expected
-    [javac]     	if (token.tokenClass == TokenClass.GT) {
-    [javac]     	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:529: error: class, interface, or enum expected
-    [javac]     	}
-    [javac]     	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:532: error: class, interface, or enum expected
-    [javac]     	}
-    [javac]     	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:535: error: class, interface, or enum expected
-    [javac]     	}
-    [javac]     	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:538: error: class, interface, or enum expected
-    [javac]     	}
-    [javac]     	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:541: error: class, interface, or enum expected
-    [javac]     	}
-    [javac]     	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:544: error: class, interface, or enum expected
-    [javac]     	}
-    [javac]     	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:546: error: class, interface, or enum expected
-    [javac]     	Expr rhs = parseLExp();
-    [javac]     	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:547: error: class, interface, or enum expected
-    [javac]     	return new BinOp(lhs, op, rhs);
-    [javac]     	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:548: error: class, interface, or enum expected
-    [javac]     }
-    [javac]     ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:550: error: class, interface, or enum expected
-    [javac]     private Expr parseLExp(); {
-    [javac]                               ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:553: error: class, interface, or enum expected
-    [javac]         }
-    [javac]         ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:556: error: class, interface, or enum expected
-    [javac]         	return lhs;
-    [javac]         	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:557: error: class, interface, or enum expected
-    [javac]         }
-    [javac]         ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:563: error: class, interface, or enum expected
-    [javac]     	Op op;
-    [javac]     	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:564: error: class, interface, or enum expected
-    [javac]     	if (token.tokenClass == TokenClass.PLUS) {
-    [javac]     	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:566: error: class, interface, or enum expected
-    [javac]     	}
-    [javac]     	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:569: error: class, interface, or enum expected
-    [javac]     	}
-    [javac]     	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:571: error: class, interface, or enum expected
-    [javac]     	Expr rhs = parseTerm();
-    [javac]     	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:572: error: class, interface, or enum expected
-    [javac]     	return new BinOp(lhs, op, rhs);
-    [javac]     	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:573: error: class, interface, or enum expected
-    [javac]     }
-    [javac]     ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:579: error: class, interface, or enum expected
-    [javac]         	return expr;
-    [javac]         	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:580: error: class, interface, or enum expected
-    [javac]         }
-    [javac]         ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:583: error: class, interface, or enum expected
-    [javac]         	return lhs;
-    [javac]         	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:584: error: class, interface, or enum expected
-    [javac]         }
-    [javac]         ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:590: error: class, interface, or enum expected
-    [javac]     	Op op;
-    [javac]     	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:591: error: class, interface, or enum expected
-    [javac]     	if (token.tokenClass == TokenClass.PLUS) {
-    [javac]     	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:593: error: class, interface, or enum expected
-    [javac]     	}
-    [javac]     	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:596: error: class, interface, or enum expected
-    [javac]     	}
-    [javac]     	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:598: error: class, interface, or enum expected
-    [javac]     	Expr rhs = parseFactor();
-    [javac]     	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:599: error: class, interface, or enum expected
-    [javac]     	return new BinOp(lhs, op, rhs);
-    [javac]     	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:600: error: class, interface, or enum expected
-    [javac]     }
-    [javac]     ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:605: error: class, interface, or enum expected
-    [javac]         if (accept(TokenClass.NUMBER, TokenClass.IDENTIFIER)) {
-    [javac]         ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:607: error: class, interface, or enum expected
-    [javac]                 Op op = Op.SUB;
-    [javac]                 ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:608: error: class, interface, or enum expected
-    [javac]                 if (accept(TokenClass.NUMBER)){
-    [javac]                 ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:610: error: class, interface, or enum expected
-    [javac]                 	return new BinOp(lhs, op, rhs);
-    [javac]                 	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:611: error: class, interface, or enum expected
-    [javac]                 }
-    [javac]                 ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:614: error: class, interface, or enum expected
-    [javac]                 	return new BinOp(lhs, op, rhs);
-    [javac]                 	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:615: error: class, interface, or enum expected
-    [javac]                 }
-    [javac]                 ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:623: error: class, interface, or enum expected
-    [javac]             Expr expr = parseLExp();
-    [javac]             ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:624: error: class, interface, or enum expected
-    [javac]             expect(TokenClass.RPAR);
-    [javac]             ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:625: error: class, interface, or enum expected
-    [javac]             return expr;
-    [javac]             ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:626: error: class, interface, or enum expected
-    [javac]         } 
-    [javac]         ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:629: error: class, interface, or enum expected
-    [javac]         	return expr
-    [javac]         	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:633: error: class, interface, or enum expected
-    [javac]         	return expr;
-    [javac]         	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:634: error: class, interface, or enum expected
-    [javac]         }
-    [javac]         ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:637: error: class, interface, or enum expected
-    [javac]         	return expr;
-    [javac]         	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:638: error: class, interface, or enum expected
-    [javac]         }
-    [javac]         ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:641: error: class, interface, or enum expected
-    [javac]         	return expr;
-    [javac]         	^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:642: error: class, interface, or enum expected
-    [javac]         } 
-    [javac]         ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:646: error: class, interface, or enum expected
-    [javac]                 return expr;
-    [javac]                 ^
-    [javac] /tmp/tmp89t8i9y9/jamesguyer/src/parser/Parser.java:647: error: class, interface, or enum expected
-    [javac]         } 
-    [javac]         ^
-    [javac] 61 errors
+     [echo] CT-15-16: /tmp/tmpjfydr08q/jamesguyer/build.xml
+    [javac] Compiling 37 source files to /tmp/tmpjfydr08q/jamesguyer/bin
+    [javac] /tmp/tmpjfydr08q/jamesguyer/src/sem/NameAnalysisVisitor.java:38: error: cannot find symbol
+    [javac] 		Symbol proc = scope.lookup(v.name);
+    [javac] 		                           ^
+    [javac]   symbol:   variable v
+    [javac]   location: class NameAnalysisVisitor
+    [javac] /tmp/tmpjfydr08q/jamesguyer/src/sem/NameAnalysisVisitor.java:42: error: variable proc is already defined in method visitProgram(Program)
+    [javac]         for (Procedure proc : p.procs) {
+    [javac]                        ^
+    [javac] /tmp/tmpjfydr08q/jamesguyer/src/sem/NameAnalysisVisitor.java:43: error: cannot find symbol
+    [javac]             p.procedure = ((ProcSymbol) proc).p;
+    [javac]              ^
+    [javac]   symbol:   variable procedure
+    [javac]   location: variable p of type Program
+    [javac] /tmp/tmpjfydr08q/jamesguyer/src/sem/NameAnalysisVisitor.java:43: error: inconvertible types
+    [javac]             p.procedure = ((ProcSymbol) proc).p;
+    [javac]                                         ^
+    [javac]   required: ProcSymbol
+    [javac]   found:    Procedure
+    [javac] /tmp/tmpjfydr08q/jamesguyer/src/sem/Scope.java:18: error: cannot find symbol
+    [javac] 		Symbol result = get(name);
+    [javac] 		                ^
+    [javac]   symbol:   method get(String)
+    [javac]   location: class Scope
+    [javac] /tmp/tmpjfydr08q/jamesguyer/src/sem/Scope.java:28: error: cannot find symbol
+    [javac] 		return symbolTable.lookup(name);
+    [javac] 		                  ^
+    [javac]   symbol:   method lookup(String)
+    [javac]   location: variable symbolTable of type Map<String,Symbol>
+    [javac] /tmp/tmpjfydr08q/jamesguyer/src/sem/Symbol.java:6: error: cannot find symbol
+    [javac] 		if (accept(VarSymbol))
+    [javac] 		           ^
+    [javac]   symbol:   variable VarSymbol
+    [javac]   location: class Symbol
+    [javac] /tmp/tmpjfydr08q/jamesguyer/src/sem/Symbol.java:12: error: cannot find symbol
+    [javac] 		if (accept(ProcSymbol))
+    [javac] 		           ^
+    [javac]   symbol:   variable ProcSymbol
+    [javac]   location: class Symbol
+    [javac] /tmp/tmpjfydr08q/jamesguyer/src/sem/ProcSymbol.java:7: error: constructor Symbol in class Symbol cannot be applied to given types;
+    [javac] 	public ProcSymbol(Procedure p) {
+    [javac] 	                               ^
+    [javac]   required: String
+    [javac]   found: no arguments
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /tmp/tmpjfydr08q/jamesguyer/src/sem/VarSymbol.java:7: error: constructor Symbol in class Symbol cannot be applied to given types;
+    [javac] 	public VarSymbol(VarDecl vd) {
+    [javac] 	                             ^
+    [javac]   required: String
+    [javac]   found: no arguments
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 10 errors
 
 BUILD FAILED
-/tmp/tmp89t8i9y9/jamesguyer/build.xml:49: Compile failed; see the compiler error output for details.
+/tmp/tmpjfydr08q/jamesguyer/build.xml:49: Compile failed; see the compiler error output for details.
 
-Total time: 0 seconds
+Total time: 1 second
 </pre></fieldset></div><hr /><div class="container" style="width:75%;"><a href="scoreboard.html"><button type="button" class="btn btn-default">Go back</button></a></div></div></body></html>
