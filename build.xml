@@ -25,7 +25,10 @@
   <property environment="env"/>
   <property name="debuglevel" value="source,lines,vars"/>
   <property name="target" value="1.7"/>
-  <property name="source" value="1.7"/> 
+  <property name="source" value="1.7"/>
+  <path id="${ant.project.name}.classpath">
+	<pathelement location="lib/asm-all-4.2.jar"/>
+  </path>
 
   <target name="init">
     <tstamp/>
