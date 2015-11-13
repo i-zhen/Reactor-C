@@ -40,9 +40,10 @@ To be completed...
 
 ## New Files
 
-A new package has been added under `src/sem/`. This package contains template classes to get you started on implementing the semantic analysis.
+A new package has been added under `src/gen/`. This package should be used to store your code generator.
 
- * The `sem.SemanticAnalyzer` is the only class which `Main.java` directly interfaces with. Inside this class you should run all your semantic visitors.
+ * The `gen.CodeGenerator` is the only class which `Main.java` directly interfaces with. Inside this class you should run your own code generator visitor.
+ * The `lib/asm-all-4.2.jar` package contains the version 4.2 of the ASM library that you have to use for implementing the code generator.
 
 ## Updated Files
 
