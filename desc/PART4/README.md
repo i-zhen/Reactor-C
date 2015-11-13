@@ -37,6 +37,13 @@ Finally, you should extend your visitor to handle the actual code found in each 
 
 To be completed...
 
+## Running your compiler
+In order to run your compiler you need to supply it with the path to the `asm-all-4.2.jar` as this library is a dependency.
+Therefore, you may run your compiler as follows:
+```
+$ java -cp "bin/:lib/asm-all-4.2.jar" Main -gen tests/fibonacci.c out/Main.class
+```
+The `-cp` argument instructs the Java run-time to look for classes in `bin`, and where it may find the asm library. The `-gen` argument instructs your compiler to generate code for the `fibonacci`-program; the generated code is written to a file called `Main.class`.
 
 ## New Files
 
