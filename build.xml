@@ -18,14 +18,18 @@
 		  on the commandline.		     
 		  -->
 <!-- Replace the value of the attribute "name" with the name of YOUR project. -->
-<project basedir="." default="build" name="CT-15-16">
+<project basedir="." default="build" name="ct-15-16">
   <!-- You do not need to touch anything below this comment -->
   <property name="src" location="src"/>
   <property name="bin" location="bin"/>
   <property environment="env"/>
   <property name="debuglevel" value="source,lines,vars"/>
   <property name="target" value="1.7"/>
-  <property name="source" value="1.7"/> 
+  <property name="source" value="1.7"/>
+  <path id="project.classpath">
+	<pathelement location="lib/asm-all-4.2.jar"/>
+        <pathelement path="${java.class.path}"/>
+  </path>
 
   <target name="init">
     <tstamp/>
@@ -47,6 +51,7 @@
   <target depends="init" name="build-project">
     <echo message="${ant.project.name}: ${ant.file}"/>
     <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+      <classpath refid="project.classpath"/>
       <src path="src"/>      
     </javac>
   </target>
