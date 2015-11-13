@@ -8,7 +8,10 @@ We will restrict our-self to the use of the Core API and it is **forbidden** to 
 
 You first task will consist of reading the ASM [guide](./asm4-guide.pdf), in particular section 2 and 3.
 Use the examples of section 2.2.3 and 3.2.2 to learn how to generate a class and a method using the Core API.
+The Javadoc is also available [here](http://asm.ow2.org/asm40/javadoc/user/index.html) (for a slightly older version).
 
+We also recommend that you take a look at the ASMifier tool or the Bytecode Outline plugin for Eclipse which allows you to type Java source code and see the ASM API calls needed in order to produce the corresponding Java ByteCode.
+You can find a link to these tools on the main ASM [webpage](http://asm.ow2.org/).
 
 ## 1. Generating the Main class
 
