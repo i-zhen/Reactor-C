@@ -1,46 +1,311 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CT Scoreboard for tkerber</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><style type="text/css">body { margin: 0 auto; width: 50%; padding-bottom: 30px; } td.hd { font-weight: bold; text-align: center; } td { padding: 5px; }</style></head><body><div class="container"><h2>Information</h2>
-<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>tkerber</td></tr><tr><td>Start</td><td>2015-11-13 16:16:32</td></tr><tr><td>End</td><td>2015-11-13 16:16:38</td></tr><tr><td>Comment ID</td><td>f78679622ef039cdb1f3c0ac7c16329efce6c312</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>240</td><td>One or more semantic error(s).</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>124</td><td>Your compiler might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmpqeqqx6t_/tkerber/build.xml
+<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>tkerber</td></tr><tr><td>Start</td><td>2015-11-14 04:14:40</td></tr><tr><td>End</td><td>2015-11-14 04:14:45</td></tr><tr><td>Comment ID</td><td>aa58577faaa1e59a91a4ea0144f66841a556f0d6</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>240</td><td>One or more semantic error(s).</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>124</td><td>Your compiler might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmpkoqi9hvr/tkerber/build.xml
 
 build-subprojects:
 
 init:
-    [mkdir] Created dir: /tmp/tmpqeqqx6t_/tkerber/bin
+    [mkdir] Created dir: /tmp/tmpkoqi9hvr/tkerber/bin
 
 build-project:
-     [echo] CT-15-16: /tmp/tmpqeqqx6t_/tkerber/build.xml
-    [javac] Compiling 38 source files to /tmp/tmpqeqqx6t_/tkerber/bin
-    [javac] /tmp/tmpqeqqx6t_/tkerber/src/gen/CodeGenerator.java:9: error: package org.objectweb.asm does not exist
+     [echo] CT-15-16: /tmp/tmpkoqi9hvr/tkerber/build.xml
+    [javac] Compiling 42 source files to /tmp/tmpkoqi9hvr/tkerber/bin
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/Builtins.java:3: error: package org.objectweb.asm does not exist
+    [javac] import org.objectweb.asm.MethodVisitor;
+    [javac]                         ^
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/Builtins.java:4: error: package org.objectweb.asm does not exist
+    [javac] import static org.objectweb.asm.Opcodes.*;
+    [javac]                                ^
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/Builtins.java:7: error: cannot find symbol
+    [javac]     public static void emitPrintS(MethodVisitor mv) {
+    [javac]                                   ^
+    [javac]   symbol:   class MethodVisitor
+    [javac]   location: class Builtins
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/ClassGenVisitor.java:23: error: package org.objectweb.asm does not exist
     [javac] import org.objectweb.asm.ClassWriter;
     [javac]                         ^
-    [javac] /tmp/tmpqeqqx6t_/tkerber/src/gen/CodeGenerator.java:10: error: package org.objectweb.asm does not exist
-    [javac] import org.objectweb.asm.Opcodes;
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/ClassGenVisitor.java:24: error: package org.objectweb.asm does not exist
+    [javac] import org.objectweb.asm.FieldVisitor;
     [javac]                         ^
-    [javac] /tmp/tmpqeqqx6t_/tkerber/src/gen/CodeGenerator.java:13: error: cannot find symbol
-    [javac]     private final ClassWriter writer;
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/ClassGenVisitor.java:25: error: package org.objectweb.asm does not exist
+    [javac] import org.objectweb.asm.MethodVisitor;
+    [javac]                         ^
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/ClassGenVisitor.java:26: error: package org.objectweb.asm does not exist
+    [javac] import static org.objectweb.asm.Opcodes.*;
+    [javac]                                ^
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/ClassGenVisitor.java:29: error: cannot find symbol
+    [javac]     private final ClassWriter cw;
     [javac]                   ^
     [javac]   symbol:   class ClassWriter
-    [javac]   location: class CodeGenerator
-    [javac] /tmp/tmpqeqqx6t_/tkerber/src/gen/CodeGenerator.java:16: error: cannot find symbol
-    [javac]         writer = new ClassWriter(0);
+    [javac]   location: class ClassGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/ClassGenVisitor.java:31: error: cannot find symbol
+    [javac]     public ClassGenVisitor(ClassWriter cw) {
+    [javac]                            ^
+    [javac]   symbol:   class ClassWriter
+    [javac]   location: class ClassGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:22: error: package org.objectweb.asm does not exist
+    [javac] import org.objectweb.asm.MethodVisitor;
+    [javac]                         ^
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:23: error: package org.objectweb.asm does not exist
+    [javac] import static org.objectweb.asm.Opcodes.*;
+    [javac]                                ^
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:26: error: cannot find symbol
+    [javac]     private final MethodVisitor mv;
+    [javac]                   ^
+    [javac]   symbol:   class MethodVisitor
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:32: error: cannot find symbol
+    [javac]     public CodeGenVisitor(MethodVisitor mv) {
+    [javac]                           ^
+    [javac]   symbol:   class MethodVisitor
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenerator.java:11: error: package org.objectweb.asm does not exist
+    [javac] import org.objectweb.asm.ClassWriter;
+    [javac]                         ^
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenerator.java:12: error: package org.objectweb.asm does not exist
+    [javac] import org.objectweb.asm.MethodVisitor;
+    [javac]                         ^
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenerator.java:13: error: package org.objectweb.asm does not exist
+    [javac] import org.objectweb.asm.Label;
+    [javac]                         ^
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenerator.java:14: error: package org.objectweb.asm does not exist
+    [javac] import static org.objectweb.asm.Opcodes.*;
+    [javac]                                ^
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/Builtins.java:10: error: cannot find symbol
+    [javac]             GETSTATIC,
+    [javac]             ^
+    [javac]   symbol:   variable GETSTATIC
+    [javac]   location: class Builtins
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/Builtins.java:14: error: cannot find symbol
+    [javac]         mv.visitVarInsn(ALOAD, 0);
+    [javac]                         ^
+    [javac]   symbol:   variable ALOAD
+    [javac]   location: class Builtins
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/Builtins.java:16: error: cannot find symbol
+    [javac]             INVOKEVIRTUAL,
+    [javac]             ^
+    [javac]   symbol:   variable INVOKEVIRTUAL
+    [javac]   location: class Builtins
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/Builtins.java:20: error: cannot find symbol
+    [javac]         mv.visitInsn(RETURN);
     [javac]                      ^
+    [javac]   symbol:   variable RETURN
+    [javac]   location: class Builtins
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/ClassGenVisitor.java:40: error: cannot find symbol
+    [javac]         MethodVisitor mv;
+    [javac]         ^
+    [javac]   symbol:   class MethodVisitor
+    [javac]   location: class ClassGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/ClassGenVisitor.java:43: error: cannot find symbol
+    [javac]                 ACC_PUBLIC | ACC_STATIC,
+    [javac]                 ^
+    [javac]   symbol:   variable ACC_PUBLIC
+    [javac]   location: class ClassGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/ClassGenVisitor.java:43: error: cannot find symbol
+    [javac]                 ACC_PUBLIC | ACC_STATIC,
+    [javac]                              ^
+    [javac]   symbol:   variable ACC_STATIC
+    [javac]   location: class ClassGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/ClassGenVisitor.java:49: error: cannot find symbol
+    [javac]                 ACC_PRIVATE | ACC_STATIC,
+    [javac]                 ^
+    [javac]   symbol:   variable ACC_PRIVATE
+    [javac]   location: class ClassGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/ClassGenVisitor.java:49: error: cannot find symbol
+    [javac]                 ACC_PRIVATE | ACC_STATIC,
+    [javac]                               ^
+    [javac]   symbol:   variable ACC_STATIC
+    [javac]   location: class ClassGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/ClassGenVisitor.java:60: error: cannot find symbol
+    [javac]         cw.visit(V1_7, ACC_PUBLIC, "Main", null, "java/lang/Object", null);
+    [javac]                  ^
+    [javac]   symbol:   variable V1_7
+    [javac]   location: class ClassGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/ClassGenVisitor.java:60: error: cannot find symbol
+    [javac]         cw.visit(V1_7, ACC_PUBLIC, "Main", null, "java/lang/Object", null);
+    [javac]                        ^
+    [javac]   symbol:   variable ACC_PUBLIC
+    [javac]   location: class ClassGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/ClassGenVisitor.java:73: error: cannot find symbol
+    [javac]         FieldVisitor fv = cw.visitField(
+    [javac]         ^
+    [javac]   symbol:   class FieldVisitor
+    [javac]   location: class ClassGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/ClassGenVisitor.java:74: error: cannot find symbol
+    [javac]                 ACC_PRIVATE | ACC_STATIC,
+    [javac]                 ^
+    [javac]   symbol:   variable ACC_PRIVATE
+    [javac]   location: class ClassGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/ClassGenVisitor.java:74: error: cannot find symbol
+    [javac]                 ACC_PRIVATE | ACC_STATIC,
+    [javac]                               ^
+    [javac]   symbol:   variable ACC_STATIC
+    [javac]   location: class ClassGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:41: error: cannot find symbol
+    [javac]             mv.visitVarInsn(ISTORE, a.var.decl.varid);
+    [javac]                             ^
+    [javac]   symbol:   variable ISTORE
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:44: error: cannot find symbol
+    [javac]                 PUTSTATIC,
+    [javac]                 ^
+    [javac]   symbol:   variable PUTSTATIC
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:57: error: cannot find symbol
+    [javac]                 mv.visitInsn(IADD);
+    [javac]                              ^
+    [javac]   symbol:   variable IADD
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:60: error: cannot find symbol
+    [javac]                 mv.visitInsn(ISUB);
+    [javac]                              ^
+    [javac]   symbol:   variable ISUB
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:63: error: cannot find symbol
+    [javac]                 mv.visitInsn(IMUL);
+    [javac]                              ^
+    [javac]   symbol:   variable IMUL
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:66: error: cannot find symbol
+    [javac]                 mv.visitInsn(IDIV);
+    [javac]                              ^
+    [javac]   symbol:   variable IDIV
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:69: error: cannot find symbol
+    [javac]                 mv.visitInsn(IREM);
+    [javac]                              ^
+    [javac]   symbol:   variable IREM
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:92: error: cannot find symbol
+    [javac]         mv.visitIntInsn(BIPUSH, cl.literal);
+    [javac]                         ^
+    [javac]   symbol:   variable BIPUSH
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:102: error: cannot find symbol
+    [javac]             INVOKESTATIC,
+    [javac]             ^
+    [javac]   symbol:   variable INVOKESTATIC
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:115: error: cannot find symbol
+    [javac]             INVOKESTATIC,
+    [javac]             ^
+    [javac]   symbol:   variable INVOKESTATIC
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:120: error: cannot find symbol
+    [javac]             mv.visitInsn(POP);
+    [javac]                          ^
+    [javac]   symbol:   variable POP
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:132: error: cannot find symbol
+    [javac]                 mv.visitInsn(ICONST_M1);
+    [javac]                              ^
+    [javac]   symbol:   variable ICONST_M1
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:135: error: cannot find symbol
+    [javac]                 mv.visitInsn(ICONST_0);
+    [javac]                              ^
+    [javac]   symbol:   variable ICONST_0
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:138: error: cannot find symbol
+    [javac]                 mv.visitInsn(ICONST_1);
+    [javac]                              ^
+    [javac]   symbol:   variable ICONST_1
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:141: error: cannot find symbol
+    [javac]                 mv.visitInsn(ICONST_2);
+    [javac]                              ^
+    [javac]   symbol:   variable ICONST_2
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:144: error: cannot find symbol
+    [javac]                 mv.visitInsn(ICONST_3);
+    [javac]                              ^
+    [javac]   symbol:   variable ICONST_3
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:147: error: cannot find symbol
+    [javac]                 mv.visitInsn(ICONST_4);
+    [javac]                              ^
+    [javac]   symbol:   variable ICONST_4
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:150: error: cannot find symbol
+    [javac]                 mv.visitInsn(ICONST_5);
+    [javac]                              ^
+    [javac]   symbol:   variable ICONST_5
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:155: error: cannot find symbol
+    [javac]             mv.visitIntInsn(SIPUSH, il.literal);
+    [javac]                             ^
+    [javac]   symbol:   variable SIPUSH
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:158: error: cannot find symbol
+    [javac]             mv.visitIntInsn(SIPUSH, (il.literal >> 16) & 0xffff);
+    [javac]                             ^
+    [javac]   symbol:   variable SIPUSH
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:159: error: cannot find symbol
+    [javac]             mv.visitIntInsn(BIPUSH, 16);
+    [javac]                             ^
+    [javac]   symbol:   variable BIPUSH
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:160: error: cannot find symbol
+    [javac]             mv.visitInsn(ISHL);
+    [javac]                          ^
+    [javac]   symbol:   variable ISHL
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:161: error: cannot find symbol
+    [javac]             mv.visitIntInsn(SIPUSH, il.literal & 0xffff);
+    [javac]                             ^
+    [javac]   symbol:   variable SIPUSH
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:162: error: cannot find symbol
+    [javac]             mv.visitInsn(IOR);
+    [javac]                          ^
+    [javac]   symbol:   variable IOR
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:175: error: cannot find symbol
+    [javac]                 mv.visitInsn(RETURN);
+    [javac]                              ^
+    [javac]   symbol:   variable RETURN
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:177: error: cannot find symbol
+    [javac]                 mv.visitInsn(ICONST_0);
+    [javac]                              ^
+    [javac]   symbol:   variable ICONST_0
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:179: error: cannot find symbol
+    [javac]                 mv.visitInsn(IRETURN);
+    [javac]                              ^
+    [javac]   symbol:   variable IRETURN
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:188: error: cannot find symbol
+    [javac]             mv.visitInsn(RETURN);
+    [javac]                          ^
+    [javac]   symbol:   variable RETURN
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:192: error: cannot find symbol
+    [javac]             mv.visitInsn(IRETURN);
+    [javac]                          ^
+    [javac]   symbol:   variable IRETURN
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:208: error: cannot find symbol
+    [javac]             mv.visitVarInsn(ILOAD, v.decl.varid);
+    [javac]                             ^
+    [javac]   symbol:   variable ILOAD
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenVisitor.java:211: error: cannot find symbol
+    [javac]                 GETSTATIC,
+    [javac]                 ^
+    [javac]   symbol:   variable GETSTATIC
+    [javac]   location: class CodeGenVisitor
+    [javac] /tmp/tmpkoqi9hvr/tkerber/src/gen/CodeGenerator.java:30: error: cannot find symbol
+    [javac]         ClassGenVisitor visitor = new ClassGenVisitor(new ClassWriter(0));
+    [javac]                                                           ^
     [javac]   symbol:   class ClassWriter
     [javac]   location: class CodeGenerator
-    [javac] /tmp/tmpqeqqx6t_/tkerber/src/gen/CodeGenerator.java:20: error: cannot find symbol
-    [javac]         writer.visit(Opcodes.V1_7, Opcodes.ACC_PUBLIC, "Main", null, "java/lang/Object", null);
-    [javac]                      ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenerator
-    [javac] /tmp/tmpqeqqx6t_/tkerber/src/gen/CodeGenerator.java:20: error: cannot find symbol
-    [javac]         writer.visit(Opcodes.V1_7, Opcodes.ACC_PUBLIC, "Main", null, "java/lang/Object", null);
-    [javac]                                    ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenerator
-    [javac] Note: /tmp/tmpqeqqx6t_/tkerber/src/sem/SemanticAnalyzer.java uses unchecked or unsafe operations.
+    [javac] Note: /tmp/tmpkoqi9hvr/tkerber/src/sem/SemanticAnalyzer.java uses unchecked or unsafe operations.
     [javac] Note: Recompile with -Xlint:unchecked for details.
-    [javac] 6 errors
+    [javac] 63 errors
 
 BUILD FAILED
-/tmp/tmpqeqqx6t_/tkerber/build.xml:49: Compile failed; see the compiler error output for details.
+/tmp/tmpkoqi9hvr/tkerber/build.xml:49: Compile failed; see the compiler error output for details.
 
 Total time: 1 second
 </pre></fieldset></div><hr /><div class="container" style="width:75%;"><a href="scoreboard.html"><button type="button" class="btn btn-default">Go back</button></a></div></div></body></html>
