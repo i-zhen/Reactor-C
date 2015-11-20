@@ -15,7 +15,7 @@ You can find a link to these tools on the main ASM [webpage](http://asm.ow2.org/
 
 ## 1. Generating the Main class
 
-Your next task will consists of producing in your compiler the Main class using the ASM API containing an empty main function with the following signature: `static int main(String[])`.
+Your next task will consists of producing in your compiler the Main class using the ASM API containing an empty main function with the following signature: `static void main(String[])`.
 It is important to ensure that the generated class file is named `Main.class` and located in the `out/` directory for our automated testing system to work correctly.
 You should then check that you can correctly execute the class produced by running the `java Main` command in the `out/` directory
 
@@ -43,7 +43,7 @@ Therefore, you may run your compiler as follows:
 ```
 $ java -cp "bin/:lib/asm-all-4.2.jar" Main -gen tests/fibonacci.c out/Main.class
 ```
-The `-cp` argument instructs the Java run-time to look for classes in `bin`, and where it may find the asm library. The `-gen` argument instructs your compiler to generate code for the `fibonacci`-program; the generated code is written to a file called `Main.class`.
+The `-cp` argument instructs the Java run-time to look for classes in `bin`, and where it may find the asm library. The `-gen` argument instructs your compiler to generate code for the `fibonacci`-program; the generated code is written to a file called `Main.class`. Note that on Windows platform you needto use `;` instead of `:`.
 
 ## New Files
 
