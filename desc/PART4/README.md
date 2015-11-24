@@ -35,7 +35,7 @@ Finally, you should extend your visitor to handle the actual code found in each 
 
 ## 5. Handling of built-in functions
 
-To be completed...
+We provide an implementation of the built-in functions in the class-file `lib/IO.class`. You are free to link against this library or write your own. The source file `lib/IO.java` provided along with the library class.
 
 ## Running your compiler
 In order to run your compiler you need to supply it with the path to the `asm-all-4.2.jar` as this library is a dependency.
