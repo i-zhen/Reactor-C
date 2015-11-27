@@ -13,7 +13,7 @@ int dec2bin(int decimal, int exponent) {
   int remainder; int exponent_plus_one;
   int two;
   two = 2;
-  if (decimal == 0) print_s("0");
+  if (decimal == 0) { print_s("0"); return 0; }
   else if (decimal / power(two, exponent)) {
     exponent_plus_one = exponent + 1;
     remainder = dec2bin(decimal, exponent_plus_one);
