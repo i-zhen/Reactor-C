@@ -4,6 +4,24 @@ The goal of part IV is to write the code generator.
 In order to simplify the development of the code generator, we are going to use version 4.2 of the ASM Java ByteCode manipulation library.
 We will restrict our-self to the use of the Core API and it is **forbidden** to use the Tree API (do not use any of the classes in the org.objectweb.asm.tree.* packages).
 
+## Scoring
+
+We use two types of tests for marking Part IV, full applications which are given to you in the test folders and small tests which are mostly hidden as in the previous parts.
+For calulating the mark for Part IV, the full applications will count for 80% of the mark while the small tests count for 20%. The full applications are:
+
+* cashmachine
+* dec2bin
+* fibonacci
+* factorial
+* is_leap_year
+* is_palindromic
+* is_prime
+* pascals_triangle
+* tictactoe
+* towers_of_hanoi
+
+So, if for instance you are able to compile and run correctly all the small tests but none of the full applications, you will get a mark of 20% for part IV.
+
 ## 0. Setup and Learning
 
 You first task will consist of reading the ASM [guide](./asm4-guide.pdf), in particular section 2 and 3.
@@ -35,7 +53,10 @@ Finally, you should extend your visitor to handle the actual code found in each 
 
 ## 5. Handling of built-in functions
 
-We provide an implementation of the built-in functions in the class-file `lib/IO.class`. You are free to link against this library or write your own. The source file `lib/IO.java` provided along with the library class.
+We provide an implementation of the built-in functions in the class-file `lib/IO.class`.
+You are free to link against this library or write your own.
+The source file `lib/IO.java` provided along with the library class.
+However, keep in mind that when testing for the output procuded by the program compiled with your compiler, we also check for whitespaces (newline, space, ...), so it is highly advised to use the IO functions.
 
 ## Running your compiler
 In order to run your compiler you need to supply it with the path to the `asm-all-4.2.jar` as this library is a dependency.
@@ -55,4 +76,6 @@ A new package has been added under `src/gen/`. This package should be used to st
 ## Updated Files
 
 * The `Main.java` has been updated to provide a new commandline pass `-gen` which runs your code generator.
+
+
 
