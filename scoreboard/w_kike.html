@@ -1,403 +1,60 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CT Scoreboard for w_kike</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><style type="text/css">body { margin: 0 auto; width: 50%; padding-bottom: 30px; } td.hd { font-weight: bold; text-align: center; } td { padding: 5px; }</style></head><body><div class="container"><h2>Information</h2>
-<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>w_kike</td></tr><tr><td>Start</td><td>2015-11-27 20:27:48</td></tr><tr><td>End</td><td>2015-11-27 20:27:56</td></tr><tr><td>Comment ID</td><td>52ea12618c64ab6677fb43eab023b5b436c36eca</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>240</td><td>One or more semantic error(s).</td></tr><tr><td>230</td><td>Compiled program produced wrong output.</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>204</td><td>Compiled program not found.</td></tr><tr><td>124</td><td>Your compiler or produced program might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmpm7irec4d/w_kike/build.xml
+<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>w_kike</td></tr><tr><td>Start</td><td>2015-11-28 04:26:22</td></tr><tr><td>End</td><td>2015-11-28 04:26:28</td></tr><tr><td>Comment ID</td><td>eb73a8237013e9b5382bbc9d9679c38a2f089e34</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>240</td><td>One or more semantic error(s).</td></tr><tr><td>230</td><td>Compiled program produced wrong output.</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>204</td><td>Compiled program not found.</td></tr><tr><td>124</td><td>Your compiler or produced program might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmp8ugtz9ys/w_kike/build.xml
 
 build-subprojects:
 
 init:
-    [mkdir] Created dir: /tmp/tmpm7irec4d/w_kike/bin
+    [mkdir] Created dir: /tmp/tmp8ugtz9ys/w_kike/bin
 
 build-project:
-     [echo] ct-15-16: /tmp/tmpm7irec4d/w_kike/build.xml
-    [javac] Compiling 39 source files to /tmp/tmpm7irec4d/w_kike/bin
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:31: error: package jdk.internal.org.objectweb.asm does not exist
+     [echo] ct-15-16: /tmp/tmp8ugtz9ys/w_kike/build.xml
+    [javac] Compiling 39 source files to /tmp/tmp8ugtz9ys/w_kike/bin
+    [javac] /tmp/tmp8ugtz9ys/w_kike/src/gen/CodeGenerator.java:9: error: package jdk.internal.org.objectweb.asm does not exist
     [javac] import jdk.internal.org.objectweb.asm.Opcodes;
     [javac]                                      ^
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenerator.java:9: error: package jdk.internal.org.objectweb.asm does not exist
-    [javac] import jdk.internal.org.objectweb.asm.Opcodes;
-    [javac]                                      ^
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenerator.java:10: error: package jdk.nashorn.internal.runtime.regexp.joni.constants does not exist
+    [javac] /tmp/tmp8ugtz9ys/w_kike/src/gen/CodeGenerator.java:10: error: package jdk.nashorn.internal.runtime.regexp.joni.constants does not exist
     [javac] import jdk.nashorn.internal.runtime.regexp.joni.constants.AsmConstants;
     [javac]                                                          ^
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenerator.java:25: error: cannot find symbol
+    [javac] /tmp/tmp8ugtz9ys/w_kike/src/gen/CodeGenerator.java:25: error: cannot find symbol
     [javac] public class CodeGenerator implements Opcodes{
     [javac]                                       ^
     [javac]   symbol: class Opcodes
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:53: error: cannot find symbol
-    [javac] 		cw.visit(Opcodes.V1_1, Opcodes.ACC_PUBLIC, "out/Main", null, "java/lang/Object", null);
-    [javac] 		         ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:53: error: cannot find symbol
-    [javac] 		cw.visit(Opcodes.V1_1, Opcodes.ACC_PUBLIC, "out/Main", null, "java/lang/Object", null);
-    [javac] 		                       ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:54: error: cannot find symbol
-    [javac] 		mv=cw.visitMethod(Opcodes.ACC_PUBLIC+ Opcodes.ACC_STATIC, "main", "([Ljava/lang/String;)V", null, null);
-    [javac] 		                  ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:54: error: cannot find symbol
-    [javac] 		mv=cw.visitMethod(Opcodes.ACC_PUBLIC+ Opcodes.ACC_STATIC, "main", "([Ljava/lang/String;)V", null, null);
-    [javac] 		                                      ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:55: error: cannot find symbol
-    [javac] 		mv.visitFieldInsn(Opcodes.GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
-    [javac] 		                  ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:57: error: cannot find symbol
-    [javac] 		mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V");
-    [javac] 		                   ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:58: error: cannot find symbol
-    [javac] 		mv.visitInsn(Opcodes.RETURN);
-    [javac] 		             ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:119: error: cannot find symbol
-    [javac] 			mv = cw.visitMethod(Opcodes.ACC_PUBLIC | Opcodes.ACC_STATIC, p.name, "("+params+")C", null, null);
-    [javac] 			                    ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:119: error: cannot find symbol
-    [javac] 			mv = cw.visitMethod(Opcodes.ACC_PUBLIC | Opcodes.ACC_STATIC, p.name, "("+params+")C", null, null);
-    [javac] 			                                         ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:122: error: cannot find symbol
-    [javac] 			mv = cw.visitMethod(Opcodes.ACC_PUBLIC | Opcodes.ACC_STATIC, p.name, "("+params+")I", null, null);
-    [javac] 			                    ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:122: error: cannot find symbol
-    [javac] 			mv = cw.visitMethod(Opcodes.ACC_PUBLIC | Opcodes.ACC_STATIC, p.name, "("+params+")I", null, null);
-    [javac] 			                                         ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:125: error: cannot find symbol
-    [javac] 			mv = cw.visitMethod(Opcodes.ACC_PUBLIC | Opcodes.ACC_STATIC, p.name, "("+params+")Ljava/lang/String;", null, null);
-    [javac] 			                    ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:125: error: cannot find symbol
-    [javac] 			mv = cw.visitMethod(Opcodes.ACC_PUBLIC | Opcodes.ACC_STATIC, p.name, "("+params+")Ljava/lang/String;", null, null);
-    [javac] 			                                         ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:128: error: cannot find symbol
-    [javac] 			mv = cw.visitMethod(Opcodes.ACC_PUBLIC | Opcodes.ACC_STATIC, p.name, "("+params+")V", null, null);
-    [javac] 			                    ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:128: error: cannot find symbol
-    [javac] 			mv = cw.visitMethod(Opcodes.ACC_PUBLIC | Opcodes.ACC_STATIC, p.name, "("+params+")V", null, null);
-    [javac] 			                                         ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:163: error: cannot find symbol
-    [javac] 		mv=cw.visitMethod(Opcodes.ACC_PUBLIC+ Opcodes.ACC_STATIC, "main", "([Ljava/lang/String;)V", null, null);
-    [javac] 		                  ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:163: error: cannot find symbol
-    [javac] 		mv=cw.visitMethod(Opcodes.ACC_PUBLIC+ Opcodes.ACC_STATIC, "main", "([Ljava/lang/String;)V", null, null);
-    [javac] 		                                      ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:174: error: cannot find symbol
-    [javac] 		mv.visitInsn(Opcodes.RETURN);
-    [javac] 		             ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:187: error: cannot find symbol
-    [javac] 		cw.visit(Opcodes.V1_1, Opcodes.ACC_PUBLIC, "out/Main", null, "java/lang/Object", null);
-    [javac] 		         ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:187: error: cannot find symbol
-    [javac] 		cw.visit(Opcodes.V1_1, Opcodes.ACC_PUBLIC, "out/Main", null, "java/lang/Object", null);
-    [javac] 		                       ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:191: error: cannot find symbol
-    [javac] 				cw.visitField(Opcodes.ACC_PUBLIC | Opcodes.ACC_STATIC, v.var.name, (v.type == Type.INT)? "I":"C", null, null);
-    [javac] 				              ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:191: error: cannot find symbol
-    [javac] 				cw.visitField(Opcodes.ACC_PUBLIC | Opcodes.ACC_STATIC, v.var.name, (v.type == Type.INT)? "I":"C", null, null);
-    [javac] 				                                   ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:234: error: cannot find symbol
-    [javac] 			mv.visitVarInsn(Opcodes.ILOAD, a);
-    [javac] 			                ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:236: error: cannot find symbol
-    [javac] 			mv.visitFieldInsn(Opcodes.GETSTATIC,"out/Main", v.name, (v.type == Type.INT)? "I":"C");
-    [javac] 			                  ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:245: error: cannot find symbol
-    [javac] 			mv.visitVarInsn(Opcodes.ISTORE, a);
-    [javac] 			                ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:247: error: cannot find symbol
-    [javac] 			mv.visitFieldInsn(Opcodes.PUTSTATIC,"out/Main", assign.var.name, (assign.var.type == Type.INT)? "I":"C");
-    [javac] 			                  ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:258: error: cannot find symbol
-    [javac] 			mv.visitInsn(Opcodes.IADD);
-    [javac] 			             ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:261: error: cannot find symbol
-    [javac] 			mv.visitInsn(Opcodes.IDIV);
-    [javac] 			             ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:264: error: cannot find symbol
-    [javac] 			mv.visitInsn(Opcodes.ISUB);
-    [javac] 			             ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:267: error: cannot find symbol
-    [javac] 			mv.visitInsn(Opcodes.ISUB);
-    [javac] 			             ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:269: error: cannot find symbol
-    [javac] 			mv.visitJumpInsn(Opcodes.IFGE, t);
-    [javac] 			                 ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:270: error: cannot find symbol
-    [javac] 			mv.visitInsn(Opcodes.ICONST_1);
-    [javac] 			             ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:271: error: cannot find symbol
-    [javac] 			mv.visitJumpInsn(Opcodes.GOTO,e );
-    [javac] 			                 ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:273: error: cannot find symbol
-    [javac] 			mv.visitInsn(Opcodes.ICONST_0);
-    [javac] 			             ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:277: error: cannot find symbol
-    [javac] 			mv.visitInsn(Opcodes.ISUB);
-    [javac] 			             ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:279: error: cannot find symbol
-    [javac] 			mv.visitJumpInsn(Opcodes.IFGT, t);
-    [javac] 			                 ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:280: error: cannot find symbol
-    [javac] 			mv.visitInsn(Opcodes.ICONST_1);
-    [javac] 			             ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:281: error: cannot find symbol
-    [javac] 			mv.visitJumpInsn(Opcodes.GOTO,e );
-    [javac] 			                 ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:283: error: cannot find symbol
-    [javac] 			mv.visitInsn(Opcodes.ICONST_0);
-    [javac] 			             ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:287: error: cannot find symbol
-    [javac] 			mv.visitInsn(Opcodes.ISUB);
-    [javac] 			             ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:289: error: cannot find symbol
-    [javac] 			mv.visitJumpInsn(Opcodes.IFLE, t);
-    [javac] 			                 ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:290: error: cannot find symbol
-    [javac] 			mv.visitInsn(Opcodes.ICONST_1);
-    [javac] 			             ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:291: error: cannot find symbol
-    [javac] 			mv.visitJumpInsn(Opcodes.GOTO,e );
-    [javac] 			                 ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:293: error: cannot find symbol
-    [javac] 			mv.visitInsn(Opcodes.ICONST_0);
-    [javac] 			             ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:297: error: cannot find symbol
-    [javac] 			mv.visitInsn(Opcodes.ISUB);
-    [javac] 			             ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:299: error: cannot find symbol
-    [javac] 			mv.visitJumpInsn(Opcodes.IFLT, t);
-    [javac] 			                 ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:300: error: cannot find symbol
-    [javac] 			mv.visitInsn(Opcodes.ICONST_1);
-    [javac] 			             ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:301: error: cannot find symbol
-    [javac] 			mv.visitJumpInsn(Opcodes.GOTO,e );
-    [javac] 			                 ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:303: error: cannot find symbol
-    [javac] 			mv.visitInsn(Opcodes.ICONST_0);
-    [javac] 			             ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:307: error: cannot find symbol
-    [javac] 			mv.visitInsn(Opcodes.IREM);
-    [javac] 			             ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:310: error: cannot find symbol
-    [javac] 			mv.visitInsn(Opcodes.IMUL);
-    [javac] 			             ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:313: error: cannot find symbol
-    [javac] 			mv.visitInsn(Opcodes.ISUB);
-    [javac] 			             ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:315: error: cannot find symbol
-    [javac] 			mv.visitJumpInsn(Opcodes.IFEQ, t);
-    [javac] 			                 ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:316: error: cannot find symbol
-    [javac] 			mv.visitInsn(Opcodes.ICONST_0);
-    [javac] 			             ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:317: error: cannot find symbol
-    [javac] 			mv.visitJumpInsn(Opcodes.GOTO,e );
-    [javac] 			                 ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:319: error: cannot find symbol
-    [javac] 			mv.visitInsn(Opcodes.ICONST_1);
-    [javac] 			             ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:323: error: cannot find symbol
-    [javac] 			mv.visitInsn(Opcodes.ISUB);
-    [javac] 			             ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:342: error: cannot find symbol
-    [javac] 		mv.visitMethodInsn(Opcodes.INVOKESTATIC, "out/Main", callExpr.name, this.getDescriptorE(callExpr));
-    [javac] 		                   ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:422: error: cannot find symbol
-    [javac] 			mv.visitFieldInsn(Opcodes.GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
-    [javac] 			                  ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:425: error: cannot find symbol
-    [javac] 			mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V");
-    [javac] 			                   ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:427: error: cannot find symbol
-    [javac] 			mv.visitFieldInsn(Opcodes.GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
-    [javac] 			                  ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:430: error: cannot find symbol
-    [javac] 			mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/io/PrintStream", "println", "(I)V");
-    [javac] 			                   ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:432: error: cannot find symbol
-    [javac] 			mv.visitFieldInsn(Opcodes.GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
-    [javac] 			                  ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:435: error: cannot find symbol
-    [javac] 			mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/io/PrintStream", "println", "(C)V");
-    [javac] 			                   ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:440: error: cannot find symbol
-    [javac] 			mv.visitMethodInsn(Opcodes.INVOKESTATIC, "out/Main", callStmt.name, this.getDescriptorS(callStmt));
-    [javac] 			                   ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:455: error: cannot find symbol
-    [javac] 		mv.visitJumpInsn(Opcodes.IFEQ, ifL);
-    [javac] 		                 ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:461: error: cannot find symbol
-    [javac] 		mv.visitJumpInsn(Opcodes.GOTO, finL);		
-    [javac] 		                 ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenVisitor.java:479: error: cannot find symbol
-    [javac] 			mv.visitInsn(Opcodes.IRETURN);
-    [javac] 			             ^
-    [javac]   symbol:   variable Opcodes
-    [javac]   location: class CodeGenVisitor
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenerator.java:37: error: cannot find symbol
+    [javac] /tmp/tmp8ugtz9ys/w_kike/src/gen/CodeGenerator.java:37: error: cannot find symbol
     [javac] 		  cw.visit(V1_1, ACC_PUBLIC, "Example", null, "java/lang/Object", null);
     [javac] 		           ^
     [javac]   symbol:   variable V1_1
     [javac]   location: class CodeGenerator
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenerator.java:37: error: cannot find symbol
+    [javac] /tmp/tmp8ugtz9ys/w_kike/src/gen/CodeGenerator.java:37: error: cannot find symbol
     [javac] 		  cw.visit(V1_1, ACC_PUBLIC, "Example", null, "java/lang/Object", null);
     [javac] 		                 ^
     [javac]   symbol:   variable ACC_PUBLIC
     [javac]   location: class CodeGenerator
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenerator.java:40: error: cannot find symbol
+    [javac] /tmp/tmp8ugtz9ys/w_kike/src/gen/CodeGenerator.java:40: error: cannot find symbol
     [javac] 	        MethodVisitor mw = cw.visitMethod(ACC_PUBLIC, "<init>", "()V", null,
     [javac] 	                                          ^
     [javac]   symbol:   variable ACC_PUBLIC
     [javac]   location: class CodeGenerator
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenerator.java:43: error: cannot find symbol
+    [javac] /tmp/tmp8ugtz9ys/w_kike/src/gen/CodeGenerator.java:43: error: cannot find symbol
     [javac] 	        mw.visitVarInsn(ALOAD, 0);
     [javac] 	                        ^
     [javac]   symbol:   variable ALOAD
     [javac]   location: class CodeGenerator
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenerator.java:45: error: cannot find symbol
+    [javac] /tmp/tmp8ugtz9ys/w_kike/src/gen/CodeGenerator.java:45: error: cannot find symbol
     [javac] 	        mw.visitMethodInsn(INVOKESPECIAL, "java/lang/Object", "<init>", "()V");
     [javac] 	                           ^
     [javac]   symbol:   variable INVOKESPECIAL
     [javac]   location: class CodeGenerator
-    [javac] /tmp/tmpm7irec4d/w_kike/src/gen/CodeGenerator.java:46: error: cannot find symbol
+    [javac] /tmp/tmp8ugtz9ys/w_kike/src/gen/CodeGenerator.java:46: error: cannot find symbol
     [javac] 	        mw.visitInsn(RETURN);
     [javac] 	                     ^
     [javac]   symbol:   variable RETURN
     [javac]   location: class CodeGenerator
-    [javac] Note: /tmp/tmpm7irec4d/w_kike/src/sem/SemanticAnalyzer.java uses unchecked or unsafe operations.
+    [javac] Note: /tmp/tmp8ugtz9ys/w_kike/src/sem/SemanticAnalyzer.java uses unchecked or unsafe operations.
     [javac] Note: Recompile with -Xlint:unchecked for details.
-    [javac] 78 errors
+    [javac] 9 errors
 
 BUILD FAILED
-/tmp/tmpm7irec4d/w_kike/build.xml:53: Compile failed; see the compiler error output for details.
+/tmp/tmp8ugtz9ys/w_kike/build.xml:53: Compile failed; see the compiler error output for details.
 
 Total time: 1 second
 </pre></fieldset></div><hr /><div class="container" style="width:75%;"><a href="scoreboard.html"><button type="button" class="btn btn-default">Go back</button></a></div></div></body></html>
