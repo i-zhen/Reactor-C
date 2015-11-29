@@ -1,124 +1,152 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CT Scoreboard for maccery</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><style type="text/css">body { margin: 0 auto; width: 50%; padding-bottom: 30px; } td.hd { font-weight: bold; text-align: center; } td { padding: 5px; }</style></head><body><div class="container"><h2>Information</h2>
-<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>maccery</td></tr><tr><td>Start</td><td>2015-11-28 20:02:40</td></tr><tr><td>End</td><td>2015-11-28 20:02:46</td></tr><tr><td>Comment ID</td><td>e1cd1548580f53d6f55c8d116408271c58c28b41</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>240</td><td>One or more semantic error(s).</td></tr><tr><td>230</td><td>Compiled program produced wrong output.</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>204</td><td>Compiled program not found.</td></tr><tr><td>124</td><td>Your compiler or produced program might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmptkuo2w6h/maccery/build.xml
+<div class="container" style="width: 100%;"><table border="1" cellspacing="1" cellpadding="5"><tr><td>Alias</td><td>maccery</td></tr><tr><td>Start</td><td>2015-11-29 04:02:40</td></tr><tr><td>End</td><td>2015-11-29 04:02:46</td></tr><tr><td>Comment ID</td><td>72280930d989b420dd6236c07262d488acb82122</td></tr><tr><td>Scores</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Part</b></td><td><b>Passed / Total</b></td></tr><tr><td>Part 1</td><td>0 / 0</td></tr><tr><td>Part 2</td><td>0 / 0</td></tr><tr><td>Part 3</td><td>0 / 0</td></tr><tr><td>Part 4</td><td>0 / 0</td></tr></table></td></tr><tr><td>Exit codes</td><td><table border="1" cellspacing="1" cellpadding="5"><tr><td><b>Code</b></td><td><b>Explanation</b></td></tr><tr><td>250</td><td>One or more lexer error(s).</td></tr><tr><td>245</td><td>One or more parse error(s).</td></tr><tr><td>240</td><td>One or more semantic error(s).</td></tr><tr><td>230</td><td>Compiled program produced wrong output.</td></tr><tr><td>224</td><td>AST construction is wrong.</td></tr><tr><td>204</td><td>Compiled program not found.</td></tr><tr><td>124</td><td>Your compiler or produced program might have an infinite loop.</td></tr><tr><td>1</td><td>JVM exited prematurely. It occurs when your compiler has infinite recursion, requires a Java version different from 1.7, etc.</td></tr></table></td></tr></table><div class="container" style="width: 45%;margin-top:30px;"><div class="alert alert-danger" role="alert"><b>Test suite failure!</b> Could not build your compiler.</div></div><h3>Error log</h3><pre>Buildfile: /tmp/tmpjqm1k_qs/maccery/build.xml
 
 build-subprojects:
 
 init:
-    [mkdir] Created dir: /tmp/tmptkuo2w6h/maccery/bin
+    [mkdir] Created dir: /tmp/tmpjqm1k_qs/maccery/bin
 
 build-project:
-     [echo] ct-15-16: /tmp/tmptkuo2w6h/maccery/build.xml
-    [javac] Compiling 40 source files to /tmp/tmptkuo2w6h/maccery/bin
-    [javac] /tmp/tmptkuo2w6h/maccery/src/gen/CodeGenerator.java:4: error: package jdk.internal.org.objectweb.asm does not exist
+     [echo] ct-15-16: /tmp/tmpjqm1k_qs/maccery/build.xml
+    [javac] Compiling 40 source files to /tmp/tmpjqm1k_qs/maccery/bin
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGenerator.java:4: error: package jdk.internal.org.objectweb.asm does not exist
     [javac] import jdk.internal.org.objectweb.asm.Opcodes;
     [javac]                                      ^
-    [javac] /tmp/tmptkuo2w6h/maccery/src/gen/CodeGenerator.java:9: error: cannot find symbol
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGenerator.java:9: error: cannot find symbol
     [javac] public class CodeGenerator implements Opcodes {
     [javac]                                       ^
     [javac]   symbol: class Opcodes
-    [javac] /tmp/tmptkuo2w6h/maccery/src/gen/CodeGeneratorVisitor.java:5: error: package jdk.internal.org.objectweb.asm does not exist
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:5: error: package jdk.internal.org.objectweb.asm does not exist
     [javac] import jdk.internal.org.objectweb.asm.*;
     [javac] ^
-    [javac] /tmp/tmptkuo2w6h/maccery/src/gen/CodeGeneratorVisitor.java:7: error: cannot find symbol
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:6: error: package sun.dc.pr does not exist
+    [javac] import sun.dc.pr.PRError;
+    [javac]                 ^
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:8: error: cannot find symbol
     [javac] public class CodeGeneratorVisitor implements ASTVisitor<Void>, Opcodes  {
     [javac]                                                                ^
     [javac]   symbol: class Opcodes
-    [javac] /tmp/tmptkuo2w6h/maccery/src/gen/CodeGeneratorVisitor.java:10: error: cannot find symbol
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:11: error: cannot find symbol
     [javac] 	private ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_MAXS);
     [javac] 	        ^
     [javac]   symbol:   class ClassWriter
     [javac]   location: class CodeGeneratorVisitor
-    [javac] /tmp/tmptkuo2w6h/maccery/src/gen/CodeGeneratorVisitor.java:11: error: cannot find symbol
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:12: error: cannot find symbol
     [javac] 	private MethodVisitor mv;
     [javac] 	        ^
     [javac]   symbol:   class MethodVisitor
     [javac]   location: class CodeGeneratorVisitor
-    [javac] /tmp/tmptkuo2w6h/maccery/src/gen/CodeGeneratorVisitor.java:12: error: cannot find symbol
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:13: error: cannot find symbol
     [javac] 	private FieldVisitor fv;
     [javac] 	        ^
     [javac]   symbol:   class FieldVisitor
     [javac]   location: class CodeGeneratorVisitor
-    [javac] /tmp/tmptkuo2w6h/maccery/src/gen/CodeGeneratorVisitor.java:13: error: cannot find symbol
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:14: error: cannot find symbol
     [javac] 	private AnnotationVisitor av0;
     [javac] 	        ^
     [javac]   symbol:   class AnnotationVisitor
     [javac]   location: class CodeGeneratorVisitor
-    [javac] /tmp/tmptkuo2w6h/maccery/src/gen/CodeGeneratorVisitor.java:10: error: cannot find symbol
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:11: error: cannot find symbol
     [javac] 	private ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_MAXS);
     [javac] 	                             ^
     [javac]   symbol:   class ClassWriter
     [javac]   location: class CodeGeneratorVisitor
-    [javac] /tmp/tmptkuo2w6h/maccery/src/gen/CodeGeneratorVisitor.java:10: error: cannot find symbol
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:11: error: cannot find symbol
     [javac] 	private ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_MAXS);
     [javac] 	                                         ^
     [javac]   symbol:   variable ClassWriter
     [javac]   location: class CodeGeneratorVisitor
-    [javac] /tmp/tmptkuo2w6h/maccery/src/gen/CodeGeneratorVisitor.java:20: error: cannot find symbol
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:27: error: cannot find symbol
     [javac] 		mv = cw.visitMethod(ACC_PUBLIC + ACC_STATIC, p.string, methodTypefromProcedure(p), null, null);
     [javac] 		                    ^
     [javac]   symbol:   variable ACC_PUBLIC
     [javac]   location: class CodeGeneratorVisitor
-    [javac] /tmp/tmptkuo2w6h/maccery/src/gen/CodeGeneratorVisitor.java:20: error: cannot find symbol
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:27: error: cannot find symbol
     [javac] 		mv = cw.visitMethod(ACC_PUBLIC + ACC_STATIC, p.string, methodTypefromProcedure(p), null, null);
     [javac] 		                                 ^
     [javac]   symbol:   variable ACC_STATIC
     [javac]   location: class CodeGeneratorVisitor
-    [javac] /tmp/tmptkuo2w6h/maccery/src/gen/CodeGeneratorVisitor.java:36: error: cannot find symbol
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:45: error: cannot find symbol
     [javac] 		cw.visit(V1_8, ACC_PUBLIC + ACC_SUPER,
     [javac] 		         ^
     [javac]   symbol:   variable V1_8
     [javac]   location: class CodeGeneratorVisitor
-    [javac] /tmp/tmptkuo2w6h/maccery/src/gen/CodeGeneratorVisitor.java:36: error: cannot find symbol
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:45: error: cannot find symbol
     [javac] 		cw.visit(V1_8, ACC_PUBLIC + ACC_SUPER,
     [javac] 		               ^
     [javac]   symbol:   variable ACC_PUBLIC
     [javac]   location: class CodeGeneratorVisitor
-    [javac] /tmp/tmptkuo2w6h/maccery/src/gen/CodeGeneratorVisitor.java:36: error: cannot find symbol
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:45: error: cannot find symbol
     [javac] 		cw.visit(V1_8, ACC_PUBLIC + ACC_SUPER,
     [javac] 		                            ^
     [javac]   symbol:   variable ACC_SUPER
     [javac]   location: class CodeGeneratorVisitor
-    [javac] /tmp/tmptkuo2w6h/maccery/src/gen/CodeGeneratorVisitor.java:43: error: cannot find symbol
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:52: error: cannot find symbol
     [javac] 			fv = cw.visitField(ACC_STATIC, vd.var.name, fieldToCharacterIdentifier(vd.type),
     [javac] 			                   ^
     [javac]   symbol:   variable ACC_STATIC
     [javac]   location: class CodeGeneratorVisitor
-    [javac] /tmp/tmptkuo2w6h/maccery/src/gen/CodeGeneratorVisitor.java:56: error: cannot find symbol
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:65: error: cannot find symbol
     [javac] 		mv = cw.visitMethod(ACC_PUBLIC + ACC_STATIC,
     [javac] 		                    ^
     [javac]   symbol:   variable ACC_PUBLIC
     [javac]   location: class CodeGeneratorVisitor
-    [javac] /tmp/tmptkuo2w6h/maccery/src/gen/CodeGeneratorVisitor.java:56: error: cannot find symbol
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:65: error: cannot find symbol
     [javac] 		mv = cw.visitMethod(ACC_PUBLIC + ACC_STATIC,
     [javac] 		                                 ^
     [javac]   symbol:   variable ACC_STATIC
     [javac]   location: class CodeGeneratorVisitor
-    [javac] /tmp/tmptkuo2w6h/maccery/src/gen/CodeGeneratorVisitor.java:62: error: cannot find symbol
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:71: error: cannot find symbol
     [javac] 		mv.visitInsn(RETURN);
     [javac] 		             ^
     [javac]   symbol:   variable RETURN
     [javac]   location: class CodeGeneratorVisitor
-    [javac] /tmp/tmptkuo2w6h/maccery/src/gen/CodeGeneratorVisitor.java:74: error: cannot find symbol
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:83: error: cannot find symbol
     [javac] 			fv = cw.visitField(ACC_STATIC, vd.var.name, fieldToCharacterIdentifier(vd.type), null, null);
     [javac] 			                   ^
     [javac]   symbol:   variable ACC_STATIC
     [javac]   location: class CodeGeneratorVisitor
-    [javac] /tmp/tmptkuo2w6h/maccery/src/gen/CodeGeneratorVisitor.java:79: error: cannot find symbol
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:88: error: cannot find symbol
     [javac] 			Label l0 = new Label();
     [javac] 			^
     [javac]   symbol:   class Label
     [javac]   location: class CodeGeneratorVisitor
-    [javac] /tmp/tmptkuo2w6h/maccery/src/gen/CodeGeneratorVisitor.java:79: error: cannot find symbol
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:88: error: cannot find symbol
     [javac] 			Label l0 = new Label();
     [javac] 			               ^
     [javac]   symbol:   class Label
     [javac]   location: class CodeGeneratorVisitor
-    [javac] Note: /tmp/tmptkuo2w6h/maccery/src/sem/SemanticAnalyzer.java uses unchecked or unsafe operations.
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:114: error: cannot find symbol
+    [javac] 		mv.visitIntInsn(BIPUSH, chrLiteralValue);
+    [javac] 		                ^
+    [javac]   symbol:   variable BIPUSH
+    [javac]   location: class CodeGeneratorVisitor
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:139: error: cannot find symbol
+    [javac] 		mv.visitIntInsn(BIPUSH, il.value);
+    [javac] 		                ^
+    [javac]   symbol:   variable BIPUSH
+    [javac]   location: class CodeGeneratorVisitor
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:163: error: cannot find symbol
+    [javac] 		Label l0 = new Label();
+    [javac] 		^
+    [javac]   symbol:   class Label
+    [javac]   location: class CodeGeneratorVisitor
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:163: error: cannot find symbol
+    [javac] 		Label l0 = new Label();
+    [javac] 		               ^
+    [javac]   symbol:   class Label
+    [javac]   location: class CodeGeneratorVisitor
+    [javac] /tmp/tmpjqm1k_qs/maccery/src/gen/CodeGeneratorVisitor.java:174: error: cannot find symbol
+    [javac] 		mv.visitVarInsn(ISTORE, variableId);
+    [javac] 		                ^
+    [javac]   symbol:   variable ISTORE
+    [javac]   location: class CodeGeneratorVisitor
+    [javac] Note: /tmp/tmpjqm1k_qs/maccery/src/sem/SemanticAnalyzer.java uses unchecked or unsafe operations.
     [javac] Note: Recompile with -Xlint:unchecked for details.
-    [javac] 22 errors
+    [javac] 28 errors
 
 BUILD FAILED
-/tmp/tmptkuo2w6h/maccery/build.xml:53: Compile failed; see the compiler error output for details.
+/tmp/tmpjqm1k_qs/maccery/build.xml:53: Compile failed; see the compiler error output for details.
 
 Total time: 1 second
 </pre></fieldset></div><hr /><div class="container" style="width:75%;"><a href="scoreboard.html"><button type="button" class="btn btn-default">Go back</button></a></div></div></body></html>
