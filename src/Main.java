@@ -5,7 +5,7 @@ import lexer.Scanner;
 import lexer.Token;
 import lexer.Tokeniser;
 import parser.Parser;
-import sem.SemanticAnalyzer;
+//import sem.SemanticAnalyzer;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -113,34 +113,9 @@ public class Main {
         	} else 
         		System.out.println("Parsing: failed ("+parser.getErrorCount()+" errors)");
         	System.exit(parser.getErrorCount() == 0 ? PASS : PARSER_FAIL);
-        } else if (mode == Mode.SEMANTICANALYSIS) {
-        	Parser parser = new Parser(tokeniser);
-        	Program programAst = parser.parse();
-        	if (parser.getErrorCount() == 0) {
-        		SemanticAnalyzer sem = new SemanticAnalyzer();
-        		int errors = sem.analyze(programAst);
-        		if (errors == 0)
-        			System.out.println("Semantic analysis: Pass");
-        		else
-        			System.out.println("Semantic analysis: Failed (" + errors + ")");
-        		System.exit(errors == 0 ? PASS : SEM_FAIL);
-        	} else
-        		System.exit(PARSER_FAIL);
-        		System.exit(PARSER_FAIL);        	
         }
-        else if (mode == Mode.GEN) {
-            Parser parser = new Parser(tokeniser);
-            Program programAst = parser.parse();
-            if (parser.getErrorCount() > 0)
-                System.exit(PARSER_FAIL);
-            SemanticAnalyzer sem = new SemanticAnalyzer();
-            int errors = sem.analyze(programAst);
-            if (errors > 0)
-                System.exit(SEM_FAIL);
-            CodeGenerator codegen = new CodeGenerator();
-            codegen.emitProgram(programAst);
 
-        } else {
+        else {
         	System.exit(MODE_FAIL);
         }
     }

@@ -16,6 +16,6 @@ public class Procedure implements Tree {
     }
 
     public <T> T accept(ASTVisitor<T> v) {
-	return v.visitProcedure(this);
+        return v.visitProcedure(this);
     }
 }
