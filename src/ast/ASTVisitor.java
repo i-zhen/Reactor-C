@@ -16,5 +16,11 @@ public interface ASTVisitor<T> {
     public T visitWhile(While w);
     public T visitIf(If i);
     public T visitAssign(Assign a);
+    public T visitReadc(Readc r);
+    public T visitReadi(Readi r);
+    public T visitPrints(Prints p);
+    public T visitPrinti(Printi p);
+    public T visitPrintc(Printc p);
+
     // to complete ... (should have one visit method for each concrete AST node class)
 }

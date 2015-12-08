@@ -5,11 +5,8 @@ import lexer.Token;
 import lexer.Tokeniser;
 import lexer.Token.TokenClass;
 
-import java.util.LinkedList;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Queue;
-
+import java.util.*;
+import java.util.concurrent.Exchanger;
 
 
 /**
@@ -165,7 +162,7 @@ public class Parser {
             }
 
             expect(TokenClass.SEMICOLON);
-            List<VarDecl> paras = parseParams();
+            List<VarDecl> paras = parseDecls();
             if(paras != null) vd.addAll(paras);
             return vd;
         } else if (accept(TokenClass.IDENTIFIER)
@@ -179,15 +176,27 @@ public class Parser {
 
     private List<VarDecl> parseParams(){
         if (accept(TokenClass.INT, TokenClass.CHAR)){
-            List<VarDecl> varDecls = new ArrayList<>();
+            List<VarDecl> vd = new ArrayList<>();
+            Type type;
+
+            if (token.tokenClass == TokenClass.INT ){
+                type = Type.INT;
+            } else {
+                type = Type.CHAR;
+            }
 
             nextToken();
-            expect( TokenClass.IDENTIFIER );
+            Token v = expect( TokenClass.IDENTIFIER );
+            if(v != null) {
+                Var var = new Var(v.toString());
+                vd.add(new VarDecl(type, var));
+            }
             if( accept( TokenClass.COMMA ) ){
                 nextToken();
-                parseParams();
+                List<VarDecl> paras = parseParams();
+                if(paras != null) vd.addAll(paras);
             }
-            return varDecls;
+            return vd;
         }
         return null;
     }
@@ -205,19 +214,20 @@ public class Parser {
                 type = Type.VOID;
             }
             nextToken();
-            //String name = token.toString();
-            expect(TokenClass.IDENTIFIER);
+            String name = token.toString();
+            Token v = expect(TokenClass.IDENTIFIER);
 
             expect(TokenClass.LPAR);
-            List<VarDecl> varDecls = parseParams();
+            List<VarDecl> vd = parseParams();
 
             expect(TokenClass.RPAR);
             Block block = parseBlock();
+            if(v != null && block != null && vd != null)
+                procs.add(new Procedure(type, name, vd, block));
 
-            //procs.add(new Procedure(type, name, varDecls, block));
-            //procs.addAll(parseProcs());
-            parseProcs();
-            return null;
+            List<Procedure> ps = parseProcs();
+            if(ps != null) procs.addAll(ps);
+            return procs;
         } else if ( ! accept( TokenClass.VOID, TokenClass.INT, TokenClass.CHAR ) ) {
             error( TokenClass.VOID, TokenClass.INT, TokenClass.CHAR );
         }
@@ -236,53 +246,56 @@ public class Parser {
 
     private Block parseBlock() {
         expect( TokenClass.LBRA );
-        parseDecls();
-        parseStmtlist();
+        List<VarDecl> vd = parseDecls();
+        List<Stmt> stmts = parseStmtlist();
         expect(TokenClass.RBRA);
-        return null;
+        return new Block(vd, stmts); //null is possible
     }
 
     private List<Stmt> parseStmtlist(){
+        List<Stmt> stmts = new ArrayList<>();
         while (accept( TokenClass.LBRA      , TokenClass.IF    , TokenClass.WHILE
                      , TokenClass.IDENTIFIER, TokenClass.RETURN, TokenClass.PRINT
                      , TokenClass.READ ) ){
-            parseStmt();
+            Stmt st = parseStmt();
+            if(st != null) stmts.add(st);
         }
-        return null;
+        return stmts;
     }
 
     private Stmt parseStmt() {
         switch ( token.tokenClass ){
-            case LBRA : {                                          // parse block
-                parseBlock();
-                break;
+            case LBRA : {                                           // parse block
+                return parseBlock();
             } case WHILE: {                                         // parse while loop
                 nextToken();
                 expect( TokenClass.LPAR );
-                parseExpr();
+                Expr exp = parseExpr();
                 expect( TokenClass.RPAR );
-                parseStmt();
-                break;
+                return new While(exp, parseStmt());
             } case IF: {                                            // parse if
                 nextToken();
                 expect( TokenClass.LPAR );
-                parseExpr();
+                Expr exp = parseExpr();
                 expect( TokenClass.RPAR );
-                parseStmt();
+                Stmt ifst = parseStmt();
                 if ( accept( TokenClass.ELSE ) ) {
                     nextToken();
-                    parseStmt();
+                    return new If(exp, ifst, parseStmt());
                 }
-                break;
+                return new If(exp, ifst);
             } case IDENTIFIER: {                                    // parse function call or assign
                 if( lookAhead(1).tokenClass == TokenClass.LPAR ){
-                    parseFunCall();
+                    FunCallStmt foo = parseFunCallStmt();
                     expect( TokenClass.SEMICOLON );
+                    return foo;
                 } else if ( lookAhead(1).tokenClass == TokenClass.ASSIGN ) {
+                    String name = token.toString();
                     nextToken();                                    // IDENT
                     nextToken();                                    // EQ
-                    parseLexp();
+                    Expr exp = parseLexp();
                     expect( TokenClass.SEMICOLON );
+                    return new Assign(new Var(name), exp);
                 } else {
                     nextToken();                                    // Pass the error
                     error( TokenClass.LPAR, TokenClass.ASSIGN );
@@ -290,27 +303,48 @@ public class Parser {
                 break;
             } case RETURN: {                                        // parse return
                 nextToken();
-                if( ! accept( TokenClass.SEMICOLON ) )
-                    parseLexp();
+                if( ! accept( TokenClass.SEMICOLON ) ) {
+                    Expr exp = parseLexp();
+                    expect( TokenClass.SEMICOLON );
+                    return new Return(exp);
+                }
                 expect( TokenClass.SEMICOLON );
-                break;
+                return new Return();
             } case PRINT: {                                         // parse print
+                Boolean flag = true;
+                if (token.data != "print_i")
+                    flag = false;                                   // print_c || print_s
+
+                Expr exp = null;
+                String str = "";
                 nextToken();
                 expect( TokenClass.LPAR );
                 if ( accept(TokenClass.STRING_LITERAL )){
                     nextToken();
+                    str = token.toString();
                 } else {
-                    parseLexp();
+                    exp = parseLexp();
                 }
                 expect( TokenClass.RPAR );
                 expect( TokenClass.SEMICOLON );
-                break;
+                if(exp != null){
+                    if(flag)
+                        return new Printi(exp);
+                    else
+                        return new Printc(exp);
+                }else{
+                    return new Prints(new StrLiteral(str));
+                }
             } case READ: {                                          // parse read
+                Boolean flag = true;
+                if (token.data != "read_i")
+                    flag = false;                                   //read_c
                 nextToken();
                 expect( TokenClass.LPAR );
                 expect( TokenClass.RPAR );
                 expect( TokenClass.SEMICOLON );
-                break;
+                if (flag) return new Readi();
+                return new Readc();
             } default: {
                 error(    TokenClass.LBRA      , TokenClass.IF    , TokenClass.WHILE
                         , TokenClass.IDENTIFIER, TokenClass.RETURN, TokenClass.PRINT
@@ -322,62 +356,95 @@ public class Parser {
     }
 
     private Expr parseExpr() {
-        parseLexp();
+        Expr lhs = parseLexp();
         if (accept(   TokenClass.LE, TokenClass.LT, TokenClass.GE
                     , TokenClass.NE, TokenClass.EQ, TokenClass.GT ) ) {
+            Op op;
+            switch (token.tokenClass){
+                case LE: op = Op.LE; break;
+                case LT: op = Op.LT; break;
+                case GE: op = Op.GE; break;
+                case NE: op = Op.NE; break;
+                case EQ: op = Op.EQ; break;
+                case GT: op = Op.GT; break;
+                default: op = Op.EQ; break;  //init
+            }
             nextToken();
-            parseLexp();
+            Expr rhs = parseLexp();
+            return new BinOp(lhs, op, rhs);
         }
-        return null;
+        return lhs;
     }
 
     private Expr parseLexp() {
-        parseTerm();
-        while ( accept( TokenClass.PLUS, TokenClass.MINUS )){
+        Expr lhs = parseTerm();
+        if ( accept( TokenClass.PLUS, TokenClass.MINUS )){
+            Op op;
+            if (token.tokenClass == TokenClass.PLUS)
+                op = Op.ADD;
+            else
+                op = Op.SUB;
+
             nextToken();
-            parseTerm();
+            Expr rhs = parseLexp();
+            return new BinOp(lhs, op, rhs);
         }
-        return null;
+        return lhs;
     }
 
     private Expr parseTerm() {
-        parseFactor();
-        while ( accept( TokenClass.DIV, TokenClass.TIMES, TokenClass.MOD ) ){
+        Expr lhs = parseFactor();
+        if ( accept( TokenClass.DIV, TokenClass.TIMES, TokenClass.MOD ) ){
+            Op op;
+            switch (token.tokenClass){
+                case DIV: op = Op.DIV; break;
+                case TIMES: op = Op.MUL; break;
+                case MOD: op = Op.MOD; break;
+                default: op = Op.MOD; break;  //init
+            }
             nextToken();
-            parseFactor();
+            Expr rhs = parseTerm();
+            return new BinOp(lhs, op, rhs);
         }
-        return null;
+        return lhs;
     }
 
     private Expr parseFactor() {
         switch ( token.tokenClass ) {
             case LPAR:{                                                //parse Lpar
                 nextToken();
-                parseLexp();
+                Expr exp = parseLexp();
                 expect( TokenClass.RPAR );
-                break;
+                return exp;
             } case CHARACTER:{                                          //parse character
+                char ch = token.data.charAt(0);
                 nextToken();
-                break;
+                return new ChrLiteral(ch);
             } case READ:{                                               //parse read
                 nextToken();
                 expect( TokenClass.LPAR );
                 expect( TokenClass.RPAR );
                 break;
             } case IDENTIFIER:{                                         //parse variable without minus or function
+                String name = token.toString();
                 if ( lookAhead(1).tokenClass == TokenClass.LPAR ){
-                    parseFunCall();
+                    return parseFunCallExpr();
                 } else {
                     nextToken();
                 }
-                break;
+                return new Var(name);
             } case MINUS:{                                              //parse variable or number with minus
                 nextToken();
-                expect( TokenClass.IDENTIFIER, TokenClass.NUMBER );
-                break;
+                Token t = expect( TokenClass.IDENTIFIER, TokenClass.NUMBER );
+                if(t != null && t.tokenClass.equals(TokenClass.NUMBER)){
+                    return new BinOp(new IntLiteral(0), Op.SUB, new IntLiteral(Integer.parseInt(t.data)));
+                }else if(t != null){
+                    return new BinOp(new IntLiteral(0), Op.SUB, new Var(t.toString()));
+                }
             } case NUMBER:{                                             //parse number without minus
-                nextToken();
-                break;
+                Token t = expect( TokenClass.NUMBER );
+                //nextToken();
+                return new IntLiteral(Integer.parseInt(t.data));
             } default: {
                 error(    TokenClass.LPAR      , TokenClass.CHARACTER, TokenClass.READ
                         , TokenClass.IDENTIFIER, TokenClass.NUMBER   , TokenClass.MINUS );
@@ -387,22 +454,38 @@ public class Parser {
         return null;
     }
 
-    private Expr parseFunCall() {
+    private FunCallExpr parseFunCallExpr() {
+        String name = token.toString();
+        expect( TokenClass.IDENTIFIER );
+        expect( TokenClass.LPAR );
+        List<Expr> exp = parseIdent();
+        expect( TokenClass.RPAR );
+        return new FunCallExpr(name, exp);
+    }
+
+    private FunCallStmt parseFunCallStmt() {
+        String name = token.toString();
         expect( TokenClass.IDENTIFIER );
         expect( TokenClass.LPAR );
         parseIdent();
+        List<Expr> exp = parseIdent();
         expect( TokenClass.RPAR );
-        return null;
+        return new FunCallStmt(name, exp);
     }
 
-    private Expr parseIdent() {
+    private List<Expr> parseIdent() {
+        List<Expr> exp = new ArrayList<>();
         if ( accept( TokenClass.IDENTIFIER ) ){
+            exp.add(new Var(token.toString()));
             nextToken();
             while ( accept( TokenClass.COMMA ) ) {
                 nextToken();
-                expect( TokenClass.IDENTIFIER );
+                if(accept( TokenClass.IDENTIFIER)) {
+                    exp.add(new Var(token.toString()));
+                    expect(TokenClass.IDENTIFIER);
+                }
             }
         }
-        return null;
+        return exp;
     }
 }

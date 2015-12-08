@@ -1,6 +1,6 @@
 package ast;
 
-public class Assign {
+public class Assign extends Stmt{
     public final Expr exp;
     public final Var var;
 

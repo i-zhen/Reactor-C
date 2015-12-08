@@ -163,4 +163,33 @@ public class ASTPrinter implements ASTVisitor<Void> {
         return null;
     }
 
+    public Void visitReadc(Readc c){
+        writer.print("Read_c(");
+        writer.print(")");
+        return null;
+    }
+    public Void visitReadi(Readi r){
+        writer.print("Read_i(");
+        writer.print(")");
+        return null;
+    }
+    public Void visitPrintc(Printc c){
+        writer.print("Print_c(");
+        c.exp.accept(this);
+        writer.print(")");
+        return null;
+    }
+    public Void visitPrints(Prints s){
+        writer.print("Print_s(");
+        s.str.accept(this);
+        writer.print(")");
+        return null;
+    }
+    public Void visitPrinti(Printi i){
+        writer.print("Print_i(");
+        i.exp.accept(this);
+        writer.print(")");
+        return null;
+    }
+
 }
