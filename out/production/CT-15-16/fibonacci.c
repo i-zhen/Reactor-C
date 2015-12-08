@@ -8,21 +8,16 @@ void main() {
   int next;
   int c;
   char t;
-
-  dfeef = jjdjjf;
-  dfdf=dkkd+df+Fd+a+A+A+A+A+A+df;
-  
-
   // read n from the standard input
-  n = read_i();
-  
+  //n = read_i();
+
   first = 0;
   second = 1;
-    
+
   print_s("First ");
   print_i(n);
   print_s(" terms of Fibonacci series are : ");
- 
+
   c = 0;
   if(_){}else{}
   while (c ==0) {

@@ -337,7 +337,7 @@ public class Parser {
                 }
             } case READ: {                                          // parse read
                 Boolean flag = true;
-                if (token.data != "read_i")
+                if (!token.data.equals("read_i"))
                     flag = false;                                   //read_c
                 nextToken();
                 expect( TokenClass.LPAR );
@@ -421,10 +421,14 @@ public class Parser {
                 nextToken();
                 return new ChrLiteral(ch);
             } case READ:{                                               //parse read
+                Boolean flag = true;
+                if (!token.data.equals("read_i"))
+                    flag = false;                                       //read_c
                 nextToken();
                 expect( TokenClass.LPAR );
                 expect( TokenClass.RPAR );
-                break;
+                if (flag) return new ReadiExpr();
+                return new ReadcExpr();
             } case IDENTIFIER:{                                         //parse variable without minus or function
                 String name = token.toString();
                 if ( lookAhead(1).tokenClass == TokenClass.LPAR ){

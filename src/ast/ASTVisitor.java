@@ -21,6 +21,7 @@ public interface ASTVisitor<T> {
     public T visitPrints(Prints p);
     public T visitPrinti(Printi p);
     public T visitPrintc(Printc p);
-
+    public T visitReadcExpr(ReadcExpr r);
+    public T visitReadiExpr(ReadiExpr r);
     // to complete ... (should have one visit method for each concrete AST node class)
 }
