@@ -319,8 +319,8 @@ public class Parser {
                 nextToken();
                 expect( TokenClass.LPAR );
                 if ( accept(TokenClass.STRING_LITERAL )){
+                    str = token.data;
                     nextToken();
-                    str = token.toString();
                 } else {
                     exp = parseLexp();
                 }

@@ -12,7 +12,7 @@ void main() {
   n = read_i();
 
   first = 0;
-  second = 1;
+  second = 7*(-1);
 
   print_s("First ");
   print_i(n);
