@@ -145,24 +145,29 @@ public class Parser {
 
     private List<VarDecl> parseDecls() {
         if (accept(TokenClass.INT, TokenClass.CHAR, TokenClass.VOID) && (lookAhead(2).tokenClass == TokenClass.SEMICOLON)){
-            List<VarDecl> varDecls = new ArrayList<>();
+            List<VarDecl> vd = new ArrayList<>();
             Type type;
 
             if (token.tokenClass == TokenClass.INT ){
                 type = Type.INT;
-            } else{
+            } else if(token.tokenClass == TokenClass.VOID){
+                type = Type.VOID;
+            } else {
                 type = Type.CHAR;
             }
             nextToken();
 
-            //ast.Var var = new ast.Var(expect(TokenClass.IDENTIFIER).toString());
-            expect(TokenClass.IDENTIFIER);
+            Token v = expect(TokenClass.IDENTIFIER);
 
-            //varDecls.add(new VarDecl(type, var));
+            if(v != null) {
+                Var var = new Var(v.toString());
+                vd.add(new VarDecl(type, var));
+            }
+
             expect(TokenClass.SEMICOLON);
-            //varDecls.addAll(parseDecls());
-            parseDecls();
-            return null;
+            List<VarDecl> paras = parseParams();
+            if(paras != null) vd.addAll(paras);
+            return vd;
         } else if (accept(TokenClass.IDENTIFIER)
                 && (lookAhead(1).tokenClass != TokenClass.LPAR)
                 && (lookAhead(1).tokenClass != TokenClass.ASSIGN)) {
@@ -175,7 +180,7 @@ public class Parser {
     private List<VarDecl> parseParams(){
         if (accept(TokenClass.INT, TokenClass.CHAR)){
             List<VarDecl> varDecls = new ArrayList<>();
-            //incomplete
+
             nextToken();
             expect( TokenClass.IDENTIFIER );
             if( accept( TokenClass.COMMA ) ){
@@ -226,7 +231,7 @@ public class Parser {
         expect( TokenClass.LPAR );
         expect( TokenClass.RPAR );
 
-        return new Procedure( Type.VOID, "main", null, parseBlock() );
+        return new Procedure( Type.VOID, TokenClass.MAIN.toString(), null, parseBlock() );
     }
 
     private Block parseBlock() {
