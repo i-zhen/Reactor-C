@@ -18,7 +18,7 @@ char read_c() {
   return c;
 }
 
-char read_i() {
+int read_i() {
   int i;
   fscanf(stdin, "%d", &i);
   return i;

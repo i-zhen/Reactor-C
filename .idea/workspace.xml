@@ -2,7 +2,150 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fe539b0-54dc-4c80-b34d-032b048cadfb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/Parser.java" afterPath="$PROJECT_DIR$/src/parser/Parser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/IO.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/IO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/asm-all-4.2.pom" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/cashmachine.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/dec2bin.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/factorial.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/is_leap_year.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/is_palindromic.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/is_prime.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/pascals_triangle.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/tictactoe.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/towers_of_hanoi.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/Main$Mode.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/Main$Mode.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/Main.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/ASTPrinter.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/ASTPrinter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/ASTVisitor.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/ASTVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/Assign.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/Assign.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/BinOp.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/BinOp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/Block.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/Block.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/ChrLiteral.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/ChrLiteral.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/Expr.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/Expr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/FunCallExpr.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/FunCallExpr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/FunCallStmt.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/FunCallStmt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/If.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/If.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/IntLiteral.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/IntLiteral.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/Op.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/Op.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/Printc.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/Printc.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/Printi.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/Printi.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/Prints.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/Prints.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/Procedure.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/Procedure.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/Program.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/Program.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/Readc.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/Readc.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/ReadcExpr.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/ReadcExpr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/Readi.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/Readi.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/ReadiExpr.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/ReadiExpr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/Return.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/Return.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/Stmt.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/Stmt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/StrLiteral.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/StrLiteral.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/Tree.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/Tree.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/Var.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/Var.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/VarDecl.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/VarDecl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/ast/While.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/ast/While.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/gen/CodeGenerator.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/gen/CodeGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/parser/Parser$1.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/parser/Parser$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/parser/Parser.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/parser/Parser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desc/PART4/README.md" afterPath="$PROJECT_DIR$/desc/PART4/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/BPag.html" afterPath="$PROJECT_DIR$/scoreboard/BPag.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/BobSmithIV.html" afterPath="$PROJECT_DIR$/scoreboard/BobSmithIV.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/DamodarSojka.html" afterPath="$PROJECT_DIR$/scoreboard/DamodarSojka.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/JanoHorvath.html" afterPath="$PROJECT_DIR$/scoreboard/JanoHorvath.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/JennyWilson.html" afterPath="$PROJECT_DIR$/scoreboard/JennyWilson.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/JirkaVebr.html" afterPath="$PROJECT_DIR$/scoreboard/JirkaVebr.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/KarolisGreblikas.html" afterPath="$PROJECT_DIR$/scoreboard/KarolisGreblikas.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/OkamiShiranui.html" afterPath="$PROJECT_DIR$/scoreboard/OkamiShiranui.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/R2ZER0.html" afterPath="$PROJECT_DIR$/scoreboard/R2ZER0.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/Ramsey144.html" afterPath="$PROJECT_DIR$/scoreboard/Ramsey144.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/SimonRovder.html" afterPath="$PROJECT_DIR$/scoreboard/SimonRovder.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/a_sarwar.html" afterPath="$PROJECT_DIR$/scoreboard/a_sarwar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/ahnonay.html" afterPath="$PROJECT_DIR$/scoreboard/ahnonay.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/aivanis.html" afterPath="$PROJECT_DIR$/scoreboard/aivanis.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/ajaya_adhikari.html" afterPath="$PROJECT_DIR$/scoreboard/ajaya_adhikari.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/ajmcb.html" afterPath="$PROJECT_DIR$/scoreboard/ajmcb.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/annieychen1993.html" afterPath="$PROJECT_DIR$/scoreboard/annieychen1993.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/arranrashid.html" afterPath="$PROJECT_DIR$/scoreboard/arranrashid.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/aws2411.html" afterPath="$PROJECT_DIR$/scoreboard/aws2411.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/bartekmalon.html" afterPath="$PROJECT_DIR$/scoreboard/bartekmalon.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/basile_henry.html" afterPath="$PROJECT_DIR$/scoreboard/basile_henry.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/boris-penev.html" afterPath="$PROJECT_DIR$/scoreboard/boris-penev.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/bshaw95.html" afterPath="$PROJECT_DIR$/scoreboard/bshaw95.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/c_mcknight.html" afterPath="$PROJECT_DIR$/scoreboard/c_mcknight.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/craigwalton.html" afterPath="$PROJECT_DIR$/scoreboard/craigwalton.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/diasiare.html" afterPath="$PROJECT_DIR$/scoreboard/diasiare.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/dimy93.html" afterPath="$PROJECT_DIR$/scoreboard/dimy93.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/easyCZ.html" afterPath="$PROJECT_DIR$/scoreboard/easyCZ.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/eeglitis.html" afterPath="$PROJECT_DIR$/scoreboard/eeglitis.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/fabienff.html" afterPath="$PROJECT_DIR$/scoreboard/fabienff.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/filipendo125.html" afterPath="$PROJECT_DIR$/scoreboard/filipendo125.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/franciskv.html" afterPath="$PROJECT_DIR$/scoreboard/franciskv.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/gaby_antova.html" afterPath="$PROJECT_DIR$/scoreboard/gaby_antova.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/gemdude46.html" afterPath="$PROJECT_DIR$/scoreboard/gemdude46.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/hamhut1066.html" afterPath="$PROJECT_DIR$/scoreboard/hamhut1066.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/hughm.html" afterPath="$PROJECT_DIR$/scoreboard/hughm.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/i-zhen.html" afterPath="$PROJECT_DIR$/scoreboard/i-zhen.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/jakzale.html" afterPath="$PROJECT_DIR$/scoreboard/jakzale.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/james_friel.html" afterPath="$PROJECT_DIR$/scoreboard/james_friel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/jamesguyer.html" afterPath="$PROJECT_DIR$/scoreboard/jamesguyer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/jon_redmond.html" afterPath="$PROJECT_DIR$/scoreboard/jon_redmond.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/jonkirch.html" afterPath="$PROJECT_DIR$/scoreboard/jonkirch.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/jordan8998.html" afterPath="$PROJECT_DIR$/scoreboard/jordan8998.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/jsren.html" afterPath="$PROJECT_DIR$/scoreboard/jsren.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/julijonas.html" afterPath="$PROJECT_DIR$/scoreboard/julijonas.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/justineyster.html" afterPath="$PROJECT_DIR$/scoreboard/justineyster.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/koenraat.html" afterPath="$PROJECT_DIR$/scoreboard/koenraat.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/krassy_gochev.html" afterPath="$PROJECT_DIR$/scoreboard/krassy_gochev.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/lotkowskim.html" afterPath="$PROJECT_DIR$/scoreboard/lotkowskim.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/maccery.html" afterPath="$PROJECT_DIR$/scoreboard/maccery.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/mad_scientist.html" afterPath="$PROJECT_DIR$/scoreboard/mad_scientist.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/martin_kristien.html" afterPath="$PROJECT_DIR$/scoreboard/martin_kristien.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/munsun.html" afterPath="$PROJECT_DIR$/scoreboard/munsun.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/n_nikolov.html" afterPath="$PROJECT_DIR$/scoreboard/n_nikolov.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/natasa_i.html" afterPath="$PROJECT_DIR$/scoreboard/natasa_i.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/nkaki.html" afterPath="$PROJECT_DIR$/scoreboard/nkaki.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/oli_green.html" afterPath="$PROJECT_DIR$/scoreboard/oli_green.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/paperbags.html" afterPath="$PROJECT_DIR$/scoreboard/paperbags.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/renasun1994.html" afterPath="$PROJECT_DIR$/scoreboard/renasun1994.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/s1247578.html" afterPath="$PROJECT_DIR$/scoreboard/s1247578.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/s1248784.html" afterPath="$PROJECT_DIR$/scoreboard/s1248784.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/s1249982.html" afterPath="$PROJECT_DIR$/scoreboard/s1249982.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/s1319624.html" afterPath="$PROJECT_DIR$/scoreboard/s1319624.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/s1345559.html" afterPath="$PROJECT_DIR$/scoreboard/s1345559.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/s1346981.html" afterPath="$PROJECT_DIR$/scoreboard/s1346981.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/scoreboard.html" afterPath="$PROJECT_DIR$/scoreboard/scoreboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/scottwthompson.html" afterPath="$PROJECT_DIR$/scoreboard/scottwthompson.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/snony.html" afterPath="$PROJECT_DIR$/scoreboard/snony.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/stmfunk.html" afterPath="$PROJECT_DIR$/scoreboard/stmfunk.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/tbu-.html" afterPath="$PROJECT_DIR$/scoreboard/tbu-.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/tkerber.html" afterPath="$PROJECT_DIR$/scoreboard/tkerber.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/tkusuno1.html" afterPath="$PROJECT_DIR$/scoreboard/tkusuno1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/underlyingfunk.html" afterPath="$PROJECT_DIR$/scoreboard/underlyingfunk.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/val0528.html" afterPath="$PROJECT_DIR$/scoreboard/val0528.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/w_kike.html" afterPath="$PROJECT_DIR$/scoreboard/w_kike.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/wirth_n.html" afterPath="$PROJECT_DIR$/scoreboard/wirth_n.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/wyaneva.html" afterPath="$PROJECT_DIR$/scoreboard/wyaneva.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/xsrust.html" afterPath="$PROJECT_DIR$/scoreboard/xsrust.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard/zygisc.html" afterPath="$PROJECT_DIR$/scoreboard/zygisc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ast/Assign.java" afterPath="$PROJECT_DIR$/src/ast/Assign.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ast/BinOp.java" afterPath="$PROJECT_DIR$/src/ast/BinOp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ast/ChrLiteral.java" afterPath="$PROJECT_DIR$/src/ast/ChrLiteral.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ast/FunCallExpr.java" afterPath="$PROJECT_DIR$/src/ast/FunCallExpr.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ast/FunCallStmt.java" afterPath="$PROJECT_DIR$/src/ast/FunCallStmt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ast/IntLiteral.java" afterPath="$PROJECT_DIR$/src/ast/IntLiteral.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ast/Op.java" afterPath="$PROJECT_DIR$/src/ast/Op.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ast/Printc.java" afterPath="$PROJECT_DIR$/src/ast/Printc.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ast/Printi.java" afterPath="$PROJECT_DIR$/src/ast/Printi.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ast/Prints.java" afterPath="$PROJECT_DIR$/src/ast/Prints.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ast/Readc.java" afterPath="$PROJECT_DIR$/src/ast/Readc.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ast/ReadcExpr.java" afterPath="$PROJECT_DIR$/src/ast/ReadcExpr.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ast/Readi.java" afterPath="$PROJECT_DIR$/src/ast/Readi.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ast/ReadiExpr.java" afterPath="$PROJECT_DIR$/src/ast/ReadiExpr.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ast/Return.java" afterPath="$PROJECT_DIR$/src/ast/Return.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ast/StrLiteral.java" afterPath="$PROJECT_DIR$/src/ast/StrLiteral.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/io.h" afterPath="$PROJECT_DIR$/tests/io.h" />
     </list>
     <ignored path="CT-15-16.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,14 +168,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parser/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50574714">
-              <caret line="318" column="28" selection-start-line="318" selection-start-column="28" selection-end-line="318" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="494" column="0" selection-start-line="494" selection-start-column="0" selection-end-line="494" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StrLiteral.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ast/StrLiteral.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Assign.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ast/Assign.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tokeniser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lexer/Tokeniser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="218" column="70" selection-start-line="218" selection-start-column="70" selection-end-line="218" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.16509435">
+              <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -188,8 +371,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -205,20 +389,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="CT-15-16" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CT-15-16" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CT-15-16" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -310,7 +480,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -842,12 +1011,13 @@
       <workItem from="1447428060960" duration="185000" />
       <workItem from="1449350071483" duration="146000" />
       <workItem from="1449352762593" duration="909000" />
-      <workItem from="1449416982997" duration="27861000" />
+      <workItem from="1449416982997" duration="28537000" />
+      <workItem from="1449594489971" duration="40000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97417000" />
+    <option name="totallyTimeSpent" value="98133000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="13" y="28" width="1260" height="733" extended-state="0" />
@@ -855,12 +1025,10 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37048194" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18492064" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -869,14 +1037,16 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37048194" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -923,12 +1093,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="e#247#248#0" expanded="false" />
-            <element signature="e#273#274#0" expanded="false" />
-            <element signature="e#314#315#0" expanded="false" />
-            <element signature="e#352#353#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -936,7 +1101,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -970,12 +1137,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="e#247#248#0" expanded="false" />
-            <element signature="e#273#274#0" expanded="false" />
-            <element signature="e#314#315#0" expanded="false" />
-            <element signature="e#352#353#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -983,7 +1145,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1017,12 +1181,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="e#247#248#0" expanded="false" />
-            <element signature="e#273#274#0" expanded="false" />
-            <element signature="e#314#315#0" expanded="false" />
-            <element signature="e#352#353#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1030,7 +1189,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1130,14 +1291,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ast/StrLiteral.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ast/Printi.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1197,14 +1350,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lexer/Tokeniser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.074074">
-          <caret line="218" column="70" selection-start-line="218" selection-start-column="70" selection-end-line="218" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ast/Tree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1256,30 +1401,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ast/ReadcExpr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ast/ReadiExpr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ast/ASTVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gen/CodeGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1288,28 +1409,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/ast/Program.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3773585">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parser/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+          <caret line="494" column="0" selection-start-line="494" selection-start-column="0" selection-end-line="494" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ast/Assign.java">
+    <entry file="file://$PROJECT_DIR$/src/ast/StrLiteral.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23584905">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ast/Program.java">
+    <entry file="file://$PROJECT_DIR$/src/ast/Assign.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3773585">
-          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lexer/Tokeniser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="218" column="70" selection-start-line="218" selection-start-column="70" selection-end-line="218" selection-end-column="70" />
           <folding />
         </state>
       </provider>
@@ -1332,13 +1469,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parser/Parser.java">
+    <entry file="file://$PROJECT_DIR$/src/ast/ASTVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50574714">
-          <caret line="318" column="28" selection-start-line="318" selection-start-column="28" selection-end-line="318" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/ReadiExpr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/ReadcExpr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16509435">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
