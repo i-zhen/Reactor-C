@@ -5,7 +5,7 @@ import lexer.Scanner;
 import lexer.Token;
 import lexer.Tokeniser;
 import parser.Parser;
-//import sem.SemanticAnalyzer;
+import sem.SemanticAnalyzer;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -18,27 +18,27 @@ import java.io.FileNotFoundException;
  *   * The Tokeniser must have a constructor which accepts a Scanner,
  *     moreover Tokeniser must provide a public method getErrorCount
  *     which returns the total number of lexing errors.
- *     
+ *
  *   * The Parser must have a constructor which accepts a Tokeniser,
  *     furthermore Parser must provide a public method getErrorCount
  *     which returns the total number of parsing errors.
  *     In particular, the Parser must have a public method parse which
  *     returns an AST.
- *     
+ *
  *   * ASTPrinter must provide a constructor which accepts a PrintWriter,
  *     and it must also implement the visitor interface.
- *     
+ *
  *   * SemanticAnalyzer must provide a nullary constructor and a public method
  *     analyze which accepts an AST, and returns the total number of semantic errors.
  */
 public class Main {
-	public static int FILE_NOT_FOUND = 2;
+    public static int FILE_NOT_FOUND = 2;
     public static int MODE_FAIL      = 254;
     public static int LEXER_FAIL     = 250;
     public static int PARSER_FAIL    = 245;
     public static int SEM_FAIL       = 240;
     public static int PASS           = 0;
-    
+
     private enum Mode {
         LEXER, PARSER, AST, SEMANTICANALYSIS, GEN
     }
@@ -62,7 +62,7 @@ public class Main {
             default:
                 usage();
                 break;
-        }     
+        }
 
         File inputFile = new File(args[1]);
         File outputFile = new File(args[2]);
@@ -78,45 +78,69 @@ public class Main {
 
         Tokeniser tokeniser = new Tokeniser(scanner);
         if (mode == Mode.LEXER) {
-            for (Token t = tokeniser.nextToken(); t.tokenClass != Token.TokenClass.EOF; t = tokeniser.nextToken()) 
-            	System.out.println(t);
+            for (Token t = tokeniser.nextToken(); t.tokenClass != Token.TokenClass.EOF; t = tokeniser.nextToken())
+                System.out.println(t);
             if (tokeniser.getErrorCount() == 0)
-        		System.out.println("Lexing: pass");
-    	    else
-        		System.out.println("Lexing: failed ("+tokeniser.getErrorCount()+" errors)");	
+                System.out.println("Lexing: pass");
+            else
+                System.out.println("Lexing: failed ("+tokeniser.getErrorCount()+" errors)");
             System.exit(tokeniser.getErrorCount() == 0 ? PASS : LEXER_FAIL);
         } else if (mode == Mode.PARSER) {
-		    Parser parser = new Parser(tokeniser);
-		    parser.parse();
-		    if (parser.getErrorCount() == 0)
-		    	System.out.println("Parsing: pass");
-		    else
-		    	System.out.println("Parsing: failed ("+parser.getErrorCount()+" errors)");
-		    System.exit(parser.getErrorCount() == 0 ? PASS : PARSER_FAIL);
+            Parser parser = new Parser(tokeniser);
+            parser.parse();
+            if (parser.getErrorCount() == 0)
+                System.out.println("Parsing: pass");
+            else
+                System.out.println("Parsing: failed ("+parser.getErrorCount()+" errors)");
+            System.exit(parser.getErrorCount() == 0 ? PASS : PARSER_FAIL);
         } else if (mode == Mode.AST) {
-        	Parser parser = new Parser(tokeniser);
-        	Program programAst = parser.parse();
-        	if (parser.getErrorCount() == 0) {
-        		System.out.println("Parsing: pass");
-        		System.out.println("Printing out AST:");
-        		PrintWriter writer;
-        		StringWriter sw = new StringWriter();
-				try {
-				    writer = new PrintWriter(sw);		
-				    programAst.accept(new ASTPrinter(writer));
-				    writer.flush();
-				    System.out.print(sw.toString());
-				    writer.close();
-				} catch (Exception e) {
-				    e.printStackTrace();
-				}
-        	} else 
-        		System.out.println("Parsing: failed ("+parser.getErrorCount()+" errors)");
-        	System.exit(parser.getErrorCount() == 0 ? PASS : PARSER_FAIL);
+            Parser parser = new Parser(tokeniser);
+            Program programAst = parser.parse();
+            if (parser.getErrorCount() == 0) {
+                System.out.println("Parsing: pass");
+                System.out.println("Printing out AST:");
+                PrintWriter writer;
+                StringWriter sw = new StringWriter();
+                try {
+                    writer = new PrintWriter(sw);
+                    programAst.accept(new ASTPrinter(writer));
+                    writer.flush();
+                    System.out.print(sw.toString());
+                    writer.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            } else
+                System.out.println("Parsing: failed ("+parser.getErrorCount()+" errors)");
+            System.exit(parser.getErrorCount() == 0 ? PASS : PARSER_FAIL);
+        } else if (mode == Mode.SEMANTICANALYSIS) {
+            Parser parser = new Parser(tokeniser);
+            Program programAst = parser.parse();
+            if (parser.getErrorCount() == 0) {
+                SemanticAnalyzer sem = new SemanticAnalyzer();
+                int errors = sem.analyze(programAst);
+                if (errors == 0)
+                    System.out.println("Semantic analysis: Pass");
+                else
+                    System.out.println("Semantic analysis: Failed (" + errors + ")");
+                System.exit(errors == 0 ? PASS : SEM_FAIL);
+            } else
+                System.exit(PARSER_FAIL);
         }
+        else if (mode == Mode.GEN) {
+            Parser parser = new Parser(tokeniser);
+            Program programAst = parser.parse();
+            if (parser.getErrorCount() > 0)
+                System.exit(PARSER_FAIL);
+            SemanticAnalyzer sem = new SemanticAnalyzer();
+            int errors = sem.analyze(programAst);
+            if (errors > 0)
+                System.exit(SEM_FAIL);
+            CodeGenerator codegen = new CodeGenerator();
+            codegen.emitProgram(programAst);
 
-        else {
-        	System.exit(MODE_FAIL);
+        } else {
+            System.exit(MODE_FAIL);
         }
     }
 }
