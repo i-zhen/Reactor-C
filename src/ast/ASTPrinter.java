@@ -3,6 +3,7 @@ package ast;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.io.SyncFailedException;
 
 public class ASTPrinter implements ASTVisitor<Void> {
 
@@ -22,7 +23,8 @@ public class ASTPrinter implements ASTVisitor<Void> {
             b.stmts.get(i).accept(this);
             writer.print(",");
         }
-        b.stmts.get(b.stmts.size() - 1).accept(this);
+        if(b.stmts.size() > 0)
+            b.stmts.get(b.stmts.size() - 1).accept(this);
         writer.print(")");
         return null;
     }
@@ -108,7 +110,8 @@ public class ASTPrinter implements ASTVisitor<Void> {
             f.args.get(i).accept(this);
             writer.print(",");
         }
-        f.args.get(f.args.size() - 1).accept(this);
+        if(f.args.size() > 0)
+            f.args.get(f.args.size() - 1).accept(this);
         writer.print(")");
         return null;
     }
@@ -127,7 +130,8 @@ public class ASTPrinter implements ASTVisitor<Void> {
             f.args.get(i).accept(this);
             writer.print(",");
         }
-        f.args.get(f.args.size() - 1).accept(this);
+        if(f.args.size() > 0)
+            f.args.get(f.args.size() - 1).accept(this);
         writer.print(")");
         return null;
     }

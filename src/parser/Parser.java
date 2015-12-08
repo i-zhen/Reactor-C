@@ -141,8 +141,8 @@ public class Parser {
     }
 
     private List<VarDecl> parseDecls() {
+        List<VarDecl> vd = new ArrayList<>();
         if (accept(TokenClass.INT, TokenClass.CHAR, TokenClass.VOID) && (lookAhead(2).tokenClass == TokenClass.SEMICOLON)){
-            List<VarDecl> vd = new ArrayList<>();
             Type type;
 
             if (token.tokenClass == TokenClass.INT ){
@@ -164,19 +164,19 @@ public class Parser {
             expect(TokenClass.SEMICOLON);
             List<VarDecl> paras = parseDecls();
             if(paras != null) vd.addAll(paras);
-            return vd;
         } else if (accept(TokenClass.IDENTIFIER)
                 && (lookAhead(1).tokenClass != TokenClass.LPAR)
                 && (lookAhead(1).tokenClass != TokenClass.ASSIGN)) {
             error(TokenClass.INT, TokenClass.CHAR);
         }
 
-        return null;
+        return vd;
     }
 
     private List<VarDecl> parseParams(){
+        List<VarDecl> vd = new ArrayList<>();
         if (accept(TokenClass.INT, TokenClass.CHAR)){
-            List<VarDecl> vd = new ArrayList<>();
+
             Type type;
 
             if (token.tokenClass == TokenClass.INT ){
@@ -196,15 +196,15 @@ public class Parser {
                 List<VarDecl> paras = parseParams();
                 if(paras != null) vd.addAll(paras);
             }
-            return vd;
         }
-        return null;
+        return vd;
     }
     
     private List<Procedure> parseProcs() {
+        List<Procedure> procs = new ArrayList<>();
+
         if (accept(TokenClass.INT, TokenClass.CHAR, TokenClass.VOID) &&
                 (lookAhead(1).tokenClass != TokenClass.MAIN)){
-            List<Procedure> procs = new ArrayList<>();
             Type type;
             if (token.tokenClass == TokenClass.INT ){
                 type = Type.INT;
@@ -227,12 +227,11 @@ public class Parser {
 
             List<Procedure> ps = parseProcs();
             if(ps != null) procs.addAll(ps);
-            return procs;
         } else if ( ! accept( TokenClass.VOID, TokenClass.INT, TokenClass.CHAR ) ) {
             error( TokenClass.VOID, TokenClass.INT, TokenClass.CHAR );
         }
 
-        return null;
+        return procs;
     }
 
     private Procedure parseMain() {
@@ -241,7 +240,7 @@ public class Parser {
         expect( TokenClass.LPAR );
         expect( TokenClass.RPAR );
 
-        return new Procedure( Type.VOID, TokenClass.MAIN.toString(), null, parseBlock() );
+        return new Procedure( Type.VOID, TokenClass.MAIN.toString(), new ArrayList<VarDecl>(), parseBlock() );
     }
 
     private Block parseBlock() {
