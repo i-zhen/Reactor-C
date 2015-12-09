@@ -157,7 +157,7 @@ public class Parser {
             Token v = expect(TokenClass.IDENTIFIER);
 
             if(v != null) {
-                Var var = new Var(v.toString());
+                Var var = new Var(v.data);
                 vd.add(new VarDecl(type, var));
             }
 
@@ -188,7 +188,7 @@ public class Parser {
             nextToken();
             Token v = expect( TokenClass.IDENTIFIER );
             if(v != null) {
-                Var var = new Var(v.toString());
+                Var var = new Var(v.data);
                 vd.add(new VarDecl(type, var));
             }
             if( accept( TokenClass.COMMA ) ){
@@ -214,7 +214,7 @@ public class Parser {
                 type = Type.VOID;
             }
             nextToken();
-            String name = token.toString();
+            String name = token.data;
             Token v = expect(TokenClass.IDENTIFIER);
 
             expect(TokenClass.LPAR);
@@ -289,7 +289,7 @@ public class Parser {
                     expect( TokenClass.SEMICOLON );
                     return foo;
                 } else if ( lookAhead(1).tokenClass == TokenClass.ASSIGN ) {
-                    String name = token.toString();
+                    String name = token.data;
                     nextToken();                                    // IDENT
                     nextToken();                                    // EQ
                     Expr exp = parseLexp();
@@ -429,7 +429,7 @@ public class Parser {
                 if (flag) return new ReadiExpr();
                 return new ReadcExpr();
             } case IDENTIFIER:{                                         //parse variable without minus or function
-                String name = token.toString();
+                String name = token.data;
                 if ( lookAhead(1).tokenClass == TokenClass.LPAR ){
                     return parseFunCallExpr();
                 } else {
@@ -442,7 +442,7 @@ public class Parser {
                 if(t != null && t.tokenClass.equals(TokenClass.NUMBER)){
                     return new BinOp(new IntLiteral(0), Op.SUB, new IntLiteral(Integer.parseInt(t.data)));
                 }else if(t != null){
-                    return new BinOp(new IntLiteral(0), Op.SUB, new Var(t.toString()));
+                    return new BinOp(new IntLiteral(0), Op.SUB, new Var(t.data));
                 }
             } case NUMBER:{                                             //parse number without minus
                 Token t = expect( TokenClass.NUMBER );
@@ -458,7 +458,7 @@ public class Parser {
     }
 
     private FunCallExpr parseFunCallExpr() {
-        String name = token.toString();
+        String name = token.data;
         expect( TokenClass.IDENTIFIER );
         expect( TokenClass.LPAR );
         List<Expr> exp = parseIdent();
@@ -467,7 +467,7 @@ public class Parser {
     }
 
     private FunCallStmt parseFunCallStmt() {
-        String name = token.toString();
+        String name = token.data;
         expect( TokenClass.IDENTIFIER );
         expect( TokenClass.LPAR );
         parseIdent();
@@ -479,12 +479,12 @@ public class Parser {
     private List<Expr> parseIdent() {
         List<Expr> exp = new ArrayList<>();
         if ( accept( TokenClass.IDENTIFIER ) ){
-            exp.add(new Var(token.toString()));
+            exp.add(new Var(token.data));
             nextToken();
             while ( accept( TokenClass.COMMA ) ) {
                 nextToken();
                 if(accept( TokenClass.IDENTIFIER)) {
-                    exp.add(new Var(token.toString()));
+                    exp.add(new Var(token.data));
                     expect(TokenClass.IDENTIFIER);
                 }
             }
