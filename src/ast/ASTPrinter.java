@@ -105,7 +105,8 @@ public class ASTPrinter implements ASTVisitor<Void> {
 
     public Void visitFunCallExpr(FunCallExpr f){
         writer.print("FunCallExpr(");
-        writer.print(f.name + ",");
+        writer.print(f.name);
+        if (!f.args.isEmpty()) writer.print(",");
         for(int i = 0; i < f.args.size() - 1; i++) {
             f.args.get(i).accept(this);
             writer.print(",");
@@ -125,7 +126,8 @@ public class ASTPrinter implements ASTVisitor<Void> {
 
     public Void visitFunCallStmt(FunCallStmt f){
         writer.print("FunCallStmt(");
-        writer.print(f.name + ",");
+        writer.print(f.name);
+        if (!f.args.isEmpty()) writer.print(",");
         for(int i = 0; i < f.args.size() - 1; i++) {
             f.args.get(i).accept(this);
             writer.print(",");
