@@ -1,13 +1,15 @@
 package sem;
 
+import java.util.HashMap;
 import java.util.Map;
+import java.util.SortedMap;
 
 public class Scope {
 	private Scope outer;
-	private Map<String, Symbol> symbolTable;
+	private Map<String, Symbol> symbolTable = new HashMap<>();
 	
-	public Scope(Scope outer) { 
-		this.outer = outer; 
+	public Scope(Scope outer) {
+		this.outer = outer;
 	}
 	
 	public Scope() { this(null); }

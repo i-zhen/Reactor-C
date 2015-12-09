@@ -25,6 +25,9 @@ public class NameAnalysisVisitor extends BaseSemanticVisitor<Void> {
             error("The function has been declared");
         else
             scope.put(new ProcSymbol(p));
+        for(VarDecl vd : p.params)
+            scope.put(new VarSymbol(vd));
+        p.block.accept(this);
 		return null;
 	}
 
@@ -134,9 +137,7 @@ public class NameAnalysisVisitor extends BaseSemanticVisitor<Void> {
 	}
 
 	@Override
-	public Void visitReadcExpr(ReadcExpr r){
-		return null;
-	}
+	public Void visitReadcExpr(ReadcExpr r){ return null; }
 
 	@Override
 	public Void visitReadiExpr(ReadiExpr r) { return null; }
