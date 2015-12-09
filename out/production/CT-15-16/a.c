@@ -1,13 +1,7 @@
 #include "io.h"
 
-int x;
-
-void foo() { return; }
+void foo() { return x; }
 
 void main() {
-    int n;
-    print_s("fuck ");
-    read_i();
-    n = read_c();
-    n = 7 * 9 % 88 - 6;
+    int x;
 }
