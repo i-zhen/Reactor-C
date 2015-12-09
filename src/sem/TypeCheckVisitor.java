@@ -83,40 +83,4 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
 	public Type visitAssign(Assign a){
 		return null;
 	}
-
-	@Override
-	public Type visitReadc(Readc r){
-		return null;
-	}
-
-	@Override
-	public Type visitReadi(Readi r){
-		return null;
-	}
-
-	@Override
-	public Type visitPrints(Prints p){
-		return null;
-	}
-
-	@Override
-	public Type visitPrinti(Printi p){
-		return null;
-	}
-
-	@Override
-	public Type visitPrintc(Printc p){
-		return null;
-	}
-
-	@Override
-	public Type visitReadcExpr(ReadcExpr r){
-		return null;
-	}
-
-	@Override
-	public Type visitReadiExpr(ReadiExpr r){
-		return null;
-	}
-
 }

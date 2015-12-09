@@ -124,24 +124,6 @@ public class NameAnalysisVisitor extends BaseSemanticVisitor<Void> {
         return null;
 	}
 
-	@Override
-	public Void visitPrinti(Printi p){
-		p.exp.accept(this);
-        return null;
-	}
-
-	@Override
-	public Void visitPrintc(Printc p){
-        p.exp.accept(this);
-        return null;
-	}
-
-	@Override
-	public Void visitReadcExpr(ReadcExpr r){ return null; }
-
-	@Override
-	public Void visitReadiExpr(ReadiExpr r) { return null; }
-
     @Override
     public Void visitIntLiteral(IntLiteral i){ return null; }
 
@@ -150,13 +132,4 @@ public class NameAnalysisVisitor extends BaseSemanticVisitor<Void> {
 
     @Override
     public Void visitChrLiteral(ChrLiteral c){ return null; }
-
-    @Override
-    public Void visitReadc(Readc r){ return null; }
-
-    @Override
-    public Void visitReadi(Readi r){ return null; }
-
-    @Override
-    public Void visitPrints(Prints p){ return null; }
 }

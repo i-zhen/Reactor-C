@@ -240,7 +240,7 @@ public class Parser {
         expect( TokenClass.LPAR );
         expect( TokenClass.RPAR );
 
-        return new Procedure( Type.VOID, TokenClass.MAIN.toString(), new ArrayList<VarDecl>(), parseBlock() );
+        return new Procedure( Type.VOID, TokenClass.MAIN.name(), new ArrayList<VarDecl>(), parseBlock() );
     }
 
     private Block parseBlock() {
@@ -310,40 +310,27 @@ public class Parser {
                 expect( TokenClass.SEMICOLON );
                 return new Return();
             } case PRINT: {                                         // parse print
-                Boolean flag = true;
-                if (token.data != "print_i")
-                    flag = false;                                   // print_c || print_s
-
-                Expr exp = null;
-                String str = "";
+                List<Expr> exp = new ArrayList<>();
+                String name = token.data;
                 nextToken();
                 expect( TokenClass.LPAR );
                 if ( accept(TokenClass.STRING_LITERAL )){
-                    str = token.data;
+                    exp.add(new StrLiteral(token.data));
                     nextToken();
                 } else {
-                    exp = parseLexp();
+                    exp.add(parseLexp());
                 }
                 expect( TokenClass.RPAR );
                 expect( TokenClass.SEMICOLON );
-                if(exp != null){
-                    if(flag)
-                        return new Printi(exp);
-                    else
-                        return new Printc(exp);
-                }else{
-                    return new Prints(new StrLiteral(str));
-                }
+                return new FunCallStmt(name, exp);
             } case READ: {                                          // parse read
-                Boolean flag = true;
-                if (!token.data.equals("read_i"))
-                    flag = false;                                   //read_c
+                List<Expr> exp = new ArrayList<>();
+                String name = token.data;
                 nextToken();
                 expect( TokenClass.LPAR );
                 expect( TokenClass.RPAR );
                 expect( TokenClass.SEMICOLON );
-                if (flag) return new Readi();
-                return new Readc();
+                return new FunCallStmt(name, exp);
             } default: {
                 error(    TokenClass.LBRA      , TokenClass.IF    , TokenClass.WHILE
                         , TokenClass.IDENTIFIER, TokenClass.RETURN, TokenClass.PRINT
@@ -420,14 +407,12 @@ public class Parser {
                 nextToken();
                 return new ChrLiteral(ch);
             } case READ:{                                               //parse read
-                Boolean flag = true;
-                if (!token.data.equals("read_i"))
-                    flag = false;                                       //read_c
+                List<Expr> exp = new ArrayList<>();
+                String name = token.data;
                 nextToken();
                 expect( TokenClass.LPAR );
                 expect( TokenClass.RPAR );
-                if (flag) return new ReadiExpr();
-                return new ReadcExpr();
+                return new FunCallExpr(name, exp);
             } case IDENTIFIER:{                                         //parse variable without minus or function
                 String name = token.data;
                 if ( lookAhead(1).tokenClass == TokenClass.LPAR ){
