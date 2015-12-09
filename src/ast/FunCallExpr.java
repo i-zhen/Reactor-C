@@ -5,6 +5,7 @@ import java.util.List;
 public class FunCallExpr extends Expr{
     public final String name;
     public final List<Expr> args;
+    public Procedure p;
 
     public FunCallExpr(String name, List<Expr> args){
         this.name = name;

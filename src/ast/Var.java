@@ -2,6 +2,7 @@ package ast;
 
 public class Var extends Expr {
     public final String name;
+    public VarDecl vd;
     
     public Var(String name){
         this.name = name;
