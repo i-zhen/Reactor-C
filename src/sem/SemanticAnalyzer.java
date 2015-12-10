@@ -17,6 +17,7 @@ public class SemanticAnalyzer {
 		for (SemanticVisitor v : visitors) {
 			prog.accept(v);
 			errors += v.getErrorCount();
+            if(errors > 0) return errors;
 		}
 		
 		// Return the number of errors.
