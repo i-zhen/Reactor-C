@@ -1,8 +1,15 @@
 #include "io.h"
+int h;
 int foo() {
-	return 1;
+  if('s'>'c')
+	 while(1>9) return 1;
+   else {
+     h=9+7;
+     {
+       return 'd';
+     }
+   }
 	return 0;
-  return 'c';
 }
 
 void main(){

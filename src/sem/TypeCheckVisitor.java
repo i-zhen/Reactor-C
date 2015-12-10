@@ -9,11 +9,13 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
         Type retT = null;
 		for(VarDecl vd : b.params)
             vd.accept(this);
-        for(Stmt st : b.stmts)
-            if(retT == null)             //get the first return type;
-                retT = st.accept(this);
-            else if (retT != st.accept(this))
-                error("Return types are not consistent");
+        for(Stmt st : b.stmts) {
+            Type temp = st.accept(this);
+            if (retT == null && temp != null)              //get the first return type;
+                retT = temp;
+            else if (retT != null && temp != null && temp != retT)
+                error("Return types are not consistent");  //return type should be consistent if exists multiple returns
+        }
         return retT;
 	}
 
@@ -135,17 +137,24 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
 	public Type visitWhile(While w){
         if(w.exp.accept(this) != Type.INT)
             error("The Type of expression of While statement must be INT");
-        w.stmt.accept(this);
-		return null;
+		return w.stmt.accept(this);
 	}
 
 	@Override
 	public Type visitIf(If i){
         if(i.exp.accept(this) != Type.INT)
             error("The Type of expression of If statement must be INT");
-        i.ifstmt.accept(this);
+        Type ifst   = i.ifstmt.accept(this);
+        Type elsest = null;
         if(i.elsestmt != null)
-            i.elsestmt.accept(this);
+            elsest = i.elsestmt.accept(this);
+        if(ifst != null && elsest != null && ifst != elsest) { //both of if-else statements have return expression
+            error("The return types of if-else statements are not compatible");
+            return null;
+        } else if(ifst !=null && elsest == null)
+            return ifst;
+        else if(ifst == null && elsest != null)
+            return elsest;
 		return null;
 	}
 
