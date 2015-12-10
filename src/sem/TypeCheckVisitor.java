@@ -73,7 +73,7 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
                 if(lhsT == Type.VOID || rhsT == Type.VOID)
                     error("IMPOSSIBLE type : VOID");
                 else if(lhsT == rhsT){
-                    b.type = lhsT;
+                    b.type = Type.INT;
                     return b.type;
                 } else
                     error("Type mismatch : " + lhsT + " " + rhsT);
@@ -89,6 +89,10 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
         for(int pos = 0; pos < f.args.size(); pos++)
             result &= f.args.get(pos).accept(this) == f.p.params.get(pos).type;
         if(result) {
+            if(f.p.type == Type.VOID){
+                error("Function Expr cannot be VOID");
+                return Type.VOID;
+            }
             f.type = f.p.type;
             return f.type;
         }
@@ -117,14 +121,16 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
 
 	@Override
 	public Type visitWhile(While w){
-        w.exp.accept(this);
+        if(w.exp.accept(this) != Type.INT)
+            error("The Type of expression of While statement must be INT");
         w.stmt.accept(this);
 		return null;
 	}
 
 	@Override
 	public Type visitIf(If i){
-        i.exp.accept(this);
+        if(i.exp.accept(this) != Type.INT)
+            error("The Type of expression of If statement must be INT");
         i.ifstmt.accept(this);
         if(i.elsestmt != null)
             i.elsestmt.accept(this);

@@ -2,7 +2,6 @@ package sem;
 
 import ast.*;
 
-import lexer.Token;
 import java.util.ArrayList;
 import java.util.List;
 

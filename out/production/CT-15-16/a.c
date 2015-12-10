@@ -5,5 +5,8 @@ int f(int a){
 
 void main() {
     int n;
-    n = f(a);
+    char m;
+    n = f(n);
+    m = '9';
+    if(9){}
 }
