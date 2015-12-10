@@ -55,7 +55,9 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
 	}
 
 	@Override
-	public Type visitIntLiteral(IntLiteral i){ return Type.INT; }
+	public Type visitIntLiteral(IntLiteral i){
+        return Type.INT;
+    }
 
 	@Override
 	public Type visitStrLiteral(StrLiteral s){
@@ -151,9 +153,9 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
         if(ifst != null && elsest != null && ifst != elsest) { //both of if-else statements have return expression
             error("The return types of if-else statements are not compatible");
             return null;
-        } else if(ifst !=null && elsest == null)
+        } else if(ifst != null && elsest == null) {
             return ifst;
-        else if(ifst == null && elsest != null)
+        } else if(ifst == null && elsest != null)
             return elsest;
 		return null;
 	}
