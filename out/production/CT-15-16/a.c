@@ -1,24 +1,10 @@
 #include "io.h"
-
 int a;
-char c;
-
-int foo(int foo) {
-  int a;
-  {
-    int n;
-    int c;
-    return 9;
-  }
+int foo(){
+  return 0;
 }
 
 void main() {
-  {
-    foo(a);
-    {
-      char foo;
-      foo = 'd';
-      
-    }
-  }
+  a=foo(a,a,a);
+  read_i();
 }

@@ -92,8 +92,10 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
 
 	@Override
 	public Type visitFunCallExpr(FunCallExpr f){
-        if(f.p.params.size() != f.args.size())
+        if(f.p.params.size() != f.args.size()){
             error("Number of args does not match : FunCallExpr");
+            return null;
+        }
         Boolean result = true;
         for(int pos = 0; pos < f.args.size(); pos++)
             result &= f.args.get(pos).accept(this) == f.p.params.get(pos).type;
