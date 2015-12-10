@@ -22,11 +22,10 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
         for(VarDecl vd : p.params)
             vd.accept(this);
         Type ret = p.block.accept(this);
-        if(ret == null && p.type == Type.VOID)
+        if(ret == Type.VOID && p.type == Type.VOID)
 		    return p.type;
-        if(ret != null && ret == p.type)
-            return p.type;
-        error("The return type must match the type of function/main " + ret + " " + p.type);
+        else if(ret != null && ret != p.type)
+            error("The return type must match the type of function/main " + ret + " " + p.type);
         return p.type;
 	}
 
@@ -115,7 +114,7 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
 	public Type visitReturn(Return r){
         if (r.exp != null)
             return r.exp.accept(this);
-		return null;
+		return Type.VOID;
 	}
 
 	@Override

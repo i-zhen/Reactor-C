@@ -104,9 +104,9 @@ public class NameAnalysisVisitor extends BaseSemanticVisitor<Void> {
 	public Void visitFunCallExpr(FunCallExpr f){
         Symbol vs = scope.lookup(f.name);
         if(vs == null)
-            error("Using function without declaration");
+            error("Using function(Expr) without declaration");
         else if (!vs.isProc())
-            error("Not a legal function name");
+            error("Not a legal function(Expr) name");
         else
             f.p = ((ProcSymbol) vs).p;     //link the function and the declaration
         for(Expr v : f.args)
@@ -117,7 +117,7 @@ public class NameAnalysisVisitor extends BaseSemanticVisitor<Void> {
 	@Override
 	public Void visitReturn(Return r){
         if (r.exp != null)
-            return r.exp.accept(this);
+            r.exp.accept(this);
 		return null;
 	}
 
@@ -125,9 +125,9 @@ public class NameAnalysisVisitor extends BaseSemanticVisitor<Void> {
 	public Void visitFunCallStmt(FunCallStmt f){
         Symbol vs = scope.lookup(f.name);
         if(vs == null)
-            error("Using function without declaration");
+            error("Using function(Stmt) without declaration");
         else if (!vs.isProc())
-            error("Not a legal function name");
+            error("Not a legal function(Stmt) name");
         else
             f.p = ((ProcSymbol) vs).p;     //link the function and the declaration
         for(Expr v : f.args)
