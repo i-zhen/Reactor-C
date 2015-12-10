@@ -455,7 +455,6 @@ public class Parser {
         String name = token.data;
         expect( TokenClass.IDENTIFIER );
         expect( TokenClass.LPAR );
-        parseIdent();
         List<Expr> exp = parseIdent();
         expect( TokenClass.RPAR );
         return new FunCallStmt(name, exp);

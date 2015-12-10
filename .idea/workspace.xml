@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fe539b0-54dc-4c80-b34d-032b048cadfb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/.a.c.swp" afterPath="$PROJECT_DIR$/out/production/CT-15-16/.a.c.swp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/sem/NameAnalysisVisitor.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/sem/NameAnalysisVisitor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/a.c" afterPath="$PROJECT_DIR$/out/production/CT-15-16/a.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ast/ASTPrinter.java" afterPath="$PROJECT_DIR$/src/ast/ASTPrinter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sem/NameAnalysisVisitor.java" afterPath="$PROJECT_DIR$/src/sem/NameAnalysisVisitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/Parser.java" afterPath="$PROJECT_DIR$/src/parser/Parser.java" />
     </list>
     <ignored path="CT-15-16.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -95,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/parser/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="375" column="43" selection-start-line="375" selection-start-column="43" selection-end-line="375" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.43238994">
+              <caret line="456" column="34" selection-start-line="456" selection-start-column="34" selection-end-line="456" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -115,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ASTPrinter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ASTPrinter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ast/ASTPrinter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4481132">
-              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="136" column="49" selection-start-line="136" selection-start-column="49" selection-end-line="136" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -190,11 +185,11 @@
         <option value="$PROJECT_DIR$/src/ast/FunCallStmt.java" />
         <option value="$PROJECT_DIR$/src/sem/Scope.java" />
         <option value="$PROJECT_DIR$/src/ast/ASTVisitor.java" />
-        <option value="$PROJECT_DIR$/src/parser/Parser.java" />
         <option value="$PROJECT_DIR$/src/sem/SemanticAnalyzer.java" />
         <option value="$PROJECT_DIR$/src/sem/NameAnalysisVisitor.java" />
         <option value="$PROJECT_DIR$/src/sem/TypeCheckVisitor.java" />
         <option value="$PROJECT_DIR$/src/ast/ASTPrinter.java" />
+        <option value="$PROJECT_DIR$/src/parser/Parser.java" />
       </list>
     </option>
   </component>
@@ -906,12 +901,12 @@
       <workItem from="1449416982997" duration="28537000" />
       <workItem from="1449594489971" duration="903000" />
       <workItem from="1449618427229" duration="8827000" />
-      <workItem from="1449668815857" duration="12973000" />
+      <workItem from="1449668815857" duration="13215000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120796000" />
+    <option name="totallyTimeSpent" value="121038000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="13" y="28" width="1260" height="733" extended-state="0" />
@@ -1259,14 +1254,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parser/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="375" column="43" selection-start-line="375" selection-start-column="43" selection-end-line="375" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/util/Position.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1319,8 +1306,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ast/ASTPrinter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4481132">
-          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="136" column="49" selection-start-line="136" selection-start-column="49" selection-end-line="136" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parser/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43238994">
+          <caret line="456" column="34" selection-start-line="456" selection-start-column="34" selection-end-line="456" selection-end-column="34" />
           <folding />
         </state>
       </provider>
