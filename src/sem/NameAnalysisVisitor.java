@@ -48,6 +48,8 @@ public class NameAnalysisVisitor extends BaseSemanticVisitor<Void> {
             error("The function has been declared");
         else
             scope.put(new ProcSymbol(p));
+        Scope oldScope = scope;
+        scope = new Scope(scope);
         for(VarDecl vd : p.params)
             vd.accept(this);
         Block b = p.block;
@@ -55,6 +57,7 @@ public class NameAnalysisVisitor extends BaseSemanticVisitor<Void> {
             vd.accept(this);
         for(Stmt st : b.stmts)
             st.accept(this);
+        scope = oldScope;
 		return null;
 	}
 
