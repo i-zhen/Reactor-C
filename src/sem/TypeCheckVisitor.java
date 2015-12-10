@@ -10,10 +10,10 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
 		for(VarDecl vd : b.params)
             vd.accept(this);
         for(Stmt st : b.stmts)
-            if(retT == null)
+            if(retT == null)             //get the first return type;
                 retT = st.accept(this);
-            else
-                st.accept(this);
+            else if (retT != st.accept(this))
+                error("Return types are not consistent");
         return retT;
 	}
 

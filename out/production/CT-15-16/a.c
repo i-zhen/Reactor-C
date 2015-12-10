@@ -1,10 +1,10 @@
 #include "io.h"
-int a;
-int foo(){
-  return foo();
+int foo() {
+	return 1;
+	return 0;
+  return 'c';
 }
 
-void main() {
-  //a=foo(a,a,a);
-  read_i();
+void main(){
+  
 }
