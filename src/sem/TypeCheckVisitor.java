@@ -10,15 +10,23 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
             vd.accept(this);
         for(Stmt st : b.stmts)
             st.accept(this);
-		return null;
+        if(b.stmts.isEmpty())
+		    return null;
+        else
+            return b.stmts.get(b.stmts.size() - 1).accept(this);
 	}
 
 	@Override
 	public Type visitProcedure(Procedure p) {
         for(VarDecl vd : p.params)
             vd.accept(this);
-        p.block.accept(this);
-		return p.type;
+        Type ret = p.block.accept(this);
+        if(ret == null && p.type == Type.VOID)
+		    return p.type;
+        if(ret != null && ret == p.type)
+            return p.type;
+        error("The return type must match the type of function/main");
+        return p.type;
 	}
 
 	@Override

@@ -1,6 +1,7 @@
 #include "io.h"
 
 int f(int a){
+    return 9;
 }
 
 void main() {
@@ -9,4 +10,5 @@ void main() {
     n = f(n);
     m = '9';
     if(9){}
+    return ;
 }
