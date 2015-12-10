@@ -2,18 +2,20 @@
 
 int a;
 
-int factorial(int n) {
+int foo(int n) {
+  int a;
   {
     int n;
     n = 1;
+    return 0;
   }
-  return 0;
 }
 
 void main() {
   {
+    foo(a,a);
     {
-      a = 0;
+      a = 0 * foo(a);
     }
   }
 }

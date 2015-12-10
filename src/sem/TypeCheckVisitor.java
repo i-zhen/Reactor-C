@@ -118,8 +118,10 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
 
 	@Override
 	public Type visitFunCallStmt(FunCallStmt f){
-        if(f.p.params.size() != f.args.size())
+        if(f.p.params.size() != f.args.size()) {
             error("Number of args does not match : FunCallStmt");
+            return null;
+        }
         Boolean result = true;
         for(int pos = 0; pos < f.args.size(); pos++)
             result &= f.args.get(pos).accept(this) == f.p.params.get(pos).type;
@@ -150,9 +152,7 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
 	public Type visitAssign(Assign a){
         Type expT = a.exp.accept(this);
         a.var.accept(this);
-        if(a.var.type == expT)
-            return null;
-        else
+        if(a.var.type != expT)
             error("Type mismatch : Assign :" + a.var.type.toString() + " " + expT);
 		return null;
 	}
