@@ -1,21 +1,24 @@
 #include "io.h"
 
 int a;
+char c;
 
-int foo(int n) {
+int foo(int foo) {
   int a;
   {
     int n;
-    n = 1;
-    return 0;
+    int c;
+    return 9;
   }
 }
 
 void main() {
   {
-    foo(a,a);
+    foo(a);
     {
-      a = 0 * foo(a);
+      char foo;
+      foo = 'd';
+      
     }
   }
 }
