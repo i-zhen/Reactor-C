@@ -31,8 +31,12 @@ public class NameAnalysisVisitor extends BaseSemanticVisitor<Void> {
         else
             scope.put(new ProcSymbol(p));
         for(VarDecl vd : p.params)
-            scope.put(new VarSymbol(vd));
-        p.block.accept(this);
+            vd.accept(this);
+        Block b = p.block;
+        for(VarDecl vd : b.params)
+            vd.accept(this);
+        for(Stmt st : b.stmts)
+            st.accept(this);
 		return null;
 	}
 
