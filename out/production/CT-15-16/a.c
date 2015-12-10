@@ -5,4 +5,5 @@ void foo(){
 }
 
 void main() {
+    print_s(4);
 }

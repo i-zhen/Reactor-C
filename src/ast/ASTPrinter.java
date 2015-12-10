@@ -119,7 +119,7 @@ public class ASTPrinter implements ASTVisitor<Void> {
 
     public Void visitReturn(Return r){
         writer.print("Return(");
-        if(r.exp != null) writer.print(r.exp);
+        if(r.exp != null) r.exp.accept(this);
         writer.print(")");
         return null;
     }
