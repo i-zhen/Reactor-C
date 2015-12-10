@@ -6,14 +6,15 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
 
 	@Override
 	public Type visitBlock(Block b) {
+        Type retT = null;
 		for(VarDecl vd : b.params)
             vd.accept(this);
         for(Stmt st : b.stmts)
-            st.accept(this);
-        if(b.stmts.isEmpty())
-		    return null;
-        else
-            return b.stmts.get(b.stmts.size() - 1).accept(this);
+            if(retT == null)
+                retT = st.accept(this);
+            else
+                st.accept(this);
+        return retT;
 	}
 
 	@Override
@@ -25,7 +26,7 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
 		    return p.type;
         if(ret != null && ret == p.type)
             return p.type;
-        error("The return type must match the type of function/main");
+        error("The return type must match the type of function/main " + ret + " " + p.type);
         return p.type;
 	}
 
@@ -150,7 +151,7 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
         Type expT = a.exp.accept(this);
         a.var.accept(this);
         if(a.var.type == expT)
-            return expT;
+            return null;
         else
             error("Type mismatch : Assign :" + a.var.type.toString() + " " + expT);
 		return null;
