@@ -19,13 +19,10 @@ public class ASTPrinter implements ASTVisitor<Void> {
             b.params.get(i).accept(this);
             writer.print(",");
         }
-        if(!b.stmts.isEmpty() && b.params.size() > 0){
+        if(b.params.size() > 0)
             b.params.get(b.params.size() - 1).accept(this);
+        if(!b.stmts.isEmpty())
             writer.print(",");
-        } else if (b.stmts.isEmpty() && b.params.size() > 0){
-            b.params.get(b.params.size() - 1).accept(this);
-        }
-
         for(int i = 0; i < b.stmts.size() - 1; i++) {
             b.stmts.get(i).accept(this);
             writer.print(",");

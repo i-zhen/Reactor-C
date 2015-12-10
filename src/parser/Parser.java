@@ -145,12 +145,10 @@ public class Parser {
         if (accept(TokenClass.INT, TokenClass.CHAR, TokenClass.VOID) && (lookAhead(2).tokenClass == TokenClass.SEMICOLON)){
             Type type;
 
-            if (token.tokenClass == TokenClass.INT ){
-                type = Type.INT;
-            } else if(token.tokenClass == TokenClass.VOID){
-                type = Type.VOID;
-            } else {
-                type = Type.CHAR;
+            switch (token.tokenClass){
+                case INT : type = Type.INT;  break;
+                case CHAR: type = Type.CHAR; break;
+                default  : type = Type.VOID;
             }
             nextToken();
 
