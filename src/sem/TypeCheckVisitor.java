@@ -13,7 +13,7 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
             Type temp = st.accept(this);
             if (retT == null && temp != null)              //get the first return type;
                 retT = temp;
-            else if (retT != null && temp != null && temp != retT)
+            if (retT != null && temp != null && temp != retT)
                 error("Return types are not consistent");  //return type should be consistent if exists multiple returns
         }
         return retT;
