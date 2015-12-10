@@ -1,6 +1,14 @@
 #include "io.h"
 
+void a(){
+}
+
+int b(int a,char b, void c){
+
+}
+
+char c(){
+}
+
 void main() {
-    foo(a,b,c);
-    n = foo(a,b,c);
 }

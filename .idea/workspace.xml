@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fe539b0-54dc-4c80-b34d-032b048cadfb" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/.a.c.swp" afterPath="$PROJECT_DIR$/out/production/CT-15-16/.a.c.swp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/a.c" afterPath="$PROJECT_DIR$/out/production/CT-15-16/a.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/Parser.java" afterPath="$PROJECT_DIR$/src/parser/Parser.java" />
     </list>
     <ignored path="CT-15-16.iws" />
@@ -93,8 +95,8 @@
       <file leaf-file-name="Parser.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/parser/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43238994">
-              <caret line="456" column="34" selection-start-line="456" selection-start-column="34" selection-end-line="456" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.5267296">
+              <caret line="186" column="32" selection-start-line="186" selection-start-column="32" selection-end-line="186" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -901,12 +903,12 @@
       <workItem from="1449416982997" duration="28537000" />
       <workItem from="1449594489971" duration="903000" />
       <workItem from="1449618427229" duration="8827000" />
-      <workItem from="1449668815857" duration="13215000" />
+      <workItem from="1449668815857" duration="13413000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121038000" />
+    <option name="totallyTimeSpent" value="121236000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="13" y="28" width="1260" height="733" extended-state="0" />
@@ -1314,8 +1316,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/parser/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43238994">
-          <caret line="456" column="34" selection-start-line="456" selection-start-column="34" selection-end-line="456" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.5267296">
+          <caret line="186" column="32" selection-start-line="186" selection-start-column="32" selection-end-line="186" selection-end-column="32" />
           <folding />
         </state>
       </provider>

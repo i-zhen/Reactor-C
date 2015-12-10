@@ -175,15 +175,16 @@ public class Parser {
 
     private List<VarDecl> parseParams(){
         List<VarDecl> vd = new ArrayList<>();
-        if (accept(TokenClass.INT, TokenClass.CHAR)){
+        if (accept(TokenClass.INT, TokenClass.CHAR, TokenClass.VOID)){
 
             Type type;
 
             if (token.tokenClass == TokenClass.INT ){
                 type = Type.INT;
-            } else {
+            } else if(token.tokenClass == TokenClass.CHAR){
                 type = Type.CHAR;
-            }
+            } else
+                type = Type.VOID;
 
             nextToken();
             Token v = expect( TokenClass.IDENTIFIER );
