@@ -39,14 +39,16 @@ public class NameAnalysisVisitor extends BaseSemanticVisitor<Void> {
 	@Override
 	public Void visitProgram(Program p) {
         //init internal functions such as read and print
+        List<VarDecl> vdReadChr = new ArrayList<>();
+        List<VarDecl> vdReadInt = new ArrayList<>();
         List<VarDecl> vdPrintChr = new ArrayList<>();
         vdPrintChr.add(new VarDecl(Type.CHAR,new Var("paraPrintChr")));
         List<VarDecl> vdPrintInt = new ArrayList<>();
         vdPrintInt.add(new VarDecl(Type.INT,new Var("paraPrintInt")));
         List<VarDecl> vdPrintStr = new ArrayList<>();
         vdPrintStr.add(new VarDecl(Type.STRING,new Var("paraPrintInt")));
-        scope.put(new ProcSymbol(new Procedure(Type.INT, "read_i", null, null)));
-        scope.put(new ProcSymbol(new Procedure(Type.CHAR, "read_c", null, null)));
+        scope.put(new ProcSymbol(new Procedure(Type.INT, "read_i", vdReadInt, null)));
+        scope.put(new ProcSymbol(new Procedure(Type.CHAR, "read_c", vdReadChr, null)));
         scope.put(new ProcSymbol(new Procedure(Type.VOID, "print_i", vdPrintInt, null)));
         scope.put(new ProcSymbol(new Procedure(Type.VOID, "print_c", vdPrintChr, null)));
         scope.put(new ProcSymbol(new Procedure(Type.VOID, "print_s", vdPrintStr, null)));

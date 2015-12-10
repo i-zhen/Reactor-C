@@ -67,7 +67,7 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
                     b.type = Type.INT;
                     return Type.INT;
                 } else
-                    error("Type mismatch : BinOp :" + lhsT.toString() + " " + rhsT.toString());
+                    error("Type mismatch : BinOp :" + lhsT + " " + rhsT);
                 break;
             default:
                 if(lhsT == Type.VOID || rhsT == Type.VOID)
@@ -76,7 +76,7 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
                     b.type = lhsT;
                     return b.type;
                 } else
-                    error("Type mismatch : " + lhsT.toString() + " " + rhsT.toString());
+                    error("Type mismatch : " + lhsT + " " + rhsT);
         }
         return null;
 	}
@@ -87,12 +87,12 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
             error("Number of args does not match : FunCallExpr");
         Boolean result = true;
         for(int pos = 0; pos < f.args.size(); pos++)
-            result &= f.args.get(pos).accept(this) == f.p.params.get(pos).accept(this);
-        if(!result) {
-            error("Type of args does not match : FunCallExpr");
+            result &= f.args.get(pos).accept(this) == f.p.params.get(pos).type;
+        if(result) {
             f.type = f.p.type;
             return f.type;
         }
+        error("Type of args does not match : FunCallExpr");
 		return null;
 	}
 
@@ -109,7 +109,7 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
             error("Number of args does not match : FunCallStmt");
         Boolean result = true;
         for(int pos = 0; pos < f.args.size(); pos++)
-            result &= f.args.get(pos).accept(this) == f.p.params.get(pos).accept(this);
+            result &= f.args.get(pos).accept(this) == f.p.params.get(pos).type;
         if(!result)
             error("Type of args does not match : FunCallStmt");
         return null;
@@ -138,7 +138,7 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
         if(a.var.type == expT)
             return expT;
         else
-            error("Type mismatch : Assign :" + a.var.type.toString() + " " + expT.toString());
+            error("Type mismatch : Assign :" + a.var.type.toString() + " " + expT);
 		return null;
 	}
 }

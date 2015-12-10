@@ -1,9 +1,6 @@
 #include "io.h"
 
-void foo(){
-    return 9*7;
-}
-
 void main() {
-    print_s(4);
+    int n;
+    n=read_c();
 }
