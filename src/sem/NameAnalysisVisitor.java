@@ -29,11 +29,6 @@ public class NameAnalysisVisitor extends BaseSemanticVisitor<Void> {
         return null;
     }
 
-    int i=0;
-    void inc(int x){
-        x=x+1;
-        return ;
-    }
 	@Override
 	public Void visitBlock(Block b) {
         Scope oldScope = scope;
@@ -112,6 +107,8 @@ public class NameAnalysisVisitor extends BaseSemanticVisitor<Void> {
             error("Not a legal function name");
         else
             f.p = ((ProcSymbol) vs).p;     //link the function and the declaration
+        for(Expr v : f.args)
+            v.accept(this);
 		return null;
 	}
 
@@ -131,6 +128,8 @@ public class NameAnalysisVisitor extends BaseSemanticVisitor<Void> {
             error("Not a legal function name");
         else
             f.p = ((ProcSymbol) vs).p;     //link the function and the declaration
+        for(Expr v : f.args)
+            v.accept(this);
         return null;
 	}
 

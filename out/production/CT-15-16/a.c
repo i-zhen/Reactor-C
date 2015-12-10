@@ -1,7 +1,9 @@
 #include "io.h"
 
+int f(int a){
+}
 
 void main() {
-    foo(a);
-    b = fo(i,u,fo());
+    int n;
+    n = f(a);
 }
