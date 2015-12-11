@@ -265,6 +265,4 @@ public class Tokeniser {
         error(c,line,column);
         return new Token(TokenClass.INVALID, line, column);
     }
-
-
 }

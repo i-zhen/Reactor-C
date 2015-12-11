@@ -28,6 +28,9 @@ public class TypeCheckVisitor extends BaseSemanticVisitor<Type> {
 		    return p.type;
         else if(ret != null && ret != p.type)
             error("The return type must match the type of function/main " + ret + " " + p.type);
+        if(ret == null){
+            error("Must have return");
+        }
         return p.type;
 	}
 
