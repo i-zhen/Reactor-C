@@ -138,7 +138,6 @@ public class Main {
                 System.exit(SEM_FAIL);
             CodeGenerator codegen = new CodeGenerator();
             codegen.emitProgram(programAst);
-
         } else {
             System.exit(MODE_FAIL);
         }

@@ -1,7 +1,6 @@
 package sem;
 
 /**
- * @author dhil
  * An interface for semantic visitors.
  * Exposes a method for extracting the number of errors encountered during an AST traversal.
  */
