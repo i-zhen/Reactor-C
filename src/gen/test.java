@@ -6,7 +6,8 @@ package gen;
 public class test {
     static int h;
 
-    public static void foo(int a, int b, char c){
+    public static int foo(int a, int b, char c){
+        return 0;
     }
     public test(){
         int a;
@@ -14,8 +15,8 @@ public class test {
         h =1;
         a = 1;
         b=1;
-        while(a>1){
-            b = h;
+        while(a>0){
+            foo(1,2,'c');
         }
         System.out.println(b);
 

@@ -20,6 +20,7 @@ public class GenerateVisitor extends BaseCodeGenVisitor<Void> {
     private MethodVisitor mv;
 
     private boolean GlobalFlag = false;
+    private boolean Init = false;
     private int     localVariablCount = 0;
     private Label   label;
 
@@ -60,8 +61,10 @@ public class GenerateVisitor extends BaseCodeGenVisitor<Void> {
 
     @Override
     public Void visitBlock(Block b) {
+        Init = true;
         for(VarDecl vd : b.params)
             vd.accept(this);
+        Init = false;
         for(Stmt st : b.stmts)
             st.accept(this);
         return null;
@@ -77,6 +80,7 @@ public class GenerateVisitor extends BaseCodeGenVisitor<Void> {
         }
         type = type + ")" + getType(p.type);
         p.setCallType(type);
+
         mv = cw.visitMethod(Opcodes.ACC_STATIC, p.name, type, null, null);
         mv.visitCode();
 
@@ -88,7 +92,7 @@ public class GenerateVisitor extends BaseCodeGenVisitor<Void> {
             mv.visitIntInsn(Opcodes.BIPUSH, 0);
             mv.visitInsn(Opcodes.IRETURN);
         }
-        mv.visitMaxs(1, 1);
+        mv.visitMaxs(100, 100);
         mv.visitEnd();
         return null;
     }
@@ -117,7 +121,7 @@ public class GenerateVisitor extends BaseCodeGenVisitor<Void> {
         p.main.block.accept(this);
         //every method must contain at least one instruction in Java ByteCode. This is the attribute
         mv.visitInsn(Opcodes.RETURN); //IMPORTANT, DO NOT FORGET
-        mv.visitMaxs(1, 1);           //Compute frame and local variable here
+        mv.visitMaxs(100, 100);           //Compute frame and local variable here
         mv.visitEnd();
         cw.visitEnd();
         writeClass(cw);
@@ -138,7 +142,11 @@ public class GenerateVisitor extends BaseCodeGenVisitor<Void> {
 
     public Void visitVarDeclLocal(VarDecl vd){
         //New Frame(scope) has been created, involves new local variable index
-        vd.setIndex(getCount());     //set new local variable index
+        vd.setIndex(getCount());             //set new local variable index
+        if (Init) {
+            mv.visitIntInsn(Opcodes.BIPUSH, 0);  //initialize
+            mv.visitVarInsn(Opcodes.ISTORE, vd.getIndex());
+        }
         return null;
     }
 
@@ -169,13 +177,19 @@ public class GenerateVisitor extends BaseCodeGenVisitor<Void> {
                     mv.visitFieldInsn(Opcodes.GETSTATIC,
                             "Main",  // classname
                             v.name,  //static field name
-                            "I");    // the type of field.
+                            "I"      // the type of field.
+                    );
                 break;
             case CHAR:
                 if(!v.vd.getGlobal())
                     mv.visitVarInsn(Opcodes.ILOAD, v.vd.getIndex());
                 else
-                    mv.visitFieldInsn(Opcodes.GETSTATIC, "Main", v.name, "C");
+                    mv.visitFieldInsn(
+                            Opcodes.GETSTATIC,
+                            "Main",
+                            v.name,
+                            "C"
+                    );
                 break;
             default:
                 error("Impossible variable type");
@@ -251,6 +265,8 @@ public class GenerateVisitor extends BaseCodeGenVisitor<Void> {
                         f.name,
                         f.p.getCallType()
                 );
+                if (!f.p.getCallType().contains("V")) // if the return value is not void
+                    mv.visitInsn(Opcodes.POP);        // just pop it
         }
         return null;
     }
