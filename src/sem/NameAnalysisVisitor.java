@@ -10,7 +10,7 @@ public class NameAnalysisVisitor extends BaseSemanticVisitor<Void> {
 	Scope scope;
     NameAnalysisVisitor(Scope scope){ this.scope = scope; }
 
-    private Void init(){
+    private void init(){
         //init internal functions such as read and print
         List<VarDecl> vdReadChr = new ArrayList<>();
         List<VarDecl> vdReadInt = new ArrayList<>();
@@ -25,7 +25,6 @@ public class NameAnalysisVisitor extends BaseSemanticVisitor<Void> {
         scope.put(new ProcSymbol(new Procedure(Type.VOID, "print_i", vdPrintInt, null)));
         scope.put(new ProcSymbol(new Procedure(Type.VOID, "print_c", vdPrintChr, null)));
         scope.put(new ProcSymbol(new Procedure(Type.VOID, "print_s", vdPrintStr, null)));
-        return null;
     }
 
 	@Override

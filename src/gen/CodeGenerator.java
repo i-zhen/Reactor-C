@@ -5,7 +5,7 @@ import ast.Program;
 public class CodeGenerator {
 
     public void emitProgram(Program program) {
-        GenerateVistor vistor = new GenerateVistor();
+        GenerateVisitor vistor = new GenerateVisitor();
         program.accept(vistor);
         if (vistor.getErrorCount() > 0) {
             System.out.println("Cannot generate code, error found: " + vistor.getErrorCount());

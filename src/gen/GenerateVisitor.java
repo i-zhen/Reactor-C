@@ -9,16 +9,23 @@ import org.objectweb.asm.Opcodes;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class GenerateVistor extends BaseCodeGenVisitor<Void> {
-    private final static int FRAMES = ClassWriter.COMPUTE_FRAMES; //or 0
-    private ClassWriter cw = new ClassWriter(FRAMES);      //Class Begin
+/**
+ * https://en.wikipedia.org/wiki/Java_bytecode_instruction_listings
+ * http://www.egtry.com/java/bytecode/asm/field
+ * http://asm.ow2.org/asm40/javadoc/user/index.html
+ */
+
+public class GenerateVisitor extends BaseCodeGenVisitor<Void> {
+    private ClassWriter   cw;
     private MethodVisitor mv;
 
     private boolean GlobalFlag = false;
-    private boolean WhileFlag = false;
-    private int localVariablCount = 0;
-    private Label label;
-    private Label end;
+    private int     localVariablCount = 0;
+    private Label   label;
+
+    public GenerateVisitor(){
+        this.cw = new ClassWriter(ClassWriter.COMPUTE_FRAMES);
+    }
 
     private void newScope(){
         localVariablCount = 0;
@@ -53,7 +60,6 @@ public class GenerateVistor extends BaseCodeGenVisitor<Void> {
 
     @Override
     public Void visitBlock(Block b) {
-        newScope();
         for(VarDecl vd : b.params)
             vd.accept(this);
         for(Stmt st : b.stmts)
@@ -73,25 +79,22 @@ public class GenerateVistor extends BaseCodeGenVisitor<Void> {
         p.setCallType(type);
         mv = cw.visitMethod(Opcodes.ACC_STATIC, p.name, type, null, null);
         mv.visitCode();
-        Block b = p.block;
-        for(VarDecl vd : b.params)
-            vd.accept(this);
-        for(Stmt st : b.stmts)
-            st.accept(this);
+
+        p.block.accept(this);
+
         if(getType(p.type).equals("V"))
             mv.visitInsn(Opcodes.RETURN);
         else{
             mv.visitIntInsn(Opcodes.BIPUSH, 0);
             mv.visitInsn(Opcodes.IRETURN);
         }
-        mv.visitMaxs(10, 10);
+        mv.visitMaxs(1, 1);
         mv.visitEnd();
         return null;
     }
 
     @Override
     public Void visitProgram(Program p) {
-        test t = new test();
         cw.visit(Opcodes.V1_7, Opcodes.ACC_PUBLIC, "Main", null, "java/lang/Object", null);
         //generate global variable declaration
         GlobalFlag = true;
@@ -110,6 +113,7 @@ public class GenerateVistor extends BaseCodeGenVisitor<Void> {
                 null                                      //exceptions
         );
         mv.visitCode();
+        newScope();
         p.main.block.accept(this);
         //every method must contain at least one instruction in Java ByteCode. This is the attribute
         mv.visitInsn(Opcodes.RETURN); //IMPORTANT, DO NOT FORGET
@@ -180,9 +184,79 @@ public class GenerateVistor extends BaseCodeGenVisitor<Void> {
     }
 
     @Override
+    public Void visitFunCallExpr(FunCallExpr f){
+        for(Expr e : f.args)
+            e.accept(this);
+        switch (f.name){
+            case "read_i" :
+                mv.visitMethodInsn(
+                        Opcodes.INVOKESTATIC,
+                        "IO",
+                        f.name,
+                        "()I"
+                );
+                break;
+            case "read_c" :
+                mv.visitMethodInsn(
+                        Opcodes.INVOKESTATIC,
+                        "IO",
+                        f.name,
+                        "()C"
+                );
+                break;
+            default:
+                mv.visitMethodInsn(
+                        Opcodes.INVOKESTATIC,
+                        "Main",
+                        f.name,
+                        f.p.getCallType()
+                );
+        }
+        return null;
+    }
+
+    @Override
+    public Void visitFunCallStmt(FunCallStmt f){
+        for(Expr e : f.args)
+            e.accept(this);
+        switch (f.name){
+            case "print_i" :
+                mv.visitMethodInsn(
+                        Opcodes.INVOKESTATIC,
+                        "IO",
+                        f.name,
+                        "(I)V"
+                );
+                break;
+            case "print_c" :
+                mv.visitMethodInsn(
+                        Opcodes.INVOKESTATIC,
+                        "IO",
+                        f.name,
+                        "(C)V"
+                );
+                break;
+            case "print_s" :
+                mv.visitMethodInsn(
+                        Opcodes.INVOKESTATIC,
+                        "IO",
+                        f.name,
+                        "(Ljava/lang/String;)V"
+                );
+                break;
+            default:
+                mv.visitMethodInsn(
+                        Opcodes.INVOKESTATIC,
+                        "Main",
+                        f.name,
+                        f.p.getCallType()
+                );
+        }
+        return null;
+    }
+
+    @Override
     public Void visitBinOp(BinOp b){
-        boolean InvFlag = WhileFlag;
-        WhileFlag = false;
         b.lhs.accept(this);
         b.rhs.accept(this);
         switch (b.op){
@@ -197,113 +271,67 @@ public class GenerateVistor extends BaseCodeGenVisitor<Void> {
             case MOD:
                 mv.visitInsn(Opcodes.IREM); break;
             case EQ :
-                if(InvFlag)
-                    mv.visitJumpInsn(Opcodes.IF_ICMPEQ, label);
-                else
-                    mv.visitJumpInsn(Opcodes.IF_ICMPNE, label);
-                break;
+                mv.visitJumpInsn(Opcodes.IF_ICMPNE, label); break;
             case LE :
-                if(InvFlag)
-                    mv.visitJumpInsn(Opcodes.IF_ICMPLE, label);
-                else
-                    mv.visitJumpInsn(Opcodes.IF_ICMPGT, label);
-                break;
+                mv.visitJumpInsn(Opcodes.IF_ICMPGT, label); break;
             case LT :
-                if(InvFlag)
-                    mv.visitJumpInsn(Opcodes.IF_ICMPLT, label);
-                else
-                    mv.visitJumpInsn(Opcodes.IF_ICMPGE, label);
-                break;
+                mv.visitJumpInsn(Opcodes.IF_ICMPGE, label); break;
             case GT :
-                if(InvFlag)
-                    mv.visitJumpInsn(Opcodes.IF_ICMPGT, label);
-                else
-                    mv.visitJumpInsn(Opcodes.IF_ICMPLE, label);
-                break;
+                mv.visitJumpInsn(Opcodes.IF_ICMPLE, label); break;
             case GE :
-                if(InvFlag)
-                    mv.visitJumpInsn(Opcodes.IF_ICMPGE, label);
-                else
-                    mv.visitJumpInsn(Opcodes.IF_ICMPLT, label);
-                break;
+                mv.visitJumpInsn(Opcodes.IF_ICMPLT, label); break;
             case NE :
-                if(InvFlag)
-                    mv.visitJumpInsn(Opcodes.IF_ICMPNE, label);
-                else
-                    mv.visitJumpInsn(Opcodes.IF_ICMPEQ, label);
-                break;
+                mv.visitJumpInsn(Opcodes.IF_ICMPEQ, label); break;
+        }
+        switch (b.op) {  //should only execute once
+            case EQ: case LE: case LT: case GT: case GE: case NE:
+                numericalRepresentation();
         }
         return null;
     }
 
-    @Override
-    public Void visitFunCallExpr(FunCallExpr f){
-        for(Expr e : f.args)
-            e.accept(this);
-        switch (f.name){
-            case "read_i" :
-                mv.visitMethodInsn(Opcodes.INVOKESTATIC, "IO", f.name, "()I");
-                break;
-            case "read_c" :
-                mv.visitMethodInsn(Opcodes.INVOKESTATIC, "IO", f.name, "()C");
-                break;
-            default:
-                mv.visitMethodInsn(Opcodes.INVOKESTATIC, "Main", f.name, f.p.getCallType());
-        }
-        return null;
-    }
-
-    @Override
-    public Void visitFunCallStmt(FunCallStmt f){
-        for(Expr e : f.args)
-            e.accept(this);
-        switch (f.name){
-            case "print_i" :
-                mv.visitMethodInsn(Opcodes.INVOKESTATIC, "IO", f.name, "(I)V");
-                break;
-            case "print_c" :
-                mv.visitMethodInsn(Opcodes.INVOKESTATIC, "IO", f.name, "(C)V");
-                break;
-            case "print_s" :
-                mv.visitMethodInsn(Opcodes.INVOKESTATIC, "IO", f.name, "(Ljava/lang/String;)V");
-                break;
-            default:
-                mv.visitMethodInsn(Opcodes.INVOKESTATIC, "Main", f.name, f.p.getCallType());
-        }
-        return null;
+    private void numericalRepresentation(){
+        Label jump = new Label();
+        mv.visitIntInsn(Opcodes.BIPUSH, 1);
+        mv.visitJumpInsn(Opcodes.GOTO, jump);
+        mv.visitLabel(label);
+        mv.visitIntInsn(Opcodes.BIPUSH, 0);
+        mv.visitLabel(jump);
     }
 
     @Override
     public Void visitWhile(While w){
-        Label label1 = new Label();
-        Label label2 = new Label();
+        Label loop = new Label();
+        Label end = new Label();
+        label = new Label();
 
-        label = label1;
-        WhileFlag = false;
+        mv.visitLabel(loop);
         w.exp.accept(this);
-        mv.visitLabel(label2);
+        mv.visitJumpInsn(Opcodes.IFEQ, end);
         w.stmt.accept(this);
+        mv.visitJumpInsn(Opcodes.GOTO, loop);
 
-        label = label2;
-        WhileFlag = true;
-        w.exp.accept(this);
-        mv.visitLabel(label1);
+        mv.visitLabel(end);
         return null;
     }
 
     @Override
     public Void visitIf(If i){
+        Label jump = new Label();
         label = new Label();
+
         i.exp.accept(this);
+        mv.visitJumpInsn(Opcodes.IFEQ, jump);
+
         i.ifstmt.accept(this);
         if(i.elsestmt != null) {
-            end = new Label();
+            Label end = new Label();
             mv.visitJumpInsn(Opcodes.GOTO, end);
-            mv.visitLabel(label);
+            mv.visitLabel(jump);
             i.elsestmt.accept(this);
             mv.visitLabel(end);
         } else {
-            mv.visitLabel(label);
+            mv.visitLabel(jump);
         }
         return null;
     }
@@ -314,15 +342,25 @@ public class GenerateVistor extends BaseCodeGenVisitor<Void> {
         switch (a.var.type){
             case INT:
                 if(!a.var.vd.getGlobal())
-                    mv.visitIntInsn(Opcodes.ISTORE, a.var.vd.getIndex());
+                    mv.visitVarInsn(Opcodes.ISTORE, a.var.vd.getIndex());
                 else
-                    mv.visitFieldInsn(Opcodes.PUTSTATIC, "Main", a.var.name, "I");
+                    mv.visitFieldInsn(
+                            Opcodes.PUTSTATIC,
+                            "Main",
+                            a.var.name,
+                            "I"
+                    );
                 break;
             case CHAR:
                 if(!a.var.vd.getGlobal())
-                    mv.visitIntInsn(Opcodes.ISTORE, a.var.vd.getIndex());
+                    mv.visitVarInsn(Opcodes.ISTORE, a.var.vd.getIndex());
                 else
-                    mv.visitFieldInsn(Opcodes.PUTSTATIC, "Main", a.var.name, "C");
+                    mv.visitFieldInsn(
+                            Opcodes.PUTSTATIC,
+                            "Main",
+                            a.var.name,
+                            "C"
+                    );
                 break;
         }
         return null;
@@ -343,9 +381,11 @@ public class GenerateVistor extends BaseCodeGenVisitor<Void> {
     public Void visitIntLiteral(IntLiteral i){
         //mv.visitIntInsn(Opcodes.SIPUSH, i.i & 0xFFFF);
         //mv.visitIntInsn(Opcodes.SIPUSH, i.i >> 16);
-        if(i.i > 32767 || i.i < -32768)
+        if(i.i > 32767 || i.i < -32768) {
             mv.visitLdcInsn(i.i);
-        mv.visitIntInsn(Opcodes.SIPUSH, i.i);
+        } else {
+            mv.visitIntInsn(Opcodes.SIPUSH, i.i);
+        }
         return null;
     }
 
