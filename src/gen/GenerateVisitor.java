@@ -19,13 +19,17 @@ public class GenerateVisitor extends BaseCodeGenVisitor<Void> {
     private ClassWriter   cw;
     private MethodVisitor mv;
 
-    private boolean GlobalFlag = false;
-    private boolean Init = false;
-    private int     localVariablCount = 0;
-    private Label   label;
+    private boolean       GlobalFlag;
+    private boolean       Init;
+    private int           localVariablCount;
+    private Label         label;
 
-    public GenerateVisitor(){
-        this.cw = new ClassWriter(ClassWriter.COMPUTE_FRAMES);
+    public GenerateVisitor() {
+        this.cw                = new ClassWriter(ClassWriter.COMPUTE_FRAMES);
+        this.GlobalFlag        = false;
+        this.Init              = false;
+        this.localVariablCount = 0;
+
     }
 
     private void newScope(){
@@ -257,6 +261,24 @@ public class GenerateVisitor extends BaseCodeGenVisitor<Void> {
                         f.name,
                         "(Ljava/lang/String;)V"
                 );
+                break;
+            case "read_i" :
+                mv.visitMethodInsn(
+                        Opcodes.INVOKESTATIC,
+                        "IO",
+                        f.name,
+                        "()I"
+                );
+                mv.visitInsn(Opcodes.POP);
+                break;
+            case "read_c" :
+                mv.visitMethodInsn(
+                        Opcodes.INVOKESTATIC,
+                        "IO",
+                        f.name,
+                        "()C"
+                );
+                mv.visitInsn(Opcodes.POP);
                 break;
             default:
                 mv.visitMethodInsn(

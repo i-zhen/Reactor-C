@@ -2,12 +2,14 @@
 int h;
 char h2;
 
-char foo(int a89, int b, char c) {
+int foo(int a, int b) {
+    return a + b;
 }
 void main(){
     int a;
-    print_i(a);
-    while(a>h){
-        foo(a,h,h2);
-    }
+    int b;
+    h = read_i();
+    a = 99;
+    b = foo(a,h);
+    print_i(b);
 }
