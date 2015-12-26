@@ -186,6 +186,22 @@ public class Tokeniser {
             c = scanner.next();
             while (c != '\"') {
                 if (c != '\\') sb.append(c);
+                else {
+                    c = scanner.next();
+                    if (c == 't') c = '\t';
+                    else if (c == '\'') c = '\'';
+                    else if (c == '\"') c = '\"';
+                    else if (c == '\\') c = '\\';
+                    else if (c == 'n') c = '\n';
+                    else if (c == 'r') c = '\r';
+                    else if (c == 'b') c = '\b';
+                    else if (c == 'f') c = '\f';
+                    else {
+                        error(c, line, column);
+                        return new Token(TokenClass.INVALID, line, column);
+                    }
+                    sb.append(c);
+                }
                 c = scanner.next();
             }
             return new Token(TokenClass.STRING_LITERAL, sb.toString(), line, column);

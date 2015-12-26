@@ -91,6 +91,7 @@ public class GenerateVistor extends BaseCodeGenVisitor<Void> {
 
     @Override
     public Void visitProgram(Program p) {
+        test t = new test();
         cw.visit(Opcodes.V1_7, Opcodes.ACC_PUBLIC, "Main", null, "java/lang/Object", null);
         //generate global variable declaration
         GlobalFlag = true;
@@ -196,7 +197,11 @@ public class GenerateVistor extends BaseCodeGenVisitor<Void> {
             case MOD:
                 mv.visitInsn(Opcodes.IREM); break;
             case EQ :
-                mv.visitJumpInsn(Opcodes.IF_ICMPEQ, label); break;
+                if(InvFlag)
+                    mv.visitJumpInsn(Opcodes.IF_ICMPEQ, label);
+                else
+                    mv.visitJumpInsn(Opcodes.IF_ICMPNE, label);
+                break;
             case LE :
                 if(InvFlag)
                     mv.visitJumpInsn(Opcodes.IF_ICMPLE, label);
@@ -222,7 +227,11 @@ public class GenerateVistor extends BaseCodeGenVisitor<Void> {
                     mv.visitJumpInsn(Opcodes.IF_ICMPLT, label);
                 break;
             case NE :
-                mv.visitJumpInsn(Opcodes.IF_ICMPNE, label); break;
+                if(InvFlag)
+                    mv.visitJumpInsn(Opcodes.IF_ICMPNE, label);
+                else
+                    mv.visitJumpInsn(Opcodes.IF_ICMPEQ, label);
+                break;
         }
         return null;
     }

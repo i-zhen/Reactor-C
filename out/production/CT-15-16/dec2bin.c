@@ -8,7 +8,6 @@ int power(int base, int exponent) {
   exponent = exponent - 1;
   return base * power(base, exponent);
 }
-
 int dec2bin(int decimal, int exponent) {
   int remainder; int exponent_plus_one;
   int two;
@@ -30,11 +29,15 @@ int dec2bin(int decimal, int exponent) {
 }
 
 void main() {
+
   int n;
+  int m;
   int zero;
+  m=2;
   zero = 0;
   print_s("Enter integer> ");
   n = read_i();
+
   dec2bin(n, zero);
   print_s("\n");
 }
