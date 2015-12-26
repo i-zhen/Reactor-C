@@ -12,4 +12,5 @@ void main(){
     b = 2;
     c = 'e';
     while (1+3) {foo(a,b,c);}
+    print_s("fuck");
 }

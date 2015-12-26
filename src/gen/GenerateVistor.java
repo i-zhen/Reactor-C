@@ -1,7 +1,6 @@
 package gen;
 
 import ast.*;
-import com.sun.tools.classfile.Opcode;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.Label;
 import org.objectweb.asm.MethodVisitor;
@@ -92,7 +91,6 @@ public class GenerateVistor extends BaseCodeGenVisitor<Void> {
 
     @Override
     public Void visitProgram(Program p) {
-        test tt = new test();
         cw.visit(Opcodes.V1_7, Opcodes.ACC_PUBLIC, "Main", null, "java/lang/Object", null);
         //generate global variable declaration
         GlobalFlag = true;
