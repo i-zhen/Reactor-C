@@ -328,7 +328,7 @@ public class GenerateVisitor extends BaseCodeGenVisitor<Void> {
         return null;
     }
 
-    private void numericalRepresentation(){
+    private void numericalRepresentation() {
         Label jump = new Label();
         mv.visitIntInsn(Opcodes.BIPUSH, 1);
         mv.visitJumpInsn(Opcodes.GOTO, jump);

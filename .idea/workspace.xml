@@ -2,14 +2,89 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fe539b0-54dc-4c80-b34d-032b048cadfb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/gen/GenerateVisitor$1.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/gen/GenerateVisitor$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/gen/GenerateVisitor.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/gen/GenerateVisitor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/gen/test.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/gen/test.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/BPag.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/BobSmithIV.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/DamodarSojka.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/JanoHorvath.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/JennyWilson.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/JirkaVebr.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/KarolisGreblikas.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/OkamiShiranui.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/R2ZER0.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/Ramsey144.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/SimonRovder.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/a_sarwar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/ahnonay.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/aivanis.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/ajaya_adhikari.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/ajmcb.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/annieychen1993.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/arranrashid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/aws2411.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/bartekmalon.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/basile_henry.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/boris-penev.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/bshaw95.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/c_mcknight.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/craigwalton.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/diasiare.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/dimy93.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/easyCZ.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/eeglitis.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/fabienff.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/filipendo125.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/franciskv.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/gaby_antova.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/gemdude46.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/hamhut1066.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/hughm.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/i-zhen.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/jakzale.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/james_friel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/jamesguyer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/jon_redmond.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/jonkirch.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/jordan8998.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/jsren.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/julijonas.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/justineyster.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/koenraat.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/krassy_gochev.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/lotkowskim.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/maccery.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/mad_scientist.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/martin_kristien.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/munsun.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/n_nikolov.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/natasa_i.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/nkaki.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/oli_green.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/paperbags.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/renasun1994.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/s1247578.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/s1248784.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/s1249982.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/s1319624.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/s1345559.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/s1346981.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/scoreboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/scottwthompson.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/snony.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/stmfunk.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/tbu-.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/tkerber.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/tkusuno1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/underlyingfunk.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/val0528.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/w_kike.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/wirth_n.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/wyaneva.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/xsrust.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scoreboard/zygisc.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/lib/IO.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/out/Main.class" afterPath="$PROJECT_DIR$/out/production/CT-15-16/out/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CT-15-16/a.c" afterPath="$PROJECT_DIR$/out/production/CT-15-16/a.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gen/GenerateVisitor.java" afterPath="$PROJECT_DIR$/src/gen/GenerateVisitor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gen/test.java" afterPath="$PROJECT_DIR$/src/gen/test.java" />
     </list>
     <ignored path="CT-15-16.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,7 +111,7 @@
         <entry file="file://$PROJECT_DIR$/src/gen/CodeGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -78,15 +153,21 @@
       <file leaf-file-name="GenerateVisitor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gen/GenerateVisitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.8609467">
-              <caret line="440" column="1" selection-start-line="440" selection-start-column="1" selection-end-line="440" selection-end-column="1" />
+            <state vertical-scroll-proportion="-4.014793">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#946#947#0" expanded="true" />
-                <element signature="e#983#984#0" expanded="true" />
-                <element signature="e#1012#1013#0" expanded="true" />
-                <element signature="e#1054#1055#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Scope.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sem/Scope.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -106,9 +187,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,21 +202,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Program.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ast/Program.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+              <caret line="117" column="46" selection-start-line="117" selection-start-column="46" selection-end-line="117" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -229,7 +298,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="10" />
+    <option name="x" value="9" />
     <option name="y" value="23" />
     <option name="width" value="1260" />
     <option name="height" value="773" />
@@ -259,6 +328,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -287,7 +359,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -302,6 +374,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CT-15-16" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CT-15-16" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lexer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -343,9 +437,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -355,7 +446,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -698,18 +789,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -857,6 +936,21 @@
     </option>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="StatisticProjectComponent">
+    <option name="excludeCompilerOutput" value="true" />
+    <option name="excludeIdea9ArtifactDirectory" value="true" />
+    <option name="excludeGitArtifactDirectory" value="true" />
+    <option name="excludeSubversionArtifactDirectory" value="true" />
+    <option name="excludeDotArtifactDirectory" value="false" />
+    <option name="excludeTargetDirectories" value="true" />
+    <option name="activateWhenOpenProject" value="false" />
+    <option name="excludedDirectories">
+      <value>
+        <list size="0" />
+      </value>
+    </option>
+    <option name="fileTypes" value="class;svn-base;svn-work;Extra;gif;png;jpg;jpeg;bmp;tga;tiff;ear;war;zip;jar;iml;iws;ipr;bz2;gz;" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -916,40 +1010,46 @@
       <workItem from="1450799182770" duration="162000" />
       <workItem from="1450799368301" duration="9907000" />
       <workItem from="1450837298423" duration="4934000" />
-      <workItem from="1450844997529" duration="65921000" />
+      <workItem from="1450844997529" duration="66520000" />
+      <workItem from="1451172727214" duration="652000" />
+      <workItem from="1451174615256" duration="7000" />
+      <workItem from="1451175045166" duration="61000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225106000" />
+    <option name="totallyTimeSpent" value="226425000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="23" width="1260" height="773" extended-state="0" />
+    <frame x="9" y="23" width="1260" height="773" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36789772" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20079365" sideWeight="0.48863637" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33920705" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20079365" sideWeight="0.5113636" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.71875" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936507" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36789772" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -975,6 +1075,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ast/If.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1061,13 +1169,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/IO.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37914693">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lexer/Scanner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1130,22 +1231,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sem/Scope.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gen/BaseCodeGenVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#253#254#0" expanded="false" />
-            <element signature="e#273#274#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1153,7 +1242,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1161,7 +1249,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1169,10 +1256,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39940828">
           <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-          <folding>
-            <element signature="e#253#254#0" expanded="false" />
-            <element signature="e#273#274#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1180,7 +1263,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.088757396">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1188,7 +1270,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1212,7 +1293,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1244,7 +1324,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3466872">
           <caret line="62" column="16" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1252,7 +1331,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1301,19 +1379,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ast/Program.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-          <folding />
+          <folding>
+            <element signature="e#404#405#0" expanded="false" />
+            <element signature="e#447#448#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1329,16 +1402,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ast/ASTPrinter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="174" column="1" selection-start-line="174" selection-start-column="1" selection-end-line="174" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1347,14 +1410,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gen/CodeGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -1378,16 +1433,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/gen/CodeGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sem/Scope.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/ASTPrinter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="174" column="1" selection-start-line="174" selection-start-column="1" selection-end-line="174" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="117" column="46" selection-start-line="117" selection-start-column="46" selection-end-line="117" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/gen/GenerateVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.8609467">
-          <caret line="440" column="1" selection-start-line="440" selection-start-column="1" selection-end-line="440" selection-end-column="1" />
+        <state vertical-scroll-proportion="-4.014793">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#946#947#0" expanded="true" />
-            <element signature="e#983#984#0" expanded="true" />
-            <element signature="e#1012#1013#0" expanded="true" />
-            <element signature="e#1054#1055#0" expanded="true" />
           </folding>
         </state>
       </provider>
